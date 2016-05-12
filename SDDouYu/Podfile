@@ -1,0 +1,24 @@
+platform:ios ,'8.0'
+use_frameworks!
+
+target 'SDDouYu' do
+
+
+
+pod 'MJRefresh', '~> 3.1.0'
+pod 'Masonry'         #约束
+pod 'CocoaLumberjack' #log
+pod 'DateTools'
+pod 'MJExtension'
+pod 'ReactiveCocoa','~>4.0.4-alpha-1'
+
+pod 'SDWebImage'
+pod 'SDBannerView'
+pod 'SVProgressHUD'
+pod 'AFNetworking' #OC
+#pod 'Alamofire'  #swift
+pod 'pop', '~> 1.0'
+
+
+link_with  ['SDDouYu', 'SDDouYuTests']
+end
