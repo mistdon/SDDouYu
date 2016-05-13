@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.title = @"关注";
 }
 
 - (void)didReceiveMemoryWarning {

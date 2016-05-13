@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SDTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -32,6 +32,13 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //延迟一秒执行,保证获取广告图即时显示出来
+    sleep(1);
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[SDTabBarController alloc] init];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -39,6 +46,7 @@
  *  展示首页
  */
 - (void)showBrandcastInfomationImageView:(NSString *)imageurl timeinterval:(NSTimeInterval)time{
+    return;
     UIImageView *imageview =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     [imageview sd_setImageWithURL:[NSURL URLWithString:imageurl]];
     [[UIApplication sharedApplication].keyWindow addSubview:imageview];

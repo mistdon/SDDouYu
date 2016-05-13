@@ -10,4 +10,6 @@
 
 @interface SDRootViewController : UIViewController
 
+- (void)ConfigureNavigationBarButtonItems;
+
 @end
