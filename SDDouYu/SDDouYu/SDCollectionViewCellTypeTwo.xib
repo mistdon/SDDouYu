@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SDCollectionViewCellTypeTwo">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="286"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="286"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="douyu" translatesAutoresizingMaskIntoConstraints="NO" id="1NH-su-mGy">
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="229"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXe-PK-CIz">
+                        <rect key="frame" x="0.0" y="229" width="354" height="57"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="douyu" translatesAutoresizingMaskIntoConstraints="NO" id="W1Q-Es-dYG">
+                                <rect key="frame" x="5" y="10" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W1Q-Es-dYG" secondAttribute="height" multiplier="1:1" id="dFH-8N-YXg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvZ-Vn-fUF">
+                                <rect key="frame" x="50" y="10" width="299" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="W1Q-Es-dYG" secondAttribute="bottom" constant="10" id="1EW-Te-NKv"/>
+                            <constraint firstAttribute="trailing" secondItem="MvZ-Vn-fUF" secondAttribute="trailing" constant="5" id="25l-JW-BDR"/>
+                            <constraint firstItem="W1Q-Es-dYG" firstAttribute="centerY" secondItem="qXe-PK-CIz" secondAttribute="centerY" id="3I7-XJ-q4z"/>
+                            <constraint firstItem="W1Q-Es-dYG" firstAttribute="top" secondItem="qXe-PK-CIz" secondAttribute="top" constant="10" id="FKs-Bt-hhl"/>
+                            <constraint firstItem="MvZ-Vn-fUF" firstAttribute="centerY" secondItem="qXe-PK-CIz" secondAttribute="centerY" id="Fdn-BN-bbQ"/>
+                            <constraint firstItem="MvZ-Vn-fUF" firstAttribute="bottom" secondItem="W1Q-Es-dYG" secondAttribute="bottom" id="Yta-ag-iPE"/>
+                            <constraint firstItem="MvZ-Vn-fUF" firstAttribute="leading" secondItem="W1Q-Es-dYG" secondAttribute="trailing" constant="8" id="okt-Ev-iDM"/>
+                            <constraint firstItem="W1Q-Es-dYG" firstAttribute="leading" secondItem="qXe-PK-CIz" secondAttribute="leading" constant="5" id="vPU-5e-EMe"/>
+                            <constraint firstItem="MvZ-Vn-fUF" firstAttribute="top" secondItem="W1Q-Es-dYG" secondAttribute="top" id="yE9-YW-TLW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="1NH-su-mGy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bdj-hY-q0D"/>
+                <constraint firstAttribute="trailing" secondItem="qXe-PK-CIz" secondAttribute="trailing" id="C4K-K9-B7y"/>
+                <constraint firstItem="qXe-PK-CIz" firstAttribute="top" secondItem="1NH-su-mGy" secondAttribute="bottom" id="CrZ-Co-cFt"/>
+                <constraint firstItem="1NH-su-mGy" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="Eot-bI-RIi"/>
+                <constraint firstAttribute="trailing" secondItem="1NH-su-mGy" secondAttribute="trailing" id="GAt-na-X5y"/>
+                <constraint firstItem="qXe-PK-CIz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mlZ-P8-eqV"/>
+                <constraint firstAttribute="bottom" secondItem="qXe-PK-CIz" secondAttribute="bottom" id="sSh-m5-shq"/>
+                <constraint firstItem="1NH-su-mGy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uar-qk-00g"/>
+            </constraints>
+            <size key="customSize" width="354" height="286"/>
+            <connections>
+                <outlet property="accountLable" destination="MvZ-Vn-fUF" id="JTo-VG-rGT"/>
+                <outlet property="backgroundImageView" destination="1NH-su-mGy" id="8Pk-hH-GZ1"/>
+                <outlet property="imageView" destination="W1Q-Es-dYG" id="AZs-w1-6W7"/>
+            </connections>
+            <point key="canvasLocation" x="330" y="470"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="douyu" width="256" height="256"/>
+    </resources>
+</document>

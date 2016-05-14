@@ -24,7 +24,7 @@
     self.clipsToBounds      = YES;
 }
 - (void)configureDetails:(NSDictionary *)dictionary{
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:dictionary[@"SDBrandcastModelUrl"]] placeholderImage:[UIImage imageNamed:@"icon_honor3"]];
+    [self.imageView sd_setImageWithURL:dictionary[@"SDBrandcastModelUrl"] placeholderImage:[UIImage imageNamed:@"icon_honor3"]];
     [self.nickNameLable setTitle:dictionary[@"SDBrandcastModelNickName"] forState:UIControlStateNormal];
     long long onlineNum = [dictionary[@"SDBrandcastModelOnline"] longLongValue];
     self.onLineLable.text = onlineNum > 10000 ? [NSString stringWithFormat:@"%.1lf万在线",(double)onlineNum/10000] : [NSString stringWithFormat:@"%ld在线",(long)onlineNum];

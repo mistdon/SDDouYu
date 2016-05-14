@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SDHomepageViewModel.h"
 
-typedef void(^moreHandler) (NSString * title);
-typedef void(^selectedOneBrandcast)(SDBrandcastModel * model);
+#import "UITableViewCell+Extension.h"
+
+
 
 static NSString *const SDHomePageCellHeaderImage = @"homePageCellHeaderImage";
 static NSString *const SDHomePageCellHeaderTitle = @"homePageCellHeaderTitle";

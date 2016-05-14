@@ -35,6 +35,13 @@
     
     //延迟一秒执行,保证获取广告图即时显示出来
     sleep(1);
+    
+    
+    NSIndexSet *set = [NSIndexSet indexSetWithIndex:1];
+    NSLog(@"set = %@",set);
+    
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[SDTabBarController alloc] init];

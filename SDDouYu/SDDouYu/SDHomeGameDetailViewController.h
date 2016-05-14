@@ -7,15 +7,15 @@
 //
 
 #import "SDRootViewController.h"
-#import "SDBrandcastModel.h"
+#import "SDBaseLiveModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SDHomeGameDetailViewController : SDRootViewController
 
-@property (nonatomic, strong, readonly) SDBrandcastModel *liveModel;
+@property (nonatomic, strong, readonly) SDBaseLiveModel *liveModel;
 
-- (instancetype)initWithLive:(SDBrandcastModel *)livemodel;
+- (instancetype)initWithLive:(SDBaseLiveModel *)livemodel;
 
 @end
 

@@ -56,12 +56,12 @@ static NSString *const kResponseMsg2 = @"error";
             if (result[@"data"]) {
                 successHander(result[@"data"]);
             }else{
-                NSDictionary *dictionary = @{@"msg":@"Download success, But no data."};
-                successHander(dictionary);
+                //@"Download success, But no data.;
+                successHander(nil);
             }
         }else{
-            NSDictionary *dictionary = @{kResponseMsg1:@"Error occures",kResponseMsg2:result[@"error"]};
-            successHander(dictionary);
+            //NSDictionary *dictionary = @{kResponseMsg1:@"Error occures",kResponseMsg2:result[@"error"]};
+            successHander(nil);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failHander(nil, error);

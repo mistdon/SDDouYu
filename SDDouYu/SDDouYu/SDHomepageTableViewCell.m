@@ -8,7 +8,7 @@
 
 #import "SDHomepageTableViewCell.h"
 #import "SDHomepageContentCollectionViewCell.h"
-#import "SDBrandcastModel+Extension.h"
+#import "SDBaseLiveModel+Extension.h"
 
 static NSString *const collectionViewCellIdentifier = @"collectionViewCellIdentifier";
 
@@ -17,7 +17,7 @@ static NSString *const collectionViewCellIdentifier = @"collectionViewCellIdenti
 @interface SDHomepageTableViewCell()<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *headerLeftButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *colletionView;
-@property (nonatomic, copy) NSMutableArray<__kindof SDBrandcastModel *> *details;
+@property (nonatomic, copy) NSMutableArray<__kindof SDBaseLiveModel *> *details;
 @property (nonatomic, copy) moreHandler more;
 @property (nonatomic, copy) selectedOneBrandcast selectedOneBrandcast;
 
@@ -50,8 +50,8 @@ static NSString *const collectionViewCellIdentifier = @"collectionViewCellIdenti
 #pragma mark flowlayout
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SDHomepageContentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionViewCellIdentifier forIndexPath:indexPath];
-    SDBrandcastModel *model = self.details[indexPath.row];
-    [cell configureDetails:[model readyForDetailsShow]];
+    SDBaseLiveModel *model = self.details[indexPath.row];
+    [cell configureDetails:[model detailsForShow]];
     return cell;
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{

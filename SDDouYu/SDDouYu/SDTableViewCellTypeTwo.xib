@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="363" id="KGk-i7-Jjw" customClass="SDTableViewCellTypeTwo">
+            <rect key="frame" x="0.0" y="0.0" width="536" height="363"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="536" height="362"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjm-f4-X2k">
+                        <rect key="frame" x="0.0" y="0.0" width="536" height="4"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="4oh-Fl-fF2"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxG-sZ-OsL" userLabel="upview">
+                        <rect key="frame" x="0.0" y="4" width="536" height="44"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-QH-x7r">
+                                <rect key="frame" x="0.0" y="8" width="200" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6Bc-T2-Rsr"/>
+                                    <constraint firstAttribute="width" secondItem="M6I-QH-x7r" secondAttribute="height" multiplier="1:1" id="h4l-sF-4mH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="颜值" image="icon_hornor1"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="h4l-sF-4mH"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xU-8v-39f">
+                                <rect key="frame" x="494" y="5" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5xU-8v-39f" secondAttribute="height" multiplier="1:1" id="oHP-z9-xEs"/>
+                                </constraints>
+                                <state key="normal" title="&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="M6I-QH-x7r" secondAttribute="bottom" constant="8" id="Ahq-dm-Fwj"/>
+                            <constraint firstAttribute="bottom" secondItem="5xU-8v-39f" secondAttribute="bottom" constant="5" id="Suk-yI-37j"/>
+                            <constraint firstAttribute="trailing" secondItem="5xU-8v-39f" secondAttribute="trailing" constant="8" id="Tsg-Fy-5PB"/>
+                            <constraint firstItem="M6I-QH-x7r" firstAttribute="centerY" secondItem="SxG-sZ-OsL" secondAttribute="centerY" id="VkT-tV-y9H"/>
+                            <constraint firstItem="5xU-8v-39f" firstAttribute="centerY" secondItem="SxG-sZ-OsL" secondAttribute="centerY" id="gek-HH-uN1"/>
+                            <constraint firstItem="5xU-8v-39f" firstAttribute="top" secondItem="SxG-sZ-OsL" secondAttribute="top" constant="5" id="h34-BX-4R0"/>
+                            <constraint firstItem="M6I-QH-x7r" firstAttribute="leading" secondItem="SxG-sZ-OsL" secondAttribute="leading" id="lIS-9Z-8Jo"/>
+                            <constraint firstAttribute="height" constant="44" id="qV0-pk-ZnB"/>
+                            <constraint firstItem="M6I-QH-x7r" firstAttribute="top" secondItem="SxG-sZ-OsL" secondAttribute="top" constant="8" id="wVg-mi-Bef"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VkT-tV-y9H"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YTg-Bk-JBm">
+                        <rect key="frame" x="0.0" y="48" width="536" height="314"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UrC-go-xRa">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SxG-sZ-OsL" secondAttribute="trailing" id="0wq-Xt-S1h"/>
+                    <constraint firstAttribute="bottom" secondItem="YTg-Bk-JBm" secondAttribute="bottom" id="84e-6Q-enT"/>
+                    <constraint firstItem="hjm-f4-X2k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Avl-k2-y3F"/>
+                    <constraint firstAttribute="trailing" secondItem="hjm-f4-X2k" secondAttribute="trailing" id="OkM-Qa-qKS"/>
+                    <constraint firstAttribute="trailing" secondItem="YTg-Bk-JBm" secondAttribute="trailing" id="WWu-gI-mhe"/>
+                    <constraint firstItem="SxG-sZ-OsL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aRG-Uf-joG"/>
+                    <constraint firstItem="YTg-Bk-JBm" firstAttribute="top" secondItem="SxG-sZ-OsL" secondAttribute="bottom" id="agB-5N-MHv"/>
+                    <constraint firstItem="SxG-sZ-OsL" firstAttribute="top" secondItem="hjm-f4-X2k" secondAttribute="bottom" id="by9-gG-gtA"/>
+                    <constraint firstItem="YTg-Bk-JBm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cKL-Nl-TtY"/>
+                    <constraint firstItem="hjm-f4-X2k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wxJ-sN-xen"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionVIew" destination="YTg-Bk-JBm" id="hIl-ac-BMn"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="421.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_hornor1" width="28" height="28"/>
+    </resources>
+</document>

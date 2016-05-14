@@ -1,17 +1,20 @@
 //
-//  SDBrandcastModel+Extension.h
-//  DouYu
+//  SDBaseLiveModel+Extension.h
+//  SDDouYu
 //
-//  Created by shendong on 16/5/12.
+//  Created by shendong on 16/5/14.
 //  Copyright © 2016年 com.sybercare.enterprise. All rights reserved.
 //
 
-#import "SDBrandcastModel.h"
+
+#import "SDBaseLiveModel.h"
 
 static NSString *const SDBrandcastModelUrl = @"SDBrandcastModelUrl";
 static NSString *const SDBrandcastModelNickName = @"SDBrandcastModelNickName";
 static NSString *const SDBrandcastModelOnline = @"SDBrandcastModelOnline";
 
-@interface SDBrandcastModel (Extension)
-- (NSDictionary *)readyForDetailsShow;
+@interface SDBaseLiveModel (Extension)
+
+- (NSDictionary *)detailsForShow;
+
 @end

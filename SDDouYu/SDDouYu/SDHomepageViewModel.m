@@ -13,7 +13,7 @@
 + (instancetype)recomendViewModelWithKeysAndValues:(NSDictionary *)dictionary{
     [SDHomepageViewModel mj_setupObjectClassInArray:^NSDictionary *{
         return  @{
-                  @"room_list":@"SDBrandcastModel"
+                  @"room_list":@"SDBaseLiveModel"
                   };
     }];
     SDHomepageViewModel *model = [SDHomepageViewModel mj_objectWithKeyValues:dictionary];

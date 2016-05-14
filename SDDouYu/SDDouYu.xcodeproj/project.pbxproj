@@ -17,8 +17,6 @@
 		3BD98C391CE49AAA00BA5979 /* SDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C361CE49AAA00BA5979 /* SDRootViewController.m */; };
 		3BD98C3D1CE49AC100BA5979 /* SDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C3C1CE49AC100BA5979 /* SDTabBarController.m */; };
 		3BD98C401CE49ACF00BA5979 /* SDCareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C3F1CE49ACF00BA5979 /* SDCareViewController.m */; };
-		3BD98C471CE49AE900BA5979 /* SDBrandcastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C421CE49AE900BA5979 /* SDBrandcastModel.m */; };
-		3BD98C481CE49AE900BA5979 /* SDBrandcastModel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C441CE49AE900BA5979 /* SDBrandcastModel+Extension.m */; };
 		3BD98C491CE49AE900BA5979 /* SDHomepageDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C461CE49AE900BA5979 /* SDHomepageDataSource.m */; };
 		3BD98C4E1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C4B1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m */; };
 		3BD98C4F1CE49AFD00BA5979 /* SDHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C4D1CE49AFD00BA5979 /* SDHomepageViewController.m */; };
@@ -30,6 +28,13 @@
 		3BD98C5F1CE49B1700BA5979 /* SDScrollTogetherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C591CE49B1700BA5979 /* SDScrollTogetherView.m */; };
 		3BD98C621CE49B3400BA5979 /* SDHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */; };
 		3BD98C651CE49B4F00BA5979 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */; };
+		3BEBFA2B1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */; };
+		3BEBFA2C1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */; };
+		3BEBFA301CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA2E1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m */; };
+		3BEBFA311CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEBFA2F1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib */; };
+		3BEBFA351CE6EC69001CF2E2 /* SDBaseLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA341CE6EC69001CF2E2 /* SDBaseLiveModel.m */; };
+		3BEBFA381CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */; };
+		3BEBFA3B1CE6F221001CF2E2 /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */; };
 		E1D71289F0FD89A977FCBF15 /* Pods_SDDouYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F634C8EDF906134F0C39601E /* Pods_SDDouYu.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,10 +58,6 @@
 		3BD98C3C1CE49AC100BA5979 /* SDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTabBarController.m; sourceTree = "<group>"; };
 		3BD98C3E1CE49ACF00BA5979 /* SDCareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCareViewController.h; sourceTree = "<group>"; };
 		3BD98C3F1CE49ACF00BA5979 /* SDCareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCareViewController.m; sourceTree = "<group>"; };
-		3BD98C411CE49AE900BA5979 /* SDBrandcastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrandcastModel.h; sourceTree = "<group>"; };
-		3BD98C421CE49AE900BA5979 /* SDBrandcastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrandcastModel.m; sourceTree = "<group>"; };
-		3BD98C431CE49AE900BA5979 /* SDBrandcastModel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDBrandcastModel+Extension.h"; sourceTree = "<group>"; };
-		3BD98C441CE49AE900BA5979 /* SDBrandcastModel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDBrandcastModel+Extension.m"; sourceTree = "<group>"; };
 		3BD98C451CE49AE900BA5979 /* SDHomepageDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomepageDataSource.h; sourceTree = "<group>"; };
 		3BD98C461CE49AE900BA5979 /* SDHomepageDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomepageDataSource.m; sourceTree = "<group>"; };
 		3BD98C4A1CE49AFD00BA5979 /* SDHomeGameDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomeGameDetailViewController.h; sourceTree = "<group>"; };
@@ -77,6 +78,18 @@
 		3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomepageViewModel.m; sourceTree = "<group>"; };
 		3BD98C631CE49B4F00BA5979 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
 		3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		3BEBFA281CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTableViewCellTypeTwo.h; sourceTree = "<group>"; };
+		3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTableViewCellTypeTwo.m; sourceTree = "<group>"; };
+		3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDTableViewCellTypeTwo.xib; sourceTree = "<group>"; };
+		3BEBFA2D1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCellTypeTwo.h; sourceTree = "<group>"; };
+		3BEBFA2E1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCellTypeTwo.m; sourceTree = "<group>"; };
+		3BEBFA2F1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDCollectionViewCellTypeTwo.xib; sourceTree = "<group>"; };
+		3BEBFA331CE6EC69001CF2E2 /* SDBaseLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseLiveModel.h; sourceTree = "<group>"; };
+		3BEBFA341CE6EC69001CF2E2 /* SDBaseLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseLiveModel.m; sourceTree = "<group>"; };
+		3BEBFA361CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDBaseLiveModel+Extension.h"; sourceTree = "<group>"; };
+		3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDBaseLiveModel+Extension.m"; sourceTree = "<group>"; };
+		3BEBFA391CE6F221001CF2E2 /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
+		3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
 		5C76BA6F706680020AD9B863 /* Pods-SDDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		8D6F84587FC98F2481FD62AD /* Pods-SDDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.debug.xcconfig"; sourceTree = "<group>"; };
 		F634C8EDF906134F0C39601E /* Pods_SDDouYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDDouYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +128,7 @@
 		3BD98C101CE4959A00BA5979 /* SDDouYu */ = {
 			isa = PBXGroup;
 			children = (
+				3BEBFA321CE6D672001CF2E2 /* Category */,
 				3BD98C2B1CE49A4300BA5979 /* HTTPRequest */,
 				3BD98C2A1CE49A3D00BA5979 /* Helper */,
 				3BD98C291CE49A3800BA5979 /* Class */,
@@ -213,10 +227,10 @@
 		3BD98C301CE49A7C00BA5979 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3BD98C411CE49AE900BA5979 /* SDBrandcastModel.h */,
-				3BD98C421CE49AE900BA5979 /* SDBrandcastModel.m */,
-				3BD98C431CE49AE900BA5979 /* SDBrandcastModel+Extension.h */,
-				3BD98C441CE49AE900BA5979 /* SDBrandcastModel+Extension.m */,
+				3BEBFA331CE6EC69001CF2E2 /* SDBaseLiveModel.h */,
+				3BEBFA341CE6EC69001CF2E2 /* SDBaseLiveModel.m */,
+				3BEBFA361CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.h */,
+				3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */,
 				3BD98C451CE49AE900BA5979 /* SDHomepageDataSource.h */,
 				3BD98C461CE49AE900BA5979 /* SDHomepageDataSource.m */,
 			);
@@ -226,16 +240,24 @@
 		3BD98C311CE49A8200BA5979 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3BD98C501CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.h */,
-				3BD98C511CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m */,
-				3BD98C521CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.xib */,
 				3BD98C531CE49B1700BA5979 /* SDHomepageHeaderView.h */,
 				3BD98C541CE49B1700BA5979 /* SDHomepageHeaderView.m */,
+				3BD98C581CE49B1700BA5979 /* SDScrollTogetherView.h */,
+				3BD98C591CE49B1700BA5979 /* SDScrollTogetherView.m */,
+				3BEBFA391CE6F221001CF2E2 /* UITableViewCell+Extension.h */,
+				3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */,
 				3BD98C551CE49B1700BA5979 /* SDHomepageTableViewCell.h */,
 				3BD98C561CE49B1700BA5979 /* SDHomepageTableViewCell.m */,
 				3BD98C571CE49B1700BA5979 /* SDHomepageTableViewCell.xib */,
-				3BD98C581CE49B1700BA5979 /* SDScrollTogetherView.h */,
-				3BD98C591CE49B1700BA5979 /* SDScrollTogetherView.m */,
+				3BD98C501CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.h */,
+				3BD98C511CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m */,
+				3BD98C521CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.xib */,
+				3BEBFA281CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.h */,
+				3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */,
+				3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */,
+				3BEBFA2D1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.h */,
+				3BEBFA2E1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m */,
+				3BEBFA2F1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -247,6 +269,13 @@
 				3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */,
 			);
 			name = VIewModel;
+			sourceTree = "<group>";
+		};
+		3BEBFA321CE6D672001CF2E2 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		E92CBE8C2B3437EF4FEDB234 /* Frameworks */ = {
@@ -327,7 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD98C211CE4959A00BA5979 /* LaunchScreen.storyboard in Resources */,
+				3BEBFA2C1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib in Resources */,
 				3BD98C1E1CE4959A00BA5979 /* Assets.xcassets in Resources */,
+				3BEBFA311CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib in Resources */,
 				3BD98C1C1CE4959A00BA5979 /* Main.storyboard in Resources */,
 				3BD98C5E1CE49B1700BA5979 /* SDHomepageTableViewCell.xib in Resources */,
 				3BD98C5B1CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.xib in Resources */,
@@ -391,21 +422,24 @@
 			files = (
 				3BD98C401CE49ACF00BA5979 /* SDCareViewController.m in Sources */,
 				3BD98C5A1CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m in Sources */,
+				3BEBFA351CE6EC69001CF2E2 /* SDBaseLiveModel.m in Sources */,
 				3BD98C3D1CE49AC100BA5979 /* SDTabBarController.m in Sources */,
-				3BD98C481CE49AE900BA5979 /* SDBrandcastModel+Extension.m in Sources */,
 				3BD98C5F1CE49B1700BA5979 /* SDScrollTogetherView.m in Sources */,
 				3BD98C5C1CE49B1700BA5979 /* SDHomepageHeaderView.m in Sources */,
 				3BD98C191CE4959A00BA5979 /* ViewController.m in Sources */,
 				3BD98C651CE49B4F00BA5979 /* HTTPRequest.m in Sources */,
 				3BD98C4E1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m in Sources */,
+				3BEBFA2B1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m in Sources */,
+				3BEBFA381CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m in Sources */,
+				3BEBFA301CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m in Sources */,
 				3BD98C4F1CE49AFD00BA5979 /* SDHomepageViewController.m in Sources */,
 				3BD98C161CE4959A00BA5979 /* AppDelegate.m in Sources */,
 				3BD98C621CE49B3400BA5979 /* SDHomepageViewModel.m in Sources */,
 				3BD98C381CE49AAA00BA5979 /* SDRootNavigationController.m in Sources */,
+				3BEBFA3B1CE6F221001CF2E2 /* UITableViewCell+Extension.m in Sources */,
 				3BD98C391CE49AAA00BA5979 /* SDRootViewController.m in Sources */,
 				3BD98C491CE49AE900BA5979 /* SDHomepageDataSource.m in Sources */,
 				3BD98C131CE4959A00BA5979 /* main.m in Sources */,
-				3BD98C471CE49AE900BA5979 /* SDBrandcastModel.m in Sources */,
 				3BD98C5D1CE49B1700BA5979 /* SDHomepageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

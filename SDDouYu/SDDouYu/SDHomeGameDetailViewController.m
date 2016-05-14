@@ -15,9 +15,9 @@
 @implementation SDHomeGameDetailViewController
 
 - (instancetype)init{
-    return [self initWithLive:[SDBrandcastModel new]];
+    return [self initWithLive:[SDBaseLiveModel new]];
 }
-- (instancetype)initWithLive:(SDBrandcastModel *)livemodel{
+- (instancetype)initWithLive:(SDBaseLiveModel *)livemodel{
     if (self = [super init]) {
         _liveModel = livemodel;
     }

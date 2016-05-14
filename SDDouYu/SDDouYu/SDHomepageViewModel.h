@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SDBrandcastModel.h"
+#import "SDBaseLiveModel.h"
 
 @interface SDHomepageViewModel : NSObject
 
 @property (nonatomic, copy) NSString *tag_id;
 @property (nonatomic, copy) NSString *tag_name;
-@property (nonatomic, copy) NSString *icon_url;
-@property (nonatomic, copy) NSArray<__kindof SDBrandcastModel *> *room_list;
+@property (nonatomic, strong) NSURL *icon_url;
+@property (nonatomic, copy) NSArray<__kindof SDBaseLiveModel *> *room_list;
 
 + (instancetype)recomendViewModelWithKeysAndValues:(NSDictionary *)dictionary;
 
