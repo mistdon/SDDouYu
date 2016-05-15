@@ -70,6 +70,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSURL *vertical_src;
 @property (nonatomic, copy) NSString *vod_quality;
 
+- (void)sayYouName;
+
 @end
 
 @interface SDBaseLiveBeautyModel: SDBaseLiveModel

@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 #import "UITableViewCell+Extension.h"
+#import "SDBaseLiveModel.h"
 
-
-
+typedef void(^selectedBeautyBrandcast)(SDBaseLiveBeautyModel * model);
 static NSString *const SDHomePageCellHeaderImage = @"homePageCellHeaderImage";
 static NSString *const SDHomePageCellHeaderTitle = @"homePageCellHeaderTitle";
 static CGFloat const SDHomePageCellEdgeSet       = 10;
 
 @interface SDHomepageTableViewCell : UITableViewCell
 
-- (void)configureHomepageCell:(SDHomepageViewModel *)viewmodel more:(moreHandler) moreCompletion selected:(selectedOneBrandcast)selectedOneCompletion;
+- (void)configureBaseLiveCell:(NSArray<__kindof SDBaseLiveBeautyModel *> *)model more:(moreHandler) moreCompletion selected:(selectedBeautyBrandcast)selectedOneCompletion;
 
 @end

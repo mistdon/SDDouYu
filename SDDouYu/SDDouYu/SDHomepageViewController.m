@@ -12,6 +12,7 @@
 #import "SDTableViewCellTypeTwo.h"
 
 #import "SDHomepageViewModel.h"
+#import "SDChannelModel.h"
 #import "SDHomeGameDetailViewController.h"
 #import "SDHomepageHeaderView.h"
 #import "SDHomepageDataSource.h"
@@ -49,6 +50,7 @@ static CGFloat const kTableViewHeaderViewHeight = 200;
         _tableView            = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate   = self;
+        _tableView.allowsSelection = NO;
         _tableView.backgroundColor =[UIColor whiteColor];
     }
     return _tableView;
@@ -62,12 +64,27 @@ static CGFloat const kTableViewHeaderViewHeight = 200;
     
     SDHomepageHeaderView *header = [[SDHomepageHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kTableViewHeaderViewHeight)];
     
+    //顶部Headerview轮播图
+    [HTTPRequest requestWithUrl:HTTPGetDouYuHomepageBannerInfomation success:^(id successObject) {
+        [header configureBannerViews:(NSArray *)successObject selectAction:^(id object) {
+            NSLog(@"title = %@",[(NSDictionary *)object objectForKey:@"title"]);
+        }];
+    } fail:^(id failObject, NSError *error) {
+        ;
+    }];
+    
+    
+    
+    
     //颜值系列
     [HTTPRequest requestWithUrl:HTTPGetListDataWhoArebeautiful success:^(id successObject) {
         if (successObject) {
             for (NSDictionary *info in (NSArray *)successObject) {
-                SDHomepageViewModel *model = [SDHomepageViewModel recomendViewModelWithKeysAndValues:info];
-                [self.dataArrayOne addObject:model];
+                SDBaseLiveBeautyModel *liveModel = [SDBaseLiveBeautyModel mj_objectWithKeyValues:info];
+                [self.dataArrayOne addObject:liveModel];
+                if (self.dataArrayOne.count == 4) {
+                    break;
+                }
             }
 //            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
         };;
@@ -85,10 +102,11 @@ static CGFloat const kTableViewHeaderViewHeight = 200;
     [HTTPRequest requestWithUrl:HTTPGetDouYuHomepagelist success:^(id successObject) {
         if (successObject) {
             for (NSDictionary *info in (NSArray *)successObject) {
-                SDHomepageViewModel *model = [SDHomepageViewModel recomendViewModelWithKeysAndValues:info];
+                SDChannelModel *model = [SDChannelModel recomendViewModelWithKeysAndValues:info];
                 [self.dataArrayTwo addObject:model];
             }
-            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+//            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self.tableView reloadData];
         };
     } fail:^(id failObject, NSError *error) {
         ;
@@ -117,21 +135,21 @@ static CGFloat const kTableViewHeaderViewHeight = 200;
     if (indexPath.section == 0) {
         SDHomepageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierOne];
         if (self.dataArrayOne.count > 0) {
-            [cell configureHomepageCell:self.dataArrayOne[indexPath.row] more:^(NSString *title) {
-                NSLog(@"title = %@",title);
+            [cell configureBaseLiveCell:self.dataArrayOne more:^(NSString *title) {
+               NSLog(@"title = %@",title); ;
             } selected:^(SDBaseLiveModel *model) {
                 NSLog(@"nickname = %@",model.nickname);
                 SDHomeGameDetailViewController *live = [[SDHomeGameDetailViewController alloc] initWithLive:model];
                 live.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController: live animated:YES];
+                [self.navigationController pushViewController: live animated:YES];;
             }];
         }
         return cell;
     }else{
-        SDTableViewCellTypeTwo *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifierTwo];
+        SDTableViewCellTypeTwo *cellTwo = [tableView dequeueReusableCellWithIdentifier:cellIdentifierTwo];
         if (self.dataArrayTwo.count > 0) {
-            [cell configureHomepageCell:self.dataArrayTwo[indexPath.row] more:^(NSString *title) {
-                NSLog(@"title = %@",title);
+            [cellTwo configureChannelCell:self.dataArrayTwo[indexPath.row] more:^(NSString *title) {
+                NSLog(@"title = %@",title);;
             } selected:^(SDBaseLiveModel *model) {
                 NSLog(@"nickname = %@",model.nickname);
                 SDHomeGameDetailViewController *live = [[SDHomeGameDetailViewController alloc] initWithLive:model];
@@ -139,7 +157,7 @@ static CGFloat const kTableViewHeaderViewHeight = 200;
                 [self.navigationController pushViewController: live animated:YES];
             }];
         }
-        return cell;
+        return cellTwo;
     }
 }
 

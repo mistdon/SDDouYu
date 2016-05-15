@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B05DBFE1CE84365008D90E2 /* SDCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B05DBFD1CE84365008D90E2 /* SDCustomButton.m */; };
+		3B05DC011CE84881008D90E2 /* SDMultipleCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B05DC001CE84881008D90E2 /* SDMultipleCornerView.m */; };
 		3BD98C131CE4959A00BA5979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C121CE4959A00BA5979 /* main.m */; };
 		3BD98C161CE4959A00BA5979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C151CE4959A00BA5979 /* AppDelegate.m */; };
 		3BD98C191CE4959A00BA5979 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C181CE4959A00BA5979 /* ViewController.m */; };
@@ -28,6 +30,7 @@
 		3BD98C5F1CE49B1700BA5979 /* SDScrollTogetherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C591CE49B1700BA5979 /* SDScrollTogetherView.m */; };
 		3BD98C621CE49B3400BA5979 /* SDHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */; };
 		3BD98C651CE49B4F00BA5979 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */; };
+		3BDF97141CE73AFF004DCA64 /* SDChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF97131CE73AFF004DCA64 /* SDChannelModel.m */; };
 		3BEBFA2B1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */; };
 		3BEBFA2C1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */; };
 		3BEBFA301CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA2E1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m */; };
@@ -35,10 +38,15 @@
 		3BEBFA351CE6EC69001CF2E2 /* SDBaseLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA341CE6EC69001CF2E2 /* SDBaseLiveModel.m */; };
 		3BEBFA381CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */; };
 		3BEBFA3B1CE6F221001CF2E2 /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */; };
+		3BFD38A91CE8BA2900F95A85 /* SDMultipleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD38A81CE8BA2900F95A85 /* SDMultipleCollectionView.m */; };
 		E1D71289F0FD89A977FCBF15 /* Pods_SDDouYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F634C8EDF906134F0C39601E /* Pods_SDDouYu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B05DBFC1CE84365008D90E2 /* SDCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCustomButton.h; sourceTree = "<group>"; };
+		3B05DBFD1CE84365008D90E2 /* SDCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCustomButton.m; sourceTree = "<group>"; };
+		3B05DBFF1CE84881008D90E2 /* SDMultipleCornerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMultipleCornerView.h; sourceTree = "<group>"; };
+		3B05DC001CE84881008D90E2 /* SDMultipleCornerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMultipleCornerView.m; sourceTree = "<group>"; };
 		3BD98C0E1CE4959A00BA5979 /* SDDouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDDouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD98C121CE4959A00BA5979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD98C141CE4959A00BA5979 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +86,8 @@
 		3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomepageViewModel.m; sourceTree = "<group>"; };
 		3BD98C631CE49B4F00BA5979 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
 		3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		3BDF97121CE73AFF004DCA64 /* SDChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChannelModel.h; sourceTree = "<group>"; };
+		3BDF97131CE73AFF004DCA64 /* SDChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChannelModel.m; sourceTree = "<group>"; };
 		3BEBFA281CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTableViewCellTypeTwo.h; sourceTree = "<group>"; };
 		3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTableViewCellTypeTwo.m; sourceTree = "<group>"; };
 		3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDTableViewCellTypeTwo.xib; sourceTree = "<group>"; };
@@ -90,6 +100,8 @@
 		3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDBaseLiveModel+Extension.m"; sourceTree = "<group>"; };
 		3BEBFA391CE6F221001CF2E2 /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
+		3BFD38A71CE8BA2900F95A85 /* SDMultipleCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMultipleCollectionView.h; sourceTree = "<group>"; };
+		3BFD38A81CE8BA2900F95A85 /* SDMultipleCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMultipleCollectionView.m; sourceTree = "<group>"; };
 		5C76BA6F706680020AD9B863 /* Pods-SDDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		8D6F84587FC98F2481FD62AD /* Pods-SDDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.debug.xcconfig"; sourceTree = "<group>"; };
 		F634C8EDF906134F0C39601E /* Pods_SDDouYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDDouYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +241,8 @@
 			children = (
 				3BEBFA331CE6EC69001CF2E2 /* SDBaseLiveModel.h */,
 				3BEBFA341CE6EC69001CF2E2 /* SDBaseLiveModel.m */,
+				3BDF97121CE73AFF004DCA64 /* SDChannelModel.h */,
+				3BDF97131CE73AFF004DCA64 /* SDChannelModel.m */,
 				3BEBFA361CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.h */,
 				3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */,
 				3BD98C451CE49AE900BA5979 /* SDHomepageDataSource.h */,
@@ -274,6 +288,12 @@
 		3BEBFA321CE6D672001CF2E2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3B05DBFC1CE84365008D90E2 /* SDCustomButton.h */,
+				3B05DBFD1CE84365008D90E2 /* SDCustomButton.m */,
+				3B05DBFF1CE84881008D90E2 /* SDMultipleCornerView.h */,
+				3B05DC001CE84881008D90E2 /* SDMultipleCornerView.m */,
+				3BFD38A71CE8BA2900F95A85 /* SDMultipleCollectionView.h */,
+				3BFD38A81CE8BA2900F95A85 /* SDMultipleCollectionView.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -423,13 +443,16 @@
 				3BD98C401CE49ACF00BA5979 /* SDCareViewController.m in Sources */,
 				3BD98C5A1CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m in Sources */,
 				3BEBFA351CE6EC69001CF2E2 /* SDBaseLiveModel.m in Sources */,
+				3BFD38A91CE8BA2900F95A85 /* SDMultipleCollectionView.m in Sources */,
 				3BD98C3D1CE49AC100BA5979 /* SDTabBarController.m in Sources */,
 				3BD98C5F1CE49B1700BA5979 /* SDScrollTogetherView.m in Sources */,
 				3BD98C5C1CE49B1700BA5979 /* SDHomepageHeaderView.m in Sources */,
 				3BD98C191CE4959A00BA5979 /* ViewController.m in Sources */,
+				3B05DC011CE84881008D90E2 /* SDMultipleCornerView.m in Sources */,
 				3BD98C651CE49B4F00BA5979 /* HTTPRequest.m in Sources */,
 				3BD98C4E1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m in Sources */,
 				3BEBFA2B1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m in Sources */,
+				3B05DBFE1CE84365008D90E2 /* SDCustomButton.m in Sources */,
 				3BEBFA381CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m in Sources */,
 				3BEBFA301CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m in Sources */,
 				3BD98C4F1CE49AFD00BA5979 /* SDHomepageViewController.m in Sources */,
@@ -440,6 +463,7 @@
 				3BD98C391CE49AAA00BA5979 /* SDRootViewController.m in Sources */,
 				3BD98C491CE49AE900BA5979 /* SDHomepageDataSource.m in Sources */,
 				3BD98C131CE4959A00BA5979 /* main.m in Sources */,
+				3BDF97141CE73AFF004DCA64 /* SDChannelModel.m in Sources */,
 				3BD98C5D1CE49B1700BA5979 /* SDHomepageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -539,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -551,6 +575,7 @@
 			baseConfigurationReference = 8D6F84587FC98F2481FD62AD /* Pods-SDDouYu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDDouYu/SDDouYu-Prefix.pch";
 				INFOPLIST_FILE = SDDouYu/Info.plist;
@@ -567,6 +592,7 @@
 			baseConfigurationReference = 5C76BA6F706680020AD9B863 /* Pods-SDDouYu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDDouYu/SDDouYu-Prefix.pch";
 				INFOPLIST_FILE = SDDouYu/Info.plist;

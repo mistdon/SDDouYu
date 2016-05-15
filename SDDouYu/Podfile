@@ -5,13 +5,13 @@ target 'SDDouYu' do
 
 
 
-pod 'MJRefresh', '~> 3.1.0'
+pod 'MJRefresh', '~> 3.0.0'
 pod 'Masonry'         #约束
-pod 'CocoaLumberjack' #log
 pod 'DateTools'
 pod 'MJExtension'
 pod 'ReactiveCocoa','~>4.0.4-alpha-1'
-
+pod 'KMCGeigerCounter', '~> 0.2.2' #测试滑动流畅度
+pod 'CocoaLumberjack', '~> 2.3.0' #日志分析工具
 pod 'SDWebImage'
 pod 'SDBannerView'
 pod 'SVProgressHUD'

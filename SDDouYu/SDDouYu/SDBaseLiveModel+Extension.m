@@ -11,7 +11,7 @@
 @implementation SDBaseLiveModel (Extension)
 
 - (NSDictionary *)detailsForShow{
-    return @{SDBrandcastModelUrl : [NSURL URLWithString:self.vertical_src],
+    return @{SDBrandcastModelUrl:self.vertical_src,
              SDBrandcastModelNickName: self.nickname,
              SDBrandcastModelOnline: self.online};
 }

@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 //#import "SDBaseLiveModel.h"
 #import "UITableViewCell+Extension.h"
+#import "SDChannelModel.h"
 
 static CGFloat const SDHomePageCellEdgeSetTwo       = 10;
 
 @interface SDTableViewCellTypeTwo : UITableViewCell
 
-- (void)configureHomepageCell:(SDHomepageViewModel *)viewmodel more:(moreHandler) moreCompletion selected:(selectedOneBrandcast)selectedOneCompletion;
+- (void)configureChannelCell:(SDChannelModel *)channel more:(moreHandler) moreCompletion selected:(selectedOneBrandcast)selectedOneCompletion;
 
 @end

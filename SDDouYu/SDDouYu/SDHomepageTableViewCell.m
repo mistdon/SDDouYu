@@ -17,14 +17,14 @@ static NSString *const collectionViewCellIdentifier = @"collectionViewCellIdenti
 @interface SDHomepageTableViewCell()<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *headerLeftButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *colletionView;
-@property (nonatomic, copy) NSMutableArray<__kindof SDBaseLiveModel *> *details;
+@property (nonatomic, copy) NSMutableArray<__kindof SDBaseLiveBeautyModel *> *details;
 @property (nonatomic, copy) moreHandler more;
-@property (nonatomic, copy) selectedOneBrandcast selectedOneBrandcast;
+@property (nonatomic, copy) selectedBeautyBrandcast selectedOneBrandcast;
 
 @end
 @implementation SDHomepageTableViewCell
 {
-    SDHomepageViewModel *_homeViewmodel;
+    NSString *_tagName;
 }
 - (NSMutableArray *)details{
     if (!_details) {
@@ -35,10 +35,11 @@ static NSString *const collectionViewCellIdentifier = @"collectionViewCellIdenti
 - (void)awakeFromNib {
     // Initialization code
     UICollectionViewFlowLayout *layout      = [[UICollectionViewFlowLayout alloc] init];
-    self.colletionView.collectionViewLayout = layout;
-    self.colletionView.dataSource           = self;
-    self.colletionView.delegate             = self;
-    self.colletionView.scrollEnabled        = NO;
+    self.colletionView.collectionViewLayout      = layout;
+    self.colletionView.dataSource                = self;
+    self.colletionView.delegate                  = self;
+    self.colletionView.scrollEnabled             = NO;
+    self.headerLeftButton.userInteractionEnabled = NO;
     [self.colletionView registerNib:[UINib nibWithNibName:@"SDHomepageContentCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:collectionViewCellIdentifier];
     
 }
@@ -64,22 +65,19 @@ static NSString *const collectionViewCellIdentifier = @"collectionViewCellIdenti
     return CGSizeMake((SCREEN_WIDTH - SDHomePageCellEdgeSet * 3)/2, (SCREEN_WIDTH - SDHomePageCellEdgeSet * 3)/2);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"点击了 %@,indexpath = %lu",self.infos[SDHomePageCellHeaderTitle],indexPath.row);
-//    self.more()
-    
     self.selectedOneBrandcast(self.details[indexPath.row]);
 }
 - (IBAction)moreActionButtonClicked:(UIButton *)sender {
-    self.more(_homeViewmodel.tag_name);
+    self.more(_tagName);
 }
 #pragma public method
-- (void)configureHomepageCell:(SDHomepageViewModel *)viewmodel more:(moreHandler)moreCompletion selected:(selectedOneBrandcast)selectedOneCompletion{
-    [self.headerLeftButton.imageView sd_setImageWithURL:[NSURL URLWithString:viewmodel.icon_url] placeholderImage:[UIImage imageNamed:@"icon_honor3"]];
-    [self.headerLeftButton setTitle:viewmodel.tag_name forState:UIControlStateNormal];
-    [self.details addObjectsFromArray:viewmodel.room_list];
-    _homeViewmodel = viewmodel;
+- (void)configureBaseLiveCell:(NSArray<__kindof SDBaseLiveBeautyModel *> *)model more:(moreHandler)moreCompletion selected:(selectedBeautyBrandcast)selectedOneCompletion{
+//    [self.headerLeftButton.imageView sd_setImageWithURL:model.icon_url placeholderImage:[UIImage imageNamed:@"icon_honor3"]];
+//    [self.headerLeftButton setTitle:viewmodel.tag_name forState:UIControlStateNormal];
+    [self.details addObjectsFromArray:model];
     _more = moreCompletion;
-    _selectedOneBrandcast = selectedOneCompletion;
+    _tagName = @"颜值";
+    _selectedOneBrandcast =selectedOneCompletion ;
     [self.colletionView reloadData];
     
 }

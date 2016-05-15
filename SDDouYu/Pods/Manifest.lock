@@ -23,9 +23,10 @@ PODS:
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
   - DateTools (1.7.0)
+  - KMCGeigerCounter (0.2.2)
   - Masonry (1.0.0)
   - MJExtension (3.0.10)
-  - MJRefresh (3.1.0)
+  - MJRefresh (3.0.8)
   - pop (1.0.9)
   - ReactiveCocoa (4.0.4-alpha-4):
     - ReactiveCocoa/UI (= 4.0.4-alpha-4)
@@ -47,11 +48,12 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - CocoaLumberjack
+  - CocoaLumberjack (~> 2.3.0)
   - DateTools
+  - KMCGeigerCounter (~> 0.2.2)
   - Masonry
   - MJExtension
-  - MJRefresh (~> 3.1.0)
+  - MJRefresh (~> 3.0.0)
   - pop (~> 1.0)
   - ReactiveCocoa (~> 4.0.4-alpha-1)
   - SDBannerView
@@ -62,9 +64,10 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  KMCGeigerCounter: f8cc3c4aa19fc6f8cec168fb03b364b84c118a7a
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
-  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16

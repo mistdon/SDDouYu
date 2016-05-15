@@ -8,13 +8,14 @@
 
 #import "SDHomepageHeaderView.h"
 #import "SDBannerView.h"
+#import "SDMultipleCornerView.h"
 
 static CGFloat const kHeaderViewScale = 0.8;
 
 @interface SDHomepageHeaderView()
 
 @property (nonatomic, strong) SDBannerView *bannerView;
-@property (nonatomic, strong) UIView *downstairsView;
+@property (nonatomic, strong) SDMultipleCornerView *downstairsView;
 @end
 @implementation SDHomepageHeaderView
 
@@ -25,7 +26,7 @@ static CGFloat const kHeaderViewScale = 0.8;
         _bannerView.pageType                      = PageControlPositionDownRight;
         _bannerView.pageIndicatorTintColor        = [UIColor lightGrayColor];
         _bannerView.currentPageIndicatorTintColor = [UIColor orangeColor];
-        _downstairsView = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height * kHeaderViewScale, frame.size.width, frame.size.height * (1 - kHeaderViewScale))];
+        _downstairsView = [[SDMultipleCornerView alloc] initWithFrame:CGRectMake(0, frame.size.height * kHeaderViewScale, frame.size.width, frame.size.height * (1 - kHeaderViewScale))];
         _downstairsView.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:_bannerView];
         [self addSubview:_downstairsView];
@@ -44,6 +45,7 @@ static CGFloat const kHeaderViewScale = 0.8;
     [self.bannerView setCurrentIndexDidTap:^(NSInteger currentIndex) {
         completion(resources[currentIndex]);
     }];
+    [self.downstairsView setDatas:@[@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3"]];
 }
 
 @end

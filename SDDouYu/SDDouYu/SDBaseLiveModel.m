@@ -10,4 +10,14 @@
 
 @implementation SDBaseLiveModel
 
+- (void)sayYouName{
+    NSLog(@"%s,class = %@",__func__,NSStringFromClass([self class]));
+}
+
+@end
+
+@implementation SDBaseLiveBeautyModel
+
+
+
 @end

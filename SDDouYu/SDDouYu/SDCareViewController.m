@@ -7,6 +7,7 @@
 //
 
 #import "SDCareViewController.h"
+#import "SDCustomButton.h"
 
 @interface SDCareViewController ()
 
@@ -16,10 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    SDCustomButton *button = [[SDCustomButton alloc] initWithFrame:CGRectMake(0, 100, 200, 100)];
+    button.backgroundColor = [UIColor greenColor];
+    [button setTitle:@"更多" forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"douyu"] forState:UIControlStateNormal];
+    [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
+
+    
+    
     // Dispose of any resources that can be recreated.
 }
 
