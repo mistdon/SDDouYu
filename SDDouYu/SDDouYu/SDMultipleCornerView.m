@@ -8,9 +8,12 @@
 
 #import "SDMultipleCornerView.h"
 
-#pragma mark - SDCornerView -
-static CGFloat const kCornerViewScale = 0.8;
+NSString *const SDMultipleCornerViewImageIdentifier = @"SDMultipleCornerViewImageIdentifier";
+NSString *const SDMultipleCornerViewTitleIdentifier = @"SDMultipleCornerViewTitleIdentifier";
 
+#pragma mark - SDCornerView -
+
+static CGFloat const kCornerViewScale = 0.8;
 
 //上面是图片,下面是文字,图片高度占总高度的比例是kCornerViewScale,图片垂直居中正方形分布
 @interface SDCornerView ()
@@ -70,14 +73,17 @@ static CGFloat const kCornerViewScale = 0.8;
 #pragma mark - SDMultipleCornerViewCell -
 @implementation SDMultipleCornerViewCell
 
-
-- (void)awakeFromNib{
-    self.cornerView = [[SDCornerView alloc] init];
-    [self.contentView addSubview:self.cornerView];
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.cornerView = [[SDCornerView alloc] init];
+        self.cornerView.backgroundColor = [UIColor clearColor];
+        [self.contentView addSubview:self.cornerView];;
+    }
+    return self;
 }
 - (void)layoutSubviews{
     [self.cornerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.and.top.top.equalTo(self);
+        make.left.right.and.top.bottom.equalTo(self);
     }];
 }
 @end
@@ -88,8 +94,12 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
 @interface SDMultipleCornerView ()<UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionViewFlowLayout *flowlayout;
+@property (nonatomic, copy) selectedMultipleBlock complection;
 @end
-@implementation SDMultipleCornerView
+@implementation SDMultipleCornerView{
+    CGSize loaclitemSize;
+}
 
 - (NSMutableArray *)data{
     if (!_data) {
@@ -110,18 +120,23 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
     return self;
 }
 - (void)initWithSubCollectionView{
-    UICollectionViewLayout *layout           = [[UICollectionViewLayout alloc] init];
-    self.collectionView                      = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:layout];
-//    self.collectionView.collectionViewLayout = layout;
-    self.collectionView.delegate             = self;
-    self.collectionView.dataSource           = self;
+    self.flowlayout                         = [[UICollectionViewFlowLayout alloc] init];
+    self.flowlayout.scrollDirection         = UICollectionViewScrollDirectionHorizontal;
+    self.flowlayout.minimumInteritemSpacing = 0;
+    loaclitemSize                           = CGSizeMake(0, 0);
+    self.collectionView                     = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:self.flowlayout];
+    self.collectionView.backgroundColor     = [UIColor whiteColor];
+    self.collectionView.delegate            = self;
+    self.collectionView.dataSource          = self;
     [self.collectionView registerClass:[SDMultipleCornerViewCell class] forCellWithReuseIdentifier:KMultipleCornerViewCellIdentifier];
     [self addSubview:self.collectionView];
 }
 - (void)layoutSubviews{
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.and.top.top.equalTo(self);;
+        make.left.right.and.top.bottom.equalTo(self);;
     }];
+    
+    NSLog(@"%s",__func__);
 }
 #pragma mark - UICollectionView delagate and datasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -129,18 +144,38 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SDMultipleCornerViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KMultipleCornerViewCellIdentifier forIndexPath:indexPath];
-    [cell.cornerView setLocalImage:[UIImage imageNamed:@"douyu"] text:@"shendong"];
+//    [cell.cornerView setLocalImage:[UIImage imageNamed:@"douyu"] text:[NSString stringWithFormat:@"%lu",indexPath.row]];
+    NSDictionary *details = self.data[indexPath.row];
+    NSString *name = [details objectForKey:SDMultipleCornerViewImageIdentifier];
+    [cell.cornerView setLocalImage:[UIImage imageNamed:name] text:[details objectForKey:SDMultipleCornerViewTitleIdentifier]];
     return cell;
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(100, 100);
+    return loaclitemSize;
 }
-- (void)setDatas:(NSArray *)datas{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.complection(self.data[indexPath.row]);
+}
+#pragma mark - private method
+- (void)setScrollDirection:(UICollectionViewScrollDirection )scrollDirection{
+    self.flowlayout.scrollDirection  = scrollDirection;
+}
+- (void)setItemSize:(CGSize)itemSize{
+    loaclitemSize  = itemSize;
+    [self.collectionView reloadData];
+}
+
+- (void)setDatas:(NSArray *)datas selected:(void (^)(id))selectedComplander{
     [self.data removeAllObjects];
     [self.data addObjectsFromArray:datas];
+    [self.collectionView reloadData];
+    self.complection = selectedComplander;
+}
+- (void)willMoveToSuperview:(UIView *)newSuperview{
+    NSLog(@"%s",__func__);
     [self.collectionView reloadData];
 }
 @end

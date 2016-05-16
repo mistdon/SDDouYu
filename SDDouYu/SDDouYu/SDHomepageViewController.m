@@ -19,7 +19,7 @@
 
 static NSString *const cellIdentifierOne = @"cellIdentifierOne";
 static NSString *const cellIdentifierTwo = @"cellIdentifierTwo";
-static CGFloat const kTableViewHeaderViewHeight = 200;
+static CGFloat const kTableViewHeaderViewHeight = 250;
 
 @interface SDHomepageViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -32,6 +32,7 @@ static CGFloat const kTableViewHeaderViewHeight = 200;
 
 @implementation SDHomepageViewController{
     NSArray *titles;
+    NSArray *localTitles;
 }
 - (NSMutableArray *)dataArrayOne{
     if (!_dataArrayOne) {
@@ -59,19 +60,30 @@ static CGFloat const kTableViewHeaderViewHeight = 200;
 - (void)viewDidLoad {
     [super viewDidLoad];
     titles = @[@"颜值",@"最热",@"DOTA2",@"主机游戏",@"穿越火线",@"英雄联盟",@"炉石传说",@"魔兽世界",@"守望先锋",@"王者荣耀",@"星际争霸",@"格斗游戏"];
+    localTitles = @[@"主机游戏",@"穿越火线",@"英雄联盟",@"炉石传说",@"魔兽世界",@"守望先锋",@"王者荣耀",@"星际争霸",@"格斗游戏",@"更多"];
     [self.tableView registerNib:[UINib nibWithNibName:@"SDHomepageTableViewCell" bundle:nil] forCellReuseIdentifier:cellIdentifierOne];
     [self.tableView registerNib:[UINib nibWithNibName:@"SDTableViewCellTypeTwo" bundle:nil] forCellReuseIdentifier:cellIdentifierTwo];
     
     SDHomepageHeaderView *header = [[SDHomepageHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kTableViewHeaderViewHeight)];
     
     //顶部Headerview轮播图
+    
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSInteger index = 0; index <  localTitles.count; index++) {
+        NSDictionary *info = @{SDMultipleCornerViewImageIdentifier:@"douyu",SDMultipleCornerViewTitleIdentifier:localTitles[index]};
+        [array addObject:info];
+    }
     [HTTPRequest requestWithUrl:HTTPGetDouYuHomepageBannerInfomation success:^(id successObject) {
+        [header configureGames:array selected:^(id object) {
+            NSLog(@"object = %@", object);
+        }];
         [header configureBannerViews:(NSArray *)successObject selectAction:^(id object) {
             NSLog(@"title = %@",[(NSDictionary *)object objectForKey:@"title"]);
         }];
     } fail:^(id failObject, NSError *error) {
         ;
     }];
+    
     
     
     

@@ -10,7 +10,7 @@
 #import "SDBannerView.h"
 #import "SDMultipleCornerView.h"
 
-static CGFloat const kHeaderViewScale = 0.8;
+static CGFloat const kHeaderViewScale = 0.6;
 
 @interface SDHomepageHeaderView()
 
@@ -22,12 +22,14 @@ static CGFloat const kHeaderViewScale = 0.8;
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
+        self.backgroundColor                      = [UIColor whiteColor];
         _bannerView                               = [[SDBannerView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height * kHeaderViewScale)];
+        NSLog(@"size = %@",NSStringFromCGRect(CGRectMake(0, 0, frame.size.width, frame.size.height * kHeaderViewScale)));
         _bannerView.pageType                      = PageControlPositionDownRight;
         _bannerView.pageIndicatorTintColor        = [UIColor lightGrayColor];
         _bannerView.currentPageIndicatorTintColor = [UIColor orangeColor];
         _downstairsView = [[SDMultipleCornerView alloc] initWithFrame:CGRectMake(0, frame.size.height * kHeaderViewScale, frame.size.width, frame.size.height * (1 - kHeaderViewScale))];
-        _downstairsView.backgroundColor = [UIColor lightGrayColor];
+        _downstairsView.itemSize = CGSizeMake(frame.size.height*(1- kHeaderViewScale), frame.size.height*(1- kHeaderViewScale));
         [self addSubview:_bannerView];
         [self addSubview:_downstairsView];
     }
@@ -45,7 +47,11 @@ static CGFloat const kHeaderViewScale = 0.8;
     [self.bannerView setCurrentIndexDidTap:^(NSInteger currentIndex) {
         completion(resources[currentIndex]);
     }];
-    [self.downstairsView setDatas:@[@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3",@"1",@"2",@"3"]];
+}
+- (void)configureGames:(NSArray *)games selected:(selectedMultipleBlock)selectedHander{
+    [self.downstairsView setDatas:games selected:^(id object) {
+        selectedHander(object);
+    }];
 }
 
 @end

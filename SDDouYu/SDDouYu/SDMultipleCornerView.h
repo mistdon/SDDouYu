@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+FOUNDATION_EXPORT NSString *const SDMultipleCornerViewImageIdentifier;
+FOUNDATION_EXPORT NSString *const SDMultipleCornerViewTitleIdentifier;
 @interface SDCornerView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;
@@ -24,9 +26,13 @@
 
 @end
 
-
+typedef void(^selectedMultipleBlock)(id object);
 @interface SDMultipleCornerView : UIView
 
-@property (nonatomic, strong) NSArray *datas;
+@property (nonatomic) UICollectionViewScrollDirection scrollDirection;
+
+@property (nonatomic) CGSize itemSize; //default is CGSizeZero;
+
+- (void)setDatas:(NSArray *)datas selected:(selectedMultipleBlock)selectedComplander;
 
 @end

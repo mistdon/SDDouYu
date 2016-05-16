@@ -62,6 +62,11 @@ FOUNDATION_EXPORT NSString *const HTTPGetDouYuHomepageBannerInfomation;
  */
 FOUNDATION_EXPORT NSString *const HTTPGetDouYuHomepagelist;
 
+/**
+ *  获取首页内游戏内所有的产品详情
+ */
+FOUNDATION_EXPORT NSString *const HTTPGetAllGameInfomaitons;
+
 @interface HTTPRequest : NSObject
 
 + (void)requestWithUrl:(NSString *)urlString success:(successBlock)successHander fail:(failBlock)failHander;

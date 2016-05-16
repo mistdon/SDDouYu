@@ -29,8 +29,9 @@ NSString *const HTTPGetDouYuBigHot = @"http://capi.douyucdn.cn/api/v1/getCustomR
 NSString *const HTTPGetDouYuHomepageBannerInfomation = @"http://capi.douyucdn.cn/api/v1/slide/6?aid=ios&client_sys=ios&time=1463029440&version=2.22&auth=504dd0550153d17787ddcf0c58ce60cf";
 
 NSString *const HTTPGetDouYuHomepagelist = @"http://capi.douyucdn.cn/api/v1/getCustomRoom?aid=ios&client_sys=ios&tagIds=3_19_33_1_2_5_148_181_4_29_&time=1463030160&auth=e5e9482638e51ebbe264491c58802c13";
+
+NSString *const HTTPGetAllGameInfomaitons = @"http://capi.douyucdn.cn/api/v1/getColumnDetail?aid=ios&client_sys=ios&shortName=game&time=1463377200&auth=75549cbfb9c3a43b5827928030a5585a";
 /*
-NSString *const HTTPGetUserInfomation =
 NSString *const HTTPGetUserInfomation =
 NSString *const HTTPGetUserInfomation =
 NSString *const HTTPGetUserInfomation =

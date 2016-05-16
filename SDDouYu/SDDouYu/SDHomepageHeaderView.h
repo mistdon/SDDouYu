@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SDMultipleCornerView.h"
 
 typedef void(^selectedItemBlock)(id object);
 
 @interface SDHomepageHeaderView : UIView
 
 - (void)configureBannerViews:(NSArray *)resources selectAction:(selectedItemBlock)completion;
-
+- (void)configureGames:(NSArray *)games selected:(selectedMultipleBlock)selectedHander;
 @end

@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SDDouYu/AFNetworking.framework"
+  install_framework "Pods-SDDouYu/BlocksKit.framework"
   install_framework "Pods-SDDouYu/CocoaLumberjack.framework"
   install_framework "Pods-SDDouYu/DateTools.framework"
   install_framework "Pods-SDDouYu/KMCGeigerCounter.framework"
@@ -100,6 +101,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SDDouYu/AFNetworking.framework"
+  install_framework "Pods-SDDouYu/BlocksKit.framework"
   install_framework "Pods-SDDouYu/CocoaLumberjack.framework"
   install_framework "Pods-SDDouYu/DateTools.framework"
   install_framework "Pods-SDDouYu/KMCGeigerCounter.framework"
