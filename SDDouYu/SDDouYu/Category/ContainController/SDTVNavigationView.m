@@ -8,14 +8,11 @@
 
 #import "SDTVNavigationView.h"
 
-//static CGFloat const kMargin = 10;
-//static CGFloat const kItemWidth = 50;
-static CGFloat const kItemHeight = 50;
-
 @interface SDTVNavigationView()
 
 @property (nonatomic, strong) NSMutableArray *buttons;
 @property (nonatomic, strong) UIButton *selectedItem;
+@property (nonatomic, strong) UIView *BottomLine;
 
 @property (nonatomic, copy) SDTVNavigationViewItemClick clickedBlcok;
 
@@ -34,6 +31,9 @@ static CGFloat const kItemHeight = 50;
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator   = NO;
         self.backgroundColor                = [UIColor whiteColor];
+        self.BottomLine = [[UIView alloc] init];
+        self.BottomLine.backgroundColor = [UIColor orangeColor];
+        [self addSubview:self.BottomLine];
     }
     return self;
 }
@@ -43,9 +43,14 @@ static CGFloat const kItemHeight = 50;
         UIButton *button = [[UIButton alloc] init];
         [button setTitle:items[index] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-        button.backgroundColor = [UIColor greenColor];
+        __weak typeof(self)weakself = self;
         [button bk_addEventHandler:^(id sender) {
-            NSLog(@"sender = %@",sender);
+            NSLog(@"sender = %@",items[index]);
+            [UIView animateWithDuration:0.2 animations:^{
+                CGRect frame = weakself.BottomLine.frame;
+                frame = CGRectMake(frame.size.width * index, frame.origin.y, frame.size.width, frame.size.height);
+                weakself.BottomLine.frame = frame;;
+            }];
         } forControlEvents:UIControlEventTouchUpInside];
         [self.buttons addObject:button];
         [self addSubview:button];
@@ -57,9 +62,12 @@ static CGFloat const kItemHeight = 50;
     for (NSInteger index = 0; index < self.buttons.count; index++) {
         UIButton *button = [self.buttons objectAtIndex:index];
         CGFloat itemX = self.itemMargin + self.itemWidth * index;
-        button.frame = CGRectMake(itemX, 0, self.itemWidth, kItemHeight);
+        button.frame = CGRectMake(itemX, 0, self.itemWidth, SDTVNavigationViewItemHeight);
     }
-    self.contentSize = CGSizeMake(self.itemWidth * self.buttons.count + self.itemWidth * 2, kItemHeight);
+    NSLog(@"size = %@",NSStringFromCGRect(CGRectMake(0, SDTVNavigationViewItemHeight - 3, self.frame.size.width/self.items.count, 3)));
+    self.BottomLine.frame = CGRectMake(0, SDTVNavigationViewItemHeight - 3, self.frame.size.width/self.items.count, 3);
+    [self bringSubviewToFront:self.BottomLine];
+    self.contentSize = CGSizeMake(self.itemWidth * self.buttons.count + self.itemWidth * 2, SDTVNavigationViewItemHeight);
 }
 
 @end

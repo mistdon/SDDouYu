@@ -21,13 +21,13 @@
     [super viewDidLoad];
     
     SDTVChannel *channel = [[SDTVChannel alloc] init];
-    channel.tv_name = @"11";
+    channel.tv_name = @"推荐";
     SDTVChannel *channel1 = [[SDTVChannel alloc] init];
-    channel1.tv_name = @"22";
+    channel1.tv_name = @"游戏";
     SDTVChannel *channel2 = [[SDTVChannel alloc] init];
-    channel2.tv_name = @"33";
+    channel2.tv_name = @"娱乐";
     SDTVChannel *channel3 = [[SDTVChannel alloc] init];
-    channel3.tv_name = @"44";
+    channel3.tv_name = @"qipa";
     NSArray *arr = @[channel, channel1, channel2, channel3];
     NSMutableArray *mu = [NSMutableArray arrayWithCapacity:arr.count];
     for (SDTVChannel *temp in arr) {

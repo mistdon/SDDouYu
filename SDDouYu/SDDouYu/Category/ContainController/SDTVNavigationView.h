@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static CGFloat const SDTVNavigationViewItemHeight = 50;
+
 typedef void(^SDTVNavigationViewItemClick)(NSInteger selectedIndex);
 
 @interface SDTVNavigationView : UIScrollView

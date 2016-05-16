@@ -10,6 +10,7 @@
 #import "SDHomepageViewController.h"
 #import "SDCareViewController.h"
 #import "SDRootNavigationController.h"
+#import "SDHomeViewController.h"
 
 @interface SDTabBarController ()
 
@@ -21,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self addChildViewControlle:[[SDHomepageViewController alloc] init] showTitle:NO same:YES title:@"home" barItemTitle:@"首页" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
+    [self addChildViewControlle:[[SDHomeViewController alloc] init] showTitle:NO same:YES title:@"home" barItemTitle:@"首页" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
     [self addChildViewControlle:[[SDCareViewController alloc] init] showTitle:YES same: YES title:@"Care" barItemTitle:@"关注" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
     [self addChildViewControlle:[[UIViewController alloc] init] showTitle:NO same:YES title:@"222" barItemTitle:@"three" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
 

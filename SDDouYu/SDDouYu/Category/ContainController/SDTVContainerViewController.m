@@ -58,8 +58,8 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
         SDTVNavigationView *navView =[SDTVNavigationView TVNavigationViewWithItems:nil itemSelected:^(NSInteger selectedIndex) {
             [weakself setSelectedIndex:selectedIndex];
         }];
-        navView.itemWidth = 200;
-        navView.itemMargin = 20;
+        navView.itemWidth = SCREEN_WIDTH/4;
+        navView.itemMargin = 0;
         [self setNavigaitonView:navView];
         [self.view addSubview:navView];
         
@@ -72,8 +72,8 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
     [parentController.view addSubview:self.view];
 }
 - (void)setSelectedIndex:(NSInteger)selectedIndex{
-    _selectedIndex = selectedIndex;
-    CGFloat offsetX = self.view.bounds.size.width * selectedIndex;
+    _selectedIndex                    = selectedIndex;
+    CGFloat offsetX                   = self.view.bounds.size.width * selectedIndex;
     self.collectionView.contentOffset = CGPointMake(offsetX, 0);
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -83,19 +83,18 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
     CGFloat height = self.view.bounds.size.height;
     CGFloat topNav = 64;
     CGFloat bottomTab = 49;
-    if (self.navigationController && self.tabBarController) {
-        self.navigaitonView.frame = CGRectMake(0, topNav, width, 44);
-        self.collectionView.frame = CGRectMake(0, topNav+44, width, height-44-topNav-bottomTab);
+    if (self.navigationController) {
+        self.navigaitonView.frame = CGRectMake(0, topNav, width, SDTVNavigationViewItemHeight);
+        self.collectionView.frame = CGRectMake(0, topNav+SDTVNavigationViewItemHeight, width, height-SDTVNavigationViewItemHeight-topNav-bottomTab);
     }else{
-        self.navigaitonView.frame = CGRectMake(0, 0, width, 44);
+        self.navigaitonView.frame = CGRectMake(0, 0, width, SDTVNavigationViewItemHeight);
     }
     self.flowlayout.itemSize = self.collectionView.bounds.size;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.collectionView.scrollsToTop = NO;
+    self.collectionView.scrollsToTop          = NO;
 }
 
 - (void)didReceiveMemoryWarning {

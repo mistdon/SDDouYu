@@ -33,6 +33,7 @@
 		3BD98C5F1CE49B1700BA5979 /* SDScrollTogetherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C591CE49B1700BA5979 /* SDScrollTogetherView.m */; };
 		3BD98C621CE49B3400BA5979 /* SDHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */; };
 		3BD98C651CE49B4F00BA5979 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */; };
+		3BDDE3B61CEA285A00921C62 /* SDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDE3B51CEA285A00921C62 /* SDHomeViewController.m */; };
 		3BDF97141CE73AFF004DCA64 /* SDChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF97131CE73AFF004DCA64 /* SDChannelModel.m */; };
 		3BEBFA2B1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */; };
 		3BEBFA2C1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */; };
@@ -94,6 +95,8 @@
 		3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomepageViewModel.m; sourceTree = "<group>"; };
 		3BD98C631CE49B4F00BA5979 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
 		3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		3BDDE3B41CEA285A00921C62 /* SDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomeViewController.h; sourceTree = "<group>"; };
+		3BDDE3B51CEA285A00921C62 /* SDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomeViewController.m; sourceTree = "<group>"; };
 		3BDF97121CE73AFF004DCA64 /* SDChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChannelModel.h; sourceTree = "<group>"; };
 		3BDF97131CE73AFF004DCA64 /* SDChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChannelModel.m; sourceTree = "<group>"; };
 		3BEBFA281CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTableViewCellTypeTwo.h; sourceTree = "<group>"; };
@@ -128,13 +131,13 @@
 		3BA37EAA1CE9BCC8004AF002 /* ContainController */ = {
 			isa = PBXGroup;
 			children = (
+				3BA37EB11CE9C2D4004AF002 /* Model */,
 				3BA37EAB1CE9BCF4004AF002 /* SDTVContainerViewController.h */,
 				3BA37EAC1CE9BCF4004AF002 /* SDTVContainerViewController.m */,
 				3BA37EAE1CE9BF06004AF002 /* SDTVNavigationView.h */,
 				3BA37EAF1CE9BF06004AF002 /* SDTVNavigationView.m */,
-				3BA37EB11CE9C2D4004AF002 /* Model */,
 			);
-			name = ContainController;
+			path = ContainController;
 			sourceTree = "<group>";
 		};
 		3BA37EB11CE9C2D4004AF002 /* Model */ = {
@@ -143,16 +146,16 @@
 				3BA37EB21CE9C2E6004AF002 /* SDTVChannel.h */,
 				3BA37EB31CE9C2E6004AF002 /* SDTVChannel.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3BD98C051CE4959A00BA5979 = {
 			isa = PBXGroup;
 			children = (
-				3BD98C101CE4959A00BA5979 /* SDDouYu */,
-				3BD98C0F1CE4959A00BA5979 /* Products */,
-				EC5DDEC7DB53FA539FE3870C /* Pods */,
 				E92CBE8C2B3437EF4FEDB234 /* Frameworks */,
+				EC5DDEC7DB53FA539FE3870C /* Pods */,
+				3BD98C0F1CE4959A00BA5979 /* Products */,
+				3BD98C101CE4959A00BA5979 /* SDDouYu */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,14 +171,14 @@
 			isa = PBXGroup;
 			children = (
 				3BEBFA321CE6D672001CF2E2 /* Category */,
+				3BD98C291CE49A3800BA5979 /* Class */,
 				3BD98C2B1CE49A4300BA5979 /* HTTPRequest */,
 				3BD98C2A1CE49A3D00BA5979 /* Helper */,
-				3BD98C291CE49A3800BA5979 /* Class */,
+				3BD98C111CE4959A00BA5979 /* Supporting Files */,
 				3BD98C141CE4959A00BA5979 /* AppDelegate.h */,
 				3BD98C151CE4959A00BA5979 /* AppDelegate.m */,
 				3BD98C171CE4959A00BA5979 /* ViewController.h */,
 				3BD98C181CE4959A00BA5979 /* ViewController.m */,
-				3BD98C111CE4959A00BA5979 /* Supporting Files */,
 			);
 			path = SDDouYu;
 			sourceTree = "<group>";
@@ -183,14 +186,14 @@
 		3BD98C111CE4959A00BA5979 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3BD98C1A1CE4959A00BA5979 /* Main.storyboard */,
 				3BD98C1D1CE4959A00BA5979 /* Assets.xcassets */,
-				3BD98C1F1CE4959A00BA5979 /* LaunchScreen.storyboard */,
 				3BD98C221CE4959A00BA5979 /* Info.plist */,
-				3BD98C121CE4959A00BA5979 /* main.m */,
+				3BD98C1F1CE4959A00BA5979 /* LaunchScreen.storyboard */,
+				3BD98C1A1CE4959A00BA5979 /* Main.storyboard */,
 				3BD98C281CE4997A00BA5979 /* SDDouYu-Prefix.pch */,
+				3BD98C121CE4959A00BA5979 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3BD98C291CE49A3800BA5979 /* Class */ = {
@@ -200,14 +203,14 @@
 				3BD98C2D1CE49A5C00BA5979 /* Homepage */,
 				3BD98C2C1CE49A5500BA5979 /* RootClass */,
 			);
-			name = Class;
+			path = Class;
 			sourceTree = "<group>";
 		};
 		3BD98C2A1CE49A3D00BA5979 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Helper;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		3BD98C2B1CE49A4300BA5979 /* HTTPRequest */ = {
@@ -216,31 +219,31 @@
 				3BD98C631CE49B4F00BA5979 /* HTTPRequest.h */,
 				3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */,
 			);
-			name = HTTPRequest;
+			path = HTTPRequest;
 			sourceTree = "<group>";
 		};
 		3BD98C2C1CE49A5500BA5979 /* RootClass */ = {
 			isa = PBXGroup;
 			children = (
-				3BD98C3B1CE49AC100BA5979 /* SDTabBarController.h */,
-				3BD98C3C1CE49AC100BA5979 /* SDTabBarController.m */,
 				3BD98C331CE49AAA00BA5979 /* SDRootNavigationController.h */,
 				3BD98C341CE49AAA00BA5979 /* SDRootNavigationController.m */,
 				3BD98C351CE49AAA00BA5979 /* SDRootViewController.h */,
 				3BD98C361CE49AAA00BA5979 /* SDRootViewController.m */,
+				3BD98C3B1CE49AC100BA5979 /* SDTabBarController.h */,
+				3BD98C3C1CE49AC100BA5979 /* SDTabBarController.m */,
 			);
-			name = RootClass;
+			path = RootClass;
 			sourceTree = "<group>";
 		};
 		3BD98C2D1CE49A5C00BA5979 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				3BD98C2F1CE49A6C00BA5979 /* Controller */,
+				3BD98C301CE49A7C00BA5979 /* Model */,
 				3BD98C321CE49A8700BA5979 /* VIewModel */,
 				3BD98C311CE49A8200BA5979 /* View */,
-				3BD98C301CE49A7C00BA5979 /* Model */,
-				3BD98C2F1CE49A6C00BA5979 /* Controller */,
 			);
-			name = Homepage;
+			path = Homepage;
 			sourceTree = "<group>";
 		};
 		3BD98C2E1CE49A6200BA5979 /* Care */ = {
@@ -249,7 +252,7 @@
 				3BD98C3E1CE49ACF00BA5979 /* SDCareViewController.h */,
 				3BD98C3F1CE49ACF00BA5979 /* SDCareViewController.m */,
 			);
-			name = Care;
+			path = Care;
 			sourceTree = "<group>";
 		};
 		3BD98C2F1CE49A6C00BA5979 /* Controller */ = {
@@ -259,48 +262,50 @@
 				3BD98C4B1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m */,
 				3BD98C4C1CE49AFD00BA5979 /* SDHomepageViewController.h */,
 				3BD98C4D1CE49AFD00BA5979 /* SDHomepageViewController.m */,
+				3BDDE3B41CEA285A00921C62 /* SDHomeViewController.h */,
+				3BDDE3B51CEA285A00921C62 /* SDHomeViewController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3BD98C301CE49A7C00BA5979 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3BEBFA361CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.h */,
+				3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */,
 				3BEBFA331CE6EC69001CF2E2 /* SDBaseLiveModel.h */,
 				3BEBFA341CE6EC69001CF2E2 /* SDBaseLiveModel.m */,
 				3BDF97121CE73AFF004DCA64 /* SDChannelModel.h */,
 				3BDF97131CE73AFF004DCA64 /* SDChannelModel.m */,
-				3BEBFA361CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.h */,
-				3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */,
 				3BD98C451CE49AE900BA5979 /* SDHomepageDataSource.h */,
 				3BD98C461CE49AE900BA5979 /* SDHomepageDataSource.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3BD98C311CE49A8200BA5979 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3BD98C531CE49B1700BA5979 /* SDHomepageHeaderView.h */,
-				3BD98C541CE49B1700BA5979 /* SDHomepageHeaderView.m */,
-				3BD98C581CE49B1700BA5979 /* SDScrollTogetherView.h */,
-				3BD98C591CE49B1700BA5979 /* SDScrollTogetherView.m */,
-				3BEBFA391CE6F221001CF2E2 /* UITableViewCell+Extension.h */,
-				3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */,
-				3BD98C551CE49B1700BA5979 /* SDHomepageTableViewCell.h */,
-				3BD98C561CE49B1700BA5979 /* SDHomepageTableViewCell.m */,
-				3BD98C571CE49B1700BA5979 /* SDHomepageTableViewCell.xib */,
-				3BD98C501CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.h */,
-				3BD98C511CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m */,
-				3BD98C521CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.xib */,
-				3BEBFA281CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.h */,
-				3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */,
-				3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */,
 				3BEBFA2D1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.h */,
 				3BEBFA2E1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.m */,
 				3BEBFA2F1CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib */,
+				3BD98C501CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.h */,
+				3BD98C511CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m */,
+				3BD98C521CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.xib */,
+				3BD98C531CE49B1700BA5979 /* SDHomepageHeaderView.h */,
+				3BD98C541CE49B1700BA5979 /* SDHomepageHeaderView.m */,
+				3BD98C551CE49B1700BA5979 /* SDHomepageTableViewCell.h */,
+				3BD98C561CE49B1700BA5979 /* SDHomepageTableViewCell.m */,
+				3BD98C571CE49B1700BA5979 /* SDHomepageTableViewCell.xib */,
+				3BD98C581CE49B1700BA5979 /* SDScrollTogetherView.h */,
+				3BD98C591CE49B1700BA5979 /* SDScrollTogetherView.m */,
+				3BEBFA281CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.h */,
+				3BEBFA291CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m */,
+				3BEBFA2A1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib */,
+				3BEBFA391CE6F221001CF2E2 /* UITableViewCell+Extension.h */,
+				3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		3BD98C321CE49A8700BA5979 /* VIewModel */ = {
@@ -309,7 +314,7 @@
 				3BD98C601CE49B3400BA5979 /* SDHomepageViewModel.h */,
 				3BD98C611CE49B3400BA5979 /* SDHomepageViewModel.m */,
 			);
-			name = VIewModel;
+			path = VIewModel;
 			sourceTree = "<group>";
 		};
 		3BEBFA321CE6D672001CF2E2 /* Category */ = {
@@ -321,7 +326,7 @@
 				3B05DBFF1CE84881008D90E2 /* SDMultipleCornerView.h */,
 				3B05DC001CE84881008D90E2 /* SDMultipleCornerView.m */,
 			);
-			name = Category;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		E92CBE8C2B3437EF4FEDB234 /* Frameworks */ = {
@@ -466,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BDDE3B61CEA285A00921C62 /* SDHomeViewController.m in Sources */,
 				3BD98C401CE49ACF00BA5979 /* SDCareViewController.m in Sources */,
 				3BA37EB01CE9BF06004AF002 /* SDTVNavigationView.m in Sources */,
 				3BD98C5A1CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m in Sources */,
@@ -505,6 +511,7 @@
 				3BD98C1B1CE4959A00BA5979 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3BD98C1F1CE4959A00BA5979 /* LaunchScreen.storyboard */ = {
@@ -513,6 +520,7 @@
 				3BD98C201CE4959A00BA5979 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -605,8 +613,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SDDouYu/SDDouYu-Prefix.pch";
-				INFOPLIST_FILE = SDDouYu/Info.plist;
+				GCC_PREFIX_HEADER = "SDDouYu/Supporting Files/SDDouYu-Prefix.pch";
+				INFOPLIST_FILE = "SDDouYu/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sybercare.enterprise.SDDouYu;
@@ -622,8 +630,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SDDouYu/SDDouYu-Prefix.pch";
-				INFOPLIST_FILE = SDDouYu/Info.plist;
+				GCC_PREFIX_HEADER = "SDDouYu/Supporting Files/SDDouYu-Prefix.pch";
+				INFOPLIST_FILE = "SDDouYu/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sybercare.enterprise.SDDouYu;

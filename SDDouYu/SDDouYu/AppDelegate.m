@@ -52,14 +52,15 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
 //    sleep(2);
     
 //    [self trunOnCounterTest];  //打开滑动帧率检测
-    NSInteger ok = 0;
+    NSInteger ok = 1;
     NSLog(@"%s",__func__);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     if(ok){
        self.window.rootViewController = [[SDTabBarController alloc] init];
     }else{
-        self.window.rootViewController = [[ViewController alloc] init];
+        UINavigationController *nav =[[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+        self.window.rootViewController = [ViewController new];
     }
     
     [self.window makeKeyAndVisible];
