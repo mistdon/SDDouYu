@@ -33,12 +33,12 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     flow.minimumInteritemSpacing     = 1;
     flow.minimumLineSpacing          = 1;
-    UICollectionView *collection     = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flow];
+    UICollectionView *collection     = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 49 - 44) collectionViewLayout:flow];
     collection.dataSource            = self;
     collection.delegate              = self;
     collection.backgroundColor       = [UIColor whiteColor];
     self.collectionView = collection;
-//    [self.view addSubview:collection];
+    [self.view addSubview:collection];
     [collection registerClass:[SDCollectionViewCellTypeTwo class] forCellWithReuseIdentifier:kcellIdentifier];
 
 }

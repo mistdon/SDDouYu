@@ -48,12 +48,13 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
     cornerView.flowlayout.minimumInteritemSpacing = 0;
     cornerView.flowlayout.minimumLineSpacing = 0;
     self.tableview.tableHeaderView = cornerView;
+    [self.view addSubview:self.tableview];
     
     
     [HTTPRequest requestWithUrl:HTTPGetAllFunInfomaitons success:^(id successObject) {
         if (successObject) {
             for (NSDictionary *info in (NSArray *)successObject) {
-                SDChannelModel *model = [SDChannelModel recomendViewModelWithKeysAndValues:info];
+                SDChannelSubModel *model = [SDChannelSubModel recomendViewModelWithKeysAndValues:info];
                 [self.dataArray addObject:model];
             }
             //            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];

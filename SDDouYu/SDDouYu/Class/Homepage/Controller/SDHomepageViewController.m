@@ -48,7 +48,7 @@ static CGFloat const kTableViewHeaderViewHeight = 250;
 }
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView                     = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _tableView                     = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 49 - 44) style:UITableViewStylePlain];
         _tableView.dataSource          = self;
         _tableView.delegate            = self;
         _tableView.allowsSelection     = NO;
