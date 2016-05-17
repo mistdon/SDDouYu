@@ -22,7 +22,7 @@
 #import "BlocksKit.h"
 #import "UIControl+BlocksKit.h"
 #import "ReactiveCocoa.h"
-
+#import "HYBImageCliped.h"
 
 
 #endif /* SDDouYu_Prefix_pch */

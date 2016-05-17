@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0483FC1CEAAC310001CFF6 /* SDHomegameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */; };
+		3B0483FF1CEAB9220001CFF6 /* SDHomeFunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */; };
+		3B0484021CEAB93E0001CFF6 /* SDHomeStrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */; };
+		3B0484051CEACFB40001CFF6 /* SDGameCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0484041CEACFB40001CFF6 /* SDGameCategoryModel.m */; };
+		3B0484101CEAD3010001CFF6 /* SDHomegameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04840F1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.m */; };
+		3B0484171CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0484151CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.m */; };
+		3B0484181CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0484161CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.xib */; };
+		3B04841E1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04841D1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.m */; };
 		3B05DBFE1CE84365008D90E2 /* SDCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B05DBFD1CE84365008D90E2 /* SDCustomButton.m */; };
 		3B05DC011CE84881008D90E2 /* SDMultipleCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B05DC001CE84881008D90E2 /* SDMultipleCornerView.m */; };
+		3B722DFB1CEB27C700D23975 /* UIImageView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B722DFA1CEB27C700D23975 /* UIImageView+Corner.m */; };
 		3BA37EAD1CE9BCF4004AF002 /* SDTVContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EAC1CE9BCF4004AF002 /* SDTVContainerViewController.m */; };
 		3BA37EB01CE9BF06004AF002 /* SDTVNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EAF1CE9BF06004AF002 /* SDTVNavigationView.m */; };
 		3BA37EB41CE9C2E6004AF002 /* SDTVChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EB31CE9C2E6004AF002 /* SDTVChannel.m */; };
@@ -46,10 +55,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0483FA1CEAAC310001CFF6 /* SDHomegameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomegameViewController.h; path = Homepage/Controller/SDHomegameViewController.h; sourceTree = "<group>"; };
+		3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDHomegameViewController.m; path = Homepage/Controller/SDHomegameViewController.m; sourceTree = "<group>"; };
+		3B0483FD1CEAB9220001CFF6 /* SDHomeFunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomeFunViewController.h; path = Homepage/Controller/SDHomeFunViewController.h; sourceTree = "<group>"; };
+		3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDHomeFunViewController.m; path = Homepage/Controller/SDHomeFunViewController.m; sourceTree = "<group>"; };
+		3B0484001CEAB93E0001CFF6 /* SDHomeStrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomeStrageViewController.h; path = Homepage/Controller/SDHomeStrageViewController.h; sourceTree = "<group>"; };
+		3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDHomeStrageViewController.m; path = Homepage/Controller/SDHomeStrageViewController.m; sourceTree = "<group>"; };
+		3B0484031CEACFB40001CFF6 /* SDGameCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDGameCategoryModel.h; path = Homepage/Model/SDGameCategoryModel.h; sourceTree = "<group>"; };
+		3B0484041CEACFB40001CFF6 /* SDGameCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDGameCategoryModel.m; path = Homepage/Model/SDGameCategoryModel.m; sourceTree = "<group>"; };
+		3B04840E1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomegameCollectionViewCell.h; sourceTree = "<group>"; };
+		3B04840F1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomegameCollectionViewCell.m; sourceTree = "<group>"; };
+		3B0484141CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomegameCollectionHeaderView.h; sourceTree = "<group>"; };
+		3B0484151CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomegameCollectionHeaderView.m; sourceTree = "<group>"; };
+		3B0484161CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDHomegameCollectionHeaderView.xib; sourceTree = "<group>"; };
+		3B04841C1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomegameCommonCollectionViewCell.h; sourceTree = "<group>"; };
+		3B04841D1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomegameCommonCollectionViewCell.m; sourceTree = "<group>"; };
 		3B05DBFC1CE84365008D90E2 /* SDCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCustomButton.h; sourceTree = "<group>"; };
 		3B05DBFD1CE84365008D90E2 /* SDCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCustomButton.m; sourceTree = "<group>"; };
 		3B05DBFF1CE84881008D90E2 /* SDMultipleCornerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMultipleCornerView.h; sourceTree = "<group>"; };
 		3B05DC001CE84881008D90E2 /* SDMultipleCornerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMultipleCornerView.m; sourceTree = "<group>"; };
+		3B722DF91CEB27C700D23975 /* UIImageView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Corner.h"; sourceTree = "<group>"; };
+		3B722DFA1CEB27C700D23975 /* UIImageView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Corner.m"; sourceTree = "<group>"; };
 		3BA37EAB1CE9BCF4004AF002 /* SDTVContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTVContainerViewController.h; sourceTree = "<group>"; };
 		3BA37EAC1CE9BCF4004AF002 /* SDTVContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTVContainerViewController.m; sourceTree = "<group>"; };
 		3BA37EAE1CE9BF06004AF002 /* SDTVNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTVNavigationView.h; sourceTree = "<group>"; };
@@ -128,6 +154,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0484061CEAD2990001CFF6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B0484091CEAD2B90001CFF6 /* Strange */,
+				3B0484081CEAD2B30001CFF6 /* Fun */,
+				3B0484071CEAD2AB0001CFF6 /* Game */,
+				3BD98C2D1CE49A5C00BA5979 /* Homepage */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		3B0484071CEAD2AB0001CFF6 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				3B04840D1CEAD2D80001CFF6 /* View */,
+				3B04840C1CEAD2D30001CFF6 /* Model */,
+				3B04840A1CEAD2C40001CFF6 /* Controller */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		3B0484081CEAD2B30001CFF6 /* Fun */ = {
+			isa = PBXGroup;
+			children = (
+				3B722DF51CEB0E7100D23975 /* Controller */,
+			);
+			name = Fun;
+			sourceTree = "<group>";
+		};
+		3B0484091CEAD2B90001CFF6 /* Strange */ = {
+			isa = PBXGroup;
+			children = (
+				3B0484211CEAF5F10001CFF6 /* View */,
+				3B0484201CEAF5EC0001CFF6 /* Model */,
+				3B04841F1CEAF56A0001CFF6 /* Controller */,
+			);
+			name = Strange;
+			sourceTree = "<group>";
+		};
+		3B04840A1CEAD2C40001CFF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B0483FA1CEAAC310001CFF6 /* SDHomegameViewController.h */,
+				3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3B04840C1CEAD2D30001CFF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B0484031CEACFB40001CFF6 /* SDGameCategoryModel.h */,
+				3B0484041CEACFB40001CFF6 /* SDGameCategoryModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3B04840D1CEAD2D80001CFF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B04840E1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.h */,
+				3B04840F1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.m */,
+				3B04841C1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.h */,
+				3B04841D1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.m */,
+				3B0484141CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.h */,
+				3B0484151CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.m */,
+				3B0484161CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3B04841F1CEAF56A0001CFF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B0484001CEAB93E0001CFF6 /* SDHomeStrageViewController.h */,
+				3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3B0484201CEAF5EC0001CFF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3B0484211CEAF5F10001CFF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3B722DF51CEB0E7100D23975 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B0483FD1CEAB9220001CFF6 /* SDHomeFunViewController.h */,
+				3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		3BA37EAA1CE9BCC8004AF002 /* ContainController */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,8 +328,8 @@
 		3BD98C291CE49A3800BA5979 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3B0484061CEAD2990001CFF6 /* Home */,
 				3BD98C2E1CE49A6200BA5979 /* Care */,
-				3BD98C2D1CE49A5C00BA5979 /* Homepage */,
 				3BD98C2C1CE49A5500BA5979 /* RootClass */,
 			);
 			path = Class;
@@ -260,10 +389,10 @@
 			children = (
 				3BD98C4A1CE49AFD00BA5979 /* SDHomeGameDetailViewController.h */,
 				3BD98C4B1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m */,
-				3BD98C4C1CE49AFD00BA5979 /* SDHomepageViewController.h */,
-				3BD98C4D1CE49AFD00BA5979 /* SDHomepageViewController.m */,
 				3BDDE3B41CEA285A00921C62 /* SDHomeViewController.h */,
 				3BDDE3B51CEA285A00921C62 /* SDHomeViewController.m */,
+				3BD98C4C1CE49AFD00BA5979 /* SDHomepageViewController.h */,
+				3BD98C4D1CE49AFD00BA5979 /* SDHomepageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +454,8 @@
 				3B05DBFD1CE84365008D90E2 /* SDCustomButton.m */,
 				3B05DBFF1CE84881008D90E2 /* SDMultipleCornerView.h */,
 				3B05DC001CE84881008D90E2 /* SDMultipleCornerView.m */,
+				3B722DF91CEB27C700D23975 /* UIImageView+Corner.h */,
+				3B722DFA1CEB27C700D23975 /* UIImageView+Corner.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -407,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD98C211CE4959A00BA5979 /* LaunchScreen.storyboard in Resources */,
+				3B0484181CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.xib in Resources */,
 				3BEBFA2C1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.xib in Resources */,
 				3BD98C1E1CE4959A00BA5979 /* Assets.xcassets in Resources */,
 				3BEBFA311CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib in Resources */,
@@ -471,19 +603,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0484101CEAD3010001CFF6 /* SDHomegameCollectionViewCell.m in Sources */,
 				3BDDE3B61CEA285A00921C62 /* SDHomeViewController.m in Sources */,
 				3BD98C401CE49ACF00BA5979 /* SDCareViewController.m in Sources */,
 				3BA37EB01CE9BF06004AF002 /* SDTVNavigationView.m in Sources */,
+				3B0484171CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.m in Sources */,
 				3BD98C5A1CE49B1700BA5979 /* SDHomepageContentCollectionViewCell.m in Sources */,
+				3B04841E1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.m in Sources */,
 				3BEBFA351CE6EC69001CF2E2 /* SDBaseLiveModel.m in Sources */,
 				3BD98C3D1CE49AC100BA5979 /* SDTabBarController.m in Sources */,
+				3B0483FF1CEAB9220001CFF6 /* SDHomeFunViewController.m in Sources */,
 				3BD98C5F1CE49B1700BA5979 /* SDScrollTogetherView.m in Sources */,
 				3BA37EB41CE9C2E6004AF002 /* SDTVChannel.m in Sources */,
 				3BD98C5C1CE49B1700BA5979 /* SDHomepageHeaderView.m in Sources */,
 				3BD98C191CE4959A00BA5979 /* ViewController.m in Sources */,
 				3B05DC011CE84881008D90E2 /* SDMultipleCornerView.m in Sources */,
+				3B0484021CEAB93E0001CFF6 /* SDHomeStrageViewController.m in Sources */,
+				3B0483FC1CEAAC310001CFF6 /* SDHomegameViewController.m in Sources */,
 				3BD98C651CE49B4F00BA5979 /* HTTPRequest.m in Sources */,
 				3BA37EAD1CE9BCF4004AF002 /* SDTVContainerViewController.m in Sources */,
+				3B0484051CEACFB40001CFF6 /* SDGameCategoryModel.m in Sources */,
 				3BD98C4E1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m in Sources */,
 				3BEBFA2B1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m in Sources */,
 				3B05DBFE1CE84365008D90E2 /* SDCustomButton.m in Sources */,
@@ -499,6 +638,7 @@
 				3BD98C131CE4959A00BA5979 /* main.m in Sources */,
 				3BDF97141CE73AFF004DCA64 /* SDChannelModel.m in Sources */,
 				3BD98C5D1CE49B1700BA5979 /* SDHomepageTableViewCell.m in Sources */,
+				3B722DFB1CEB27C700D23975 /* UIImageView+Corner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,4 +14,6 @@
 
 @property (nonatomic, copy) NSString *tv_name;
 
+@property (nonatomic, copy) NSString *tv_tag;
+
 @end

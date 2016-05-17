@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     SDTVChannel *channel = [[SDTVChannel alloc] init];
     channel.tv_name = @"推荐";
     SDTVChannel *channel1 = [[SDTVChannel alloc] init];
@@ -31,8 +31,9 @@
     NSArray *arr = @[channel, channel1, channel2, channel3];
     NSMutableArray *mu = [NSMutableArray arrayWithCapacity:arr.count];
     for (SDTVChannel *temp in arr) {
-        UIViewController *vc = [[UIViewController alloc] init];
+        UITableViewController *vc = [[UITableViewController alloc] init];
         vc.title = temp.tv_name;
+        vc.view.backgroundColor = [UIColor redColor];
         UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 375, 100)];
         lable.text = temp.tv_name;
         lable.backgroundColor = [UIColor redColor];
@@ -41,7 +42,7 @@
     }
     
     SDTVContainerViewController *container = [SDTVContainerViewController TVContainterViewControllers:mu parentController:self];
-    
+//
     
     
     

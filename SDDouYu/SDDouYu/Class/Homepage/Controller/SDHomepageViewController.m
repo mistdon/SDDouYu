@@ -48,11 +48,12 @@ static CGFloat const kTableViewHeaderViewHeight = 250;
 }
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView            = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
-        _tableView.dataSource = self;
-        _tableView.delegate   = self;
-        _tableView.allowsSelection = NO;
+        _tableView                     = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _tableView.dataSource          = self;
+        _tableView.delegate            = self;
+        _tableView.allowsSelection     = NO;
         _tableView.backgroundColor =[UIColor whiteColor];
+//        _tableView.autoresizesSubviews = NO
     }
     return _tableView;
 }
@@ -69,14 +70,22 @@ static CGFloat const kTableViewHeaderViewHeight = 250;
     //顶部Headerview轮播图
     
     NSMutableArray *array = [NSMutableArray array];
-    for (NSInteger index = 0; index <  localTitles.count; index++) {
-        NSDictionary *info = @{SDMultipleCornerViewImageIdentifier:@"douyu",SDMultipleCornerViewTitleIdentifier:localTitles[index]};
-        [array addObject:info];
-    }
-    [HTTPRequest requestWithUrl:HTTPGetDouYuHomepageBannerInfomation success:^(id successObject) {
+    [HTTPRequest requestWithUrl:HTTPGetAllGameInfomaitons success:^(id successObject) {
+        NSLog(@"succes =%@",successObject);
+        NSArray *array1 = [SDGameCategoryModel mj_objectArrayWithKeyValuesArray:(NSArray *)successObject];
+        for (SDGameCategoryModel *model in array1) {
+            [array addObject:model];
+            if (array.count > 9) {
+                break;
+            }
+        }
         [header configureGames:array selected:^(id object) {
             NSLog(@"object = %@", object);
         }];
+    } fail:^(id failObject, NSError *error) {
+        ;
+    }];
+    [HTTPRequest requestWithUrl:HTTPGetDouYuHomepageBannerInfomation success:^(id successObject) {
         [header configureBannerViews:(NSArray *)successObject selectAction:^(id object) {
             NSLog(@"title = %@",[(NSDictionary *)object objectForKey:@"title"]);
         }];

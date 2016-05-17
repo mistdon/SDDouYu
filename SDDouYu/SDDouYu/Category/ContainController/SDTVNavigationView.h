@@ -10,9 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static CGFloat const SDTVNavigationViewItemHeight = 50;
+static CGFloat const SDTVNavigationViewItemHeight = 44;
 
 typedef void(^SDTVNavigationViewItemClick)(NSInteger selectedIndex);
+
 
 @interface SDTVNavigationView : UIScrollView
 
@@ -26,6 +27,7 @@ typedef void(^SDTVNavigationViewItemClick)(NSInteger selectedIndex);
 
 + (instancetype)TVNavigationViewWithItems:(nullable NSArray<NSString *>*)items itemSelected:(nullable SDTVNavigationViewItemClick)block;
 
+- (void)scrollNavigaitonViewDidScroll:(CGFloat)offset;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,6 +9,9 @@
 #import "SDHomeViewController.h"
 #import "SDTVContainerViewController.h"
 #import "SDHomepageViewController.h"
+#import "SDHomegameViewController.h"
+#import "SDHomeFunViewController.h"
+#import "SDHomeStrageViewController.h"
 
 @interface SDHomeViewController ()
 
@@ -28,21 +31,17 @@
     channel3.tv_name = @"奇葩";
     NSArray *arr = @[channel, channel1, channel2, channel3];
     NSMutableArray *mu = [NSMutableArray arrayWithCapacity:arr.count];
-    SDHomepageViewController *home = [[SDHomepageViewController alloc] init];
-    home.title = channel.tv_name;
-    [mu addObject:home];
-    for (NSInteger index1 = 0;index1 < arr.count; index1++) {
-        SDTVChannel *temp = arr[index1];
-        if (index1 > 0) {
-            UIViewController *vc = [[UIViewController alloc] init];
-            vc.title = temp.tv_name;
-            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 375, 100)];
-            lable.text = temp.tv_name;
-            lable.backgroundColor = [UIColor redColor];
-            [vc.view addSubview:lable];
-            [mu addObject:vc];
-        }
+
+    NSArray *classarray = @[@"SDHomepageViewController",@"SDHomegameViewController",@"SDHomeFunViewController",@"SDHomeStrageViewController"];
+    
+    for (NSInteger index = 0; index < classarray.count; index++) {
+        UIViewController *vc = [[NSClassFromString((NSString *)classarray[index]) alloc] init];
+        SDTVChannel *channel = arr[index];
+        vc.title =channel.tv_name;
+        [mu addObject:vc];
     }
+    
+    
     
     SDTVContainerViewController *container = [SDTVContainerViewController TVContainterViewControllers:mu parentController:self];
 }

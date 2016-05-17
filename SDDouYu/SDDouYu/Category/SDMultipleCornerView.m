@@ -7,7 +7,7 @@
 //
 
 #import "SDMultipleCornerView.h"
-
+#import "UIImageView+Corner.h"
 NSString *const SDMultipleCornerViewImageIdentifier = @"SDMultipleCornerViewImageIdentifier";
 NSString *const SDMultipleCornerViewTitleIdentifier = @"SDMultipleCornerViewTitleIdentifier";
 
@@ -46,8 +46,8 @@ static CGFloat const kCornerViewScale = 0.8;
     [self addSubview:self.textLable];
 }
 - (void)layoutSubviews{
-    self.imageView.layer.cornerRadius = (self.frame.size.height * kCornerViewScale) / 2;
-    self.imageView.clipsToBounds = YES;
+//    self.imageView.layer.cornerRadius = (self.frame.size.height * kCornerViewScale) / 2;
+//    self.imageView.clipsToBounds = YES;
     [self.textLable mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.and.bottom.equalTo(self);
         make.height.mas_equalTo(self.frame.size.height * (1 - kCornerViewScale));
@@ -60,7 +60,8 @@ static CGFloat const kCornerViewScale = 0.8;
     }];
 }
 - (void)setImage:(NSURL *)url text:(NSString *)text{
-    [self.imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"douyu"]];
+//    [self.imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"douyu"]];
+    [self.imageView setImageViewCorner:url placeholderImage:[UIImage imageNamed:@"douyu"]];
     self.textLable.text = text;
 }
 - (void)setLocalImage:(UIImage *)url text:(NSString *)text{
@@ -92,9 +93,8 @@ static CGFloat const kCornerViewScale = 0.8;
 static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerViewCellIdentifier";
 
 @interface SDMultipleCornerView ()<UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
-@property (nonatomic, strong) NSMutableArray *data;
-@property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) UICollectionViewFlowLayout *flowlayout;
+@property (nonatomic, strong) NSMutableArray<__kindof SDGameCategoryModel *> *data;
+
 @property (nonatomic, copy) selectedMultipleBlock complection;
 @end
 @implementation SDMultipleCornerView{
@@ -145,9 +145,11 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SDMultipleCornerViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KMultipleCornerViewCellIdentifier forIndexPath:indexPath];
 //    [cell.cornerView setLocalImage:[UIImage imageNamed:@"douyu"] text:[NSString stringWithFormat:@"%lu",indexPath.row]];
-    NSDictionary *details = self.data[indexPath.row];
-    NSString *name = [details objectForKey:SDMultipleCornerViewImageIdentifier];
-    [cell.cornerView setLocalImage:[UIImage imageNamed:name] text:[details objectForKey:SDMultipleCornerViewTitleIdentifier]];
+//    NSDictionary *details = self.data[indexPath.row];
+//    NSString *name = [details objectForKey:SDMultipleCornerViewImageIdentifier];
+//    [cell.cornerView setLocalImage:[UIImage imageNamed:name] text:[details objectForKey:SDMultipleCornerViewTitleIdentifier]];
+    SDGameCategoryModel *model = self.data[indexPath.item];
+    [cell.cornerView setImage:[NSURL URLWithString:model.icon_url] text:model.tag_name];
     return cell;
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{

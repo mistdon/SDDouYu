@@ -10,11 +10,19 @@
 #import "SDTVChannel.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol SDTVContainerViewProtocal <NSObject>
+
+- (void)containerViewDidScroll:(CGFloat )offsetScale;
+
+@end
+
 @interface SDTVContainerViewController : UIViewController
 
 @property (nonatomic, strong) UIViewController *parentController;
 
-+ (nullable instancetype)TVContainterViewControllers:(nonnull NSArray<UIViewController *> *)childs parentController:(nonnull UIViewController *)controller;
+@property (nonatomic, weak) id<SDTVContainerViewProtocal> delegate;
+
++ (nullable instancetype)TVContainterViewControllers:(NSArray<UIViewController *> *)childs parentController:(UIViewController *)controller;
 
 @end
 

@@ -38,6 +38,7 @@ PODS:
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
   - DateTools (1.7.0)
+  - HYBImageCliped (2.0.0)
   - KMCGeigerCounter (0.2.2)
   - Masonry (1.0.0)
   - MJExtension (3.0.10)
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - CocoaLumberjack (~> 2.3.0)
   - DateTools
+  - HYBImageCliped (~> 2.0.0)
   - KMCGeigerCounter (~> 0.2.2)
   - Masonry
   - MJExtension
@@ -81,6 +83,7 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  HYBImageCliped: e660afad3daa5702c3afcaa2b6e9dc34497c333e
   KMCGeigerCounter: f8cc3c4aa19fc6f8cec168fb03b364b84c118a7a
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548

@@ -17,6 +17,7 @@ pod 'SDWebImage'
 pod 'SDBannerView'
 pod 'SVProgressHUD'
 pod 'AFNetworking' #OC
+pod 'HYBImageCliped', '~> 2.0.0' #圆角处理
 #pod 'Alamofire'  #swift
 pod 'pop', '~> 1.0'
 

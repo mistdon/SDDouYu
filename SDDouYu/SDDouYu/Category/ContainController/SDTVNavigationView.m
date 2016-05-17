@@ -46,16 +46,35 @@
         __weak typeof(self)weakself = self;
         [button bk_addEventHandler:^(id sender) {
             NSLog(@"sender = %@",items[index]);
-            [UIView animateWithDuration:0.2 animations:^{
-                CGRect frame = weakself.BottomLine.frame;
-                frame = CGRectMake(frame.size.width * index, frame.origin.y, frame.size.width, frame.size.height);
-                weakself.BottomLine.frame = frame;;
-            }];
+            [weakself itemClick:button];
         } forControlEvents:UIControlEventTouchUpInside];
         [self.buttons addObject:button];
         [self addSubview:button];
         button.tag = index;
     }
+}
+- (void)itemClick:(UIButton *)sender{
+    if ([sender isEqual:self.selectedItem]) return;
+    self.selectedItem.selected = NO;
+    sender.selected = YES;
+    if (self.clickedBlcok) {
+        self.clickedBlcok(sender.tag);
+    }
+//    CGFloat offsetX = sender.center.x - self.center.x;
+//    if (offsetX < 0) {
+//        self.contentOffset = CGPointMake(0, 0);
+////        [self setContentOffset:CGPointMake(0, 0) animated:YES];
+//    }else if (offsetX > (self.contentSize.width - self.bounds.size.width)){
+//        self.contentOffset = CGPointMake(self.contentSize.width - self.bounds.size.width, 0);
+//    }else{
+//        self.contentOffset = CGPointMake(offsetX, 0);
+////        [self setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+//    }
+    self.selectedItem = sender;
+    __weak typeof(self)weakself = self;
+    [UIView animateWithDuration:0.5 animations:^{
+        weakself.BottomLine.center = CGPointMake(sender.center.x, weakself.BottomLine.center.y);;
+    }];
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -64,10 +83,27 @@
         CGFloat itemX = self.itemMargin + self.itemWidth * index;
         button.frame = CGRectMake(itemX, 0, self.itemWidth, SDTVNavigationViewItemHeight);
     }
-    NSLog(@"size = %@",NSStringFromCGRect(CGRectMake(0, SDTVNavigationViewItemHeight - 3, self.frame.size.width/self.items.count, 3)));
     self.BottomLine.frame = CGRectMake(0, SDTVNavigationViewItemHeight - 3, self.frame.size.width/self.items.count, 3);
     [self bringSubviewToFront:self.BottomLine];
     self.contentSize = CGSizeMake(self.itemWidth * self.buttons.count + self.itemWidth * 2, SDTVNavigationViewItemHeight);
 }
+- (void)setContentOffset:(CGPoint)contentOffset{
+    [UIView animateWithDuration:0.25f animations:^{
+        [super setContentOffset:contentOffset];
+    }];
+}
+- (void)scrollNavigaitonViewDidScroll:(CGFloat)offset{
+//    NSLog(@"offset = %lf",offset);
+    if (offset * SCREEN_WIDTH < SCREEN_WIDTH/4 || offset * SCREEN_WIDTH > (SCREEN_WIDTH * 3 /4 )) {
+        return;
+    }
+    
+    self.BottomLine.center = CGPointMake(offset * SCREEN_WIDTH, self.BottomLine.center.y);
 
+}
+- (void)setSelectedItemIndex:(NSInteger)selectedItemIndex{
+    _selectedItemIndex = selectedItemIndex;
+    UIButton *item = self.buttons[selectedItemIndex];
+    [self itemClick:item];
+}
 @end

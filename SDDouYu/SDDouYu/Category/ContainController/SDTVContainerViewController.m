@@ -12,7 +12,7 @@
 
 static NSString *const kcellIdentifier = @"kcellIdentifier";
 
-@interface SDTVContainerViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface SDTVContainerViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray *viewControllers;
 @property (nonatomic, assign) NSInteger selectedIndex;
@@ -60,9 +60,8 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
         }];
         navView.itemWidth = SCREEN_WIDTH/4;
         navView.itemMargin = 0;
-        [self setNavigaitonView:navView];
         [self.view addSubview:navView];
-        
+        [self setNavigaitonView:navView];
     }
     return self;
 }
@@ -83,9 +82,9 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
     CGFloat height = self.view.bounds.size.height;
     CGFloat topNav = 64;
     CGFloat bottomTab = 49;
-    if (self.navigationController) {
+    if (self.navigationController && self.tabBarController) {
         self.navigaitonView.frame = CGRectMake(0, topNav, width, SDTVNavigationViewItemHeight);
-        self.collectionView.frame = CGRectMake(0, topNav+SDTVNavigationViewItemHeight, width, height-SDTVNavigationViewItemHeight-topNav-bottomTab);
+        self.collectionView.frame = CGRectMake(0, topNav+self.navigaitonView.frame.size.height, width, height-self.navigaitonView.frame.size.height - topNav - bottomTab);
     }else{
         self.navigaitonView.frame = CGRectMake(0, 0, width, SDTVNavigationViewItemHeight);
     }
@@ -106,10 +105,20 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kcellIdentifier forIndexPath:indexPath];
+    [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     UIView *view = [self.viewControllers[indexPath.item] view];
+    NSLog(@"bouns = %@",NSStringFromCGRect(self.collectionView.bounds));
     [cell.contentView addSubview:view];
     view.frame = cell.bounds;
     return cell;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat offset = scrollView.contentOffset.x/self.collectionView.contentSize.width;
+//    [self.navigaitonView setContentOffset:CGPointMake(offset, self.navigaitonView.contentOffset.y) animated:YES];
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(containerViewDidScroll:)]) {
+//        [self.delegate containerViewDidScroll:offset];
+//    }
+    [self.navigaitonView scrollNavigaitonViewDidScroll:offset * SCREEN_WIDTH];
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSInteger index = scrollView.contentOffset.x / self.view.bounds.size.width;

@@ -1,0 +1,1 @@
+../../../HYBImageCliped/Sources/UIImage+HYBmageCliped.h

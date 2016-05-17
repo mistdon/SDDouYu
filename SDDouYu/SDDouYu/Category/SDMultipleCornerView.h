@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SDGameCategoryModel.h"
 
 FOUNDATION_EXPORT NSString *const SDMultipleCornerViewImageIdentifier;
 FOUNDATION_EXPORT NSString *const SDMultipleCornerViewTitleIdentifier;
+
 @interface SDCornerView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;
@@ -28,6 +30,9 @@ FOUNDATION_EXPORT NSString *const SDMultipleCornerViewTitleIdentifier;
 
 typedef void(^selectedMultipleBlock)(id object);
 @interface SDMultipleCornerView : UIView
+@property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, strong) UICollectionViewFlowLayout *flowlayout;
 
 @property (nonatomic) UICollectionViewScrollDirection scrollDirection;
 

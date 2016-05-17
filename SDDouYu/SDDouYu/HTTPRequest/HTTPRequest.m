@@ -31,9 +31,11 @@ NSString *const HTTPGetDouYuHomepageBannerInfomation = @"http://capi.douyucdn.cn
 NSString *const HTTPGetDouYuHomepagelist = @"http://capi.douyucdn.cn/api/v1/getCustomRoom?aid=ios&client_sys=ios&tagIds=3_19_33_1_2_5_148_181_4_29_&time=1463030160&auth=e5e9482638e51ebbe264491c58802c13";
 
 NSString *const HTTPGetAllGameInfomaitons = @"http://capi.douyucdn.cn/api/v1/getColumnDetail?aid=ios&client_sys=ios&shortName=game&time=1463377200&auth=75549cbfb9c3a43b5827928030a5585a";
+
+NSString *const HTTPGetAllStrangeInfomaitons = @"http://capi.douyucdn.cn/api/v1/getColumnRoom/3?aid=ios&client_sys=ios&limit=20&offset=0&time=1463470500&auth=9c09f4a4ec48001e1b46af73bf2d69f4";
+
+NSString *const HTTPGetAllFunInfomaitons = @"http://capi.douyucdn.cn/api/v1/getHotRoom/2?aid=ios&client_sys=ios&time=1463474820&auth=30f1016666d26c86da81ba7697b9ac30";
 /*
-NSString *const HTTPGetUserInfomation =
-NSString *const HTTPGetUserInfomation =
 NSString *const HTTPGetUserInfomation =
 */
 

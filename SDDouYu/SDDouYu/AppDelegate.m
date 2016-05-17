@@ -10,6 +10,7 @@
 #import "SDTabBarController.h"
 #import "KMCGeigerCounter.h"
 #import "ViewController.h"
+#import "SDHomepageViewController.h"
 
 static NSString *const KGame_overwatch_icon_url = @"http://staticlive.douyutv.com//upload//game_cate//b659618441aa7051b9133ea77e50e30a.jpg";//守望先锋
 static NSString *const KGame_WOW_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/a82a55473bd57ed1448eb95ba8571c50.jpg";//英雄联盟
@@ -51,7 +52,7 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     //延迟一秒执行,保证获取广告图即时显示出来
 //    sleep(2);
     
-//    [self trunOnCounterTest];  //打开滑动帧率检测
+
     NSInteger ok = 1;
     NSLog(@"%s",__func__);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -59,11 +60,12 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     if(ok){
        self.window.rootViewController = [[SDTabBarController alloc] init];
     }else{
-        UINavigationController *nav =[[UINavigationController alloc] initWithRootViewController:[ViewController new]];
         self.window.rootViewController = [ViewController new];
     }
     
     [self.window makeKeyAndVisible];
+    
+//    [self trunOnCounterTest];  //打开滑动帧率检测
     
     return YES;
 }
@@ -81,8 +83,8 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     });
 }
 - (void)trunOnCounterTest{
-#if !TARGET_IPHONE_SIMULATOR
+//#if !TARGET_IPHONE_SIMULATOR
     [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
-#endif
+//#endif
 }
 @end
