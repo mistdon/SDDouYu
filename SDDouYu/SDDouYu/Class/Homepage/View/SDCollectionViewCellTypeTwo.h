@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class SDBaseLiveModel;
+@class SDGameCategoryModel;
+
 @interface SDCollectionViewCellTypeTwo : UICollectionViewCell
 
 - (void)configureDetails:(NSDictionary *)dictionary;
+
+- (void)bindDataWithModel:(SDBaseLiveModel *)basemodel;
+
+- (void)bindDataWithGameCategoryModel:(SDGameCategoryModel *)basemodel;
+
 @end

@@ -19,9 +19,3 @@
 
 @end
 
-@interface SDChannelSubModel : SDChannelModel
-
-@property (nonatomic, copy) NSString *count_ios;
-@property (nonatomic, copy) NSString *count;
-
-@end

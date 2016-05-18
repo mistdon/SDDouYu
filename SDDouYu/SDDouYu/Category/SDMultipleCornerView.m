@@ -175,6 +175,9 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
     [self.data addObjectsFromArray:datas];
     [self.collectionView reloadData];
     self.complection = selectedComplander;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(sdmultipleCornerViewDidScroll:)]) {
+        [self.delegate sdmultipleCornerViewDidScroll:0];
+    }
 }
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     NSLog(@"%s",__func__);

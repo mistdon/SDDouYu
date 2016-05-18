@@ -9,6 +9,8 @@
 #ifndef SDDouYu_Prefix_pch
 #define SDDouYu_Prefix_pch
 
+#import "SDFunction.h"
+
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 

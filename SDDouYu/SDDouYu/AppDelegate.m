@@ -11,6 +11,8 @@
 #import "KMCGeigerCounter.h"
 #import "ViewController.h"
 #import "SDHomepageViewController.h"
+#import "SDHomeFunViewController.h"
+#import "SDHomeStrageViewController.h"
 
 static NSString *const KGame_overwatch_icon_url = @"http://staticlive.douyutv.com//upload//game_cate//b659618441aa7051b9133ea77e50e30a.jpg";//守望先锋
 static NSString *const KGame_WOW_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/a82a55473bd57ed1448eb95ba8571c50.jpg";//英雄联盟
@@ -53,14 +55,14 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
 //    sleep(2);
     
 
-    NSInteger ok = 1;
+    NSInteger ok = 0;
     NSLog(@"%s",__func__);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     if(ok){
        self.window.rootViewController = [[SDTabBarController alloc] init];
     }else{
-        self.window.rootViewController = [ViewController new];
+        self.window.rootViewController = [SDHomeFunViewController new];
     }
     
     [self.window makeKeyAndVisible];

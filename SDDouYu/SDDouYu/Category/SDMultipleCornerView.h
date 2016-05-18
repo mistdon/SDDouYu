@@ -29,7 +29,15 @@ FOUNDATION_EXPORT NSString *const SDMultipleCornerViewTitleIdentifier;
 @end
 
 typedef void(^selectedMultipleBlock)(id object);
+
+@protocol SDMultipleCornerViewDelegate <NSObject>
+
+- (void)sdmultipleCornerViewDidScroll:(NSInteger) index;
+
+@end
+
 @interface SDMultipleCornerView : UIView
+
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowlayout;
@@ -37,6 +45,8 @@ typedef void(^selectedMultipleBlock)(id object);
 @property (nonatomic) UICollectionViewScrollDirection scrollDirection;
 
 @property (nonatomic) CGSize itemSize; //default is CGSizeZero;
+
+@property (nonatomic, weak) id<SDMultipleCornerViewDelegate>delegate;
 
 - (void)setDatas:(NSArray *)datas selected:(selectedMultipleBlock)selectedComplander;
 

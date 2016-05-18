@@ -10,7 +10,10 @@
 #import "SDHomeFunViewController.h"
 #import "SDTableViewCellTypeTwo.h"
 #import "SDHomeGameDetailViewController.h"
-#import "SDMultipleCornerView.h"
+//#import "SDMultipleCornerView.h"
+#import "SDHomefunHeaderView.h"
+//#import "SDChannelModel.h"
+#import "SDChannelSubModel.h"
 
 static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
 
@@ -22,10 +25,10 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
 @implementation SDHomeFunViewController
 - (UITableView *)tableview{
     if (!_tableview) {
-        _tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableview.delegate = self;
+        _tableview            = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableview.delegate   = self;
         _tableview.dataSource = self;
-        [_tableview registerClass:[SDTableViewCellTypeTwo class] forCellReuseIdentifier:kFunCellIdentifier];
+        [_tableview registerNib:[UINib nibWithNibName:@"SDTableViewCellTypeTwo" bundle:nil] forCellReuseIdentifier:kFunCellIdentifier];
     }
     return _tableview;
 }
@@ -41,22 +44,19 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.view addSubview:self.tableview];
     
-    SDMultipleCornerView *cornerView = [[SDMultipleCornerView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
-    cornerView.itemSize = CGSizeMake(50, 50);
-    cornerView.flowlayout.minimumInteritemSpacing = 0;
-    cornerView.flowlayout.minimumLineSpacing = 0;
-    self.tableview.tableHeaderView = cornerView;
+    SDHomefunHeaderView *cornerView = [[SDHomefunHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+    cornerView.backgroundColor      = [UIColor yellowColor];
+    self.tableview.tableHeaderView  = cornerView;
     [self.view addSubview:self.tableview];
     
     
     [HTTPRequest requestWithUrl:HTTPGetAllFunInfomaitons success:^(id successObject) {
         if (successObject) {
-            for (NSDictionary *info in (NSArray *)successObject) {
-                SDChannelSubModel *model = [SDChannelSubModel recomendViewModelWithKeysAndValues:info];
-                [self.dataArray addObject:model];
-            }
+//            for (NSDictionary *info in (NSArray *)successObject) {
+//                SDChannelSubModel *model = [SDChannelSubModel recomendViewModelWithKeysAndValues:info];
+//                [self.dataArray addObject:model];
+//            }
             //            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
             [self.tableview reloadData];
         };;
@@ -83,7 +83,7 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREEN_WIDTH;
+    return 120;
 }
 
 @end
