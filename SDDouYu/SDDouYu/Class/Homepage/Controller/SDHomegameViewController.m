@@ -41,7 +41,7 @@ static NSString *const kHeaderIdentifier = @"kHeaderIdentifier";
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     flow.minimumInteritemSpacing     = 0;
     flow.minimumLineSpacing          = 0;
-    UICollectionView *collection     = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 49 - 44) collectionViewLayout:flow];
+    UICollectionView *collection     = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - SDUIViewControllerNavigationBarHeight - SDUIViewControllerTabBarHeight - SDUIViewControllerChannelViewHeight) collectionViewLayout:flow];
     collection.dataSource            = self;
     collection.delegate              = self;
     collection.backgroundColor       = [UIColor whiteColor];
@@ -55,7 +55,7 @@ static NSString *const kHeaderIdentifier = @"kHeaderIdentifier";
     [super viewDidLoad];
     
     [HTTPRequest requestWithUrl:HTTPGetAllGameInfomaitons success:^(id successObject) {
-        NSLog(@"succes =%@",successObject);
+//        NSLog(@"succes =%@",successObject);
         NSArray *array1 = [SDGameCategoryModel mj_objectArrayWithKeyValuesArray:(NSArray *)successObject];
         [self.allGames addObjectsFromArray:array1];
         for (SDGameCategoryModel *model in array1) {

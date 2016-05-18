@@ -36,6 +36,7 @@ static CGFloat const kCornerViewScale = 0.8;
 }
 - (void)initWithDefaults{
     self.backgroundColor         = [UIColor whiteColor];
+    self.imageView.backgroundColor = [UIColor clearColor];
     self.imageView               = [[UIImageView alloc] init];
     self.textLable               = [[UILabel alloc] init];
     self.imageView.contentMode   = UIViewContentModeScaleAspectFit;
@@ -123,8 +124,10 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
     self.flowlayout                         = [[UICollectionViewFlowLayout alloc] init];
     self.flowlayout.scrollDirection         = UICollectionViewScrollDirectionHorizontal;
     self.flowlayout.minimumInteritemSpacing = 0;
+    self.flowlayout.minimumLineSpacing      = 0;
     loaclitemSize                           = CGSizeMake(0, 0);
     self.collectionView                     = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:self.flowlayout];
+     NSLog(@"%s,%@",__FUNCTION__,NSStringFromCGRect(self.frame));
     self.collectionView.backgroundColor     = [UIColor whiteColor];
     self.collectionView.delegate            = self;
     self.collectionView.dataSource          = self;
@@ -135,8 +138,6 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.and.top.bottom.equalTo(self);;
     }];
-    
-    NSLog(@"%s",__func__);
 }
 #pragma mark - UICollectionView delagate and datasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -144,10 +145,6 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SDMultipleCornerViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KMultipleCornerViewCellIdentifier forIndexPath:indexPath];
-//    [cell.cornerView setLocalImage:[UIImage imageNamed:@"douyu"] text:[NSString stringWithFormat:@"%lu",indexPath.row]];
-//    NSDictionary *details = self.data[indexPath.row];
-//    NSString *name = [details objectForKey:SDMultipleCornerViewImageIdentifier];
-//    [cell.cornerView setLocalImage:[UIImage imageNamed:name] text:[details objectForKey:SDMultipleCornerViewTitleIdentifier]];
     SDGameCategoryModel *model = self.data[indexPath.item];
     [cell.cornerView setImage:[NSURL URLWithString:model.icon_url] text:model.tag_name];
     return cell;
@@ -179,9 +176,15 @@ static NSString *const KMultipleCornerViewCellIdentifier = @"KMultipleCornerView
         [self.delegate sdmultipleCornerViewDidScroll:0];
     }
 }
-- (void)willMoveToSuperview:(UIView *)newSuperview{
-    NSLog(@"%s",__func__);
-    [self.collectionView reloadData];
+//- (void)willMoveToSuperview:(UIView *)newSuperview{
+//    NSLog(@"%s",__func__);
+//    [self.collectionView reloadData];
+//}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    CGFloat offsetX = self.collectionView.contentOffset.x;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(sdmultipleCornerViewDidScroll:)]){
+        [self.delegate sdmultipleCornerViewDidScroll:offsetX > 200 ? 1 : 0];
+    }
 }
 @end
 

@@ -10,8 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static CGFloat const SDTVNavigationViewItemHeight = 44;
-
 typedef void(^SDTVNavigationViewItemClick)(NSInteger selectedIndex);
 
 

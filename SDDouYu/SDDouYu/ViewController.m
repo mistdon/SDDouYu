@@ -10,7 +10,8 @@
 #import "SDMultipleCornerView.h"
 #import "SDBannerView.h"
 #import "SDTVContainerViewController.h"
-
+#import "SDHomefunHeaderView.h"
+#import "SDGameCategoryModel.h"
 @interface ViewController ()
 
 @end
@@ -22,7 +23,7 @@
     
     
     UILabel *lable = [[UILabel alloc] init];
-    lable.backgroundColor = [UIColor lightTextColor];
+    lable.backgroundColor = [UIColor redColor];
     
     [self.view addSubview:lable];
     [lable mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -32,6 +33,31 @@
         make.height.mas_equalTo(50);
     }];
     lable.text = @"1100";
+    
+    
+    SDHomefunHeaderView *cornerView = [[SDHomefunHeaderView alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 150)];
+//    self.tableview.tableHeaderView  = cornerView;
+//    [self.view addSubview:self.tableview];
+    [self.view addSubview:cornerView];
+    [HTTPRequest requestWithUrl:HTTPGetAllGameInfomaitons success:^(id successObject) {
+        //        NSLog(@"succes =%@",successObject);
+        NSArray *array1 = [SDGameCategoryModel mj_objectArrayWithKeyValuesArray:(NSArray *)successObject];
+        NSMutableArray *headerData = [NSMutableArray array];
+        for (SDGameCategoryModel *model in array1) {
+            [headerData addObject:model];
+            if (headerData.count > 12) {
+                break;
+            }
+        }
+        [cornerView bindDataWithModel:headerData selected:^(id object) {
+            SDGameCategoryModel *model = (SDGameCategoryModel *)object;
+            NSLog(@"object = %@",model.tag_name);
+        }];
+    } fail:^(id failObject, NSError *error) {
+        ;
+    }];
+    
+    
     
     
 //    self.automaticallyAdjustsScrollViewInsets = NO;

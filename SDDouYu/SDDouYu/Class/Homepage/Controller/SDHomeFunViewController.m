@@ -10,22 +10,24 @@
 #import "SDHomeFunViewController.h"
 #import "SDTableViewCellTypeTwo.h"
 #import "SDHomeGameDetailViewController.h"
-//#import "SDMultipleCornerView.h"
+
 #import "SDHomefunHeaderView.h"
-//#import "SDChannelModel.h"
+
 #import "SDChannelSubModel.h"
+#import "SDGameCategoryModel.h"
 
 static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
 
 @interface SDHomeFunViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *headerData;
 @end
 
 @implementation SDHomeFunViewController
 - (UITableView *)tableview{
     if (!_tableview) {
-        _tableview            = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableview            = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-SDUIViewControllerTabBarHeight-SDUIViewControllerTabBarHeight-SDUIViewControllerChannelViewHeight) style:UITableViewStylePlain];
         _tableview.delegate   = self;
         _tableview.dataSource = self;
         [_tableview registerNib:[UINib nibWithNibName:@"SDTableViewCellTypeTwo" bundle:nil] forCellReuseIdentifier:kFunCellIdentifier];
@@ -38,6 +40,12 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
     }
     return _dataArray;
 }
+- (NSMutableArray *)headerData{
+    if (!_headerData) {
+        _headerData = [NSMutableArray array];
+    }
+    return _headerData;
+}
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
@@ -46,17 +54,31 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
     [super viewDidLoad];
     
     SDHomefunHeaderView *cornerView = [[SDHomefunHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-    cornerView.backgroundColor      = [UIColor yellowColor];
     self.tableview.tableHeaderView  = cornerView;
     [self.view addSubview:self.tableview];
-    
+    [HTTPRequest requestWithUrl:HTTPGetAllGameInfomaitons success:^(id successObject) {
+//        NSLog(@"succes =%@",successObject);
+        NSArray *array1 = [SDGameCategoryModel mj_objectArrayWithKeyValuesArray:(NSArray *)successObject];
+        for (SDGameCategoryModel *model in array1) {
+            [self.headerData addObject:model];
+            if (self.headerData.count > 12) {
+                break;
+            }
+        }
+        [cornerView bindDataWithModel:self.headerData selected:^(id object) {
+            SDGameCategoryModel *model = (SDGameCategoryModel *)object;
+            NSLog(@"object = %@",model.tag_name);
+        }];
+    } fail:^(id failObject, NSError *error) {
+        ;
+    }];
     
     [HTTPRequest requestWithUrl:HTTPGetAllFunInfomaitons success:^(id successObject) {
         if (successObject) {
-//            for (NSDictionary *info in (NSArray *)successObject) {
-//                SDChannelSubModel *model = [SDChannelSubModel recomendViewModelWithKeysAndValues:info];
-//                [self.dataArray addObject:model];
-//            }
+            for (NSDictionary *info in (NSArray *)successObject) {
+                SDChannelSubModel *model = [SDChannelSubModel recomendViewModelWithKeysAndValues:info];
+                [self.dataArray addObject:model];
+            }
             //            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
             [self.tableview reloadData];
         };;
@@ -83,7 +105,7 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 120;
+    return SCREEN_WIDTH + 50;
 }
 
 @end

@@ -83,10 +83,10 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
     CGFloat topNav = 64;
     CGFloat bottomTab = 49;
     if (self.navigationController && self.tabBarController) {
-        self.navigaitonView.frame = CGRectMake(0, topNav, width, SDTVNavigationViewItemHeight);
+        self.navigaitonView.frame = CGRectMake(0, topNav, width, SDUIViewControllerChannelViewHeight);
         self.collectionView.frame = CGRectMake(0, topNav+self.navigaitonView.frame.size.height, width, height-self.navigaitonView.frame.size.height - topNav - bottomTab);
     }else{
-        self.navigaitonView.frame = CGRectMake(0, 0, width, SDTVNavigationViewItemHeight);
+        self.navigaitonView.frame = CGRectMake(0, 0, width, SDUIViewControllerChannelViewHeight);
     }
     self.flowlayout.itemSize = self.collectionView.bounds.size;
 }

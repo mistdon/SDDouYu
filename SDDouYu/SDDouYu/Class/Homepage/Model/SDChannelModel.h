@@ -12,7 +12,7 @@
 
 @property (nonatomic, copy) NSString *tag_id;
 @property (nonatomic, copy) NSString *tag_name;
-@property (nonatomic, strong) NSURL *icon_url;
+@property (nonatomic, copy) NSString *icon_url;
 @property (nonatomic, copy) NSArray<__kindof SDBaseLiveBeautyModel *> *room_list;
 
 + (instancetype)recomendViewModelWithKeysAndValues:(NSDictionary *)dictionary;

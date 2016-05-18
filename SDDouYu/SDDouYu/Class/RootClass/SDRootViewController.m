@@ -8,6 +8,12 @@
 
 #import "SDRootViewController.h"
 
+
+CGFloat const SDUIViewControllerChannelViewHeight   = 44;
+CGFloat const SDUIViewControllerNavigationBarHeight = 64;
+CGFloat const SDUIViewControllerTabBarHeight        = 49;
+
+
 @interface SDRootViewController ()
 
 @end
@@ -16,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor                 = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 
     // Do any additional setup after loading the view.

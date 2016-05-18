@@ -81,11 +81,11 @@
     for (NSInteger index = 0; index < self.buttons.count; index++) {
         UIButton *button = [self.buttons objectAtIndex:index];
         CGFloat itemX = self.itemMargin + self.itemWidth * index;
-        button.frame = CGRectMake(itemX, 0, self.itemWidth, SDTVNavigationViewItemHeight);
+        button.frame = CGRectMake(itemX, 0, self.itemWidth, SDUIViewControllerChannelViewHeight);
     }
-    self.BottomLine.frame = CGRectMake(0, SDTVNavigationViewItemHeight - 3, self.frame.size.width/self.items.count, 3);
+    self.BottomLine.frame = CGRectMake(0, SDUIViewControllerChannelViewHeight - 3, self.frame.size.width/self.items.count, 3);
     [self bringSubviewToFront:self.BottomLine];
-    self.contentSize = CGSizeMake(self.itemWidth * self.buttons.count + self.itemWidth * 2, SDTVNavigationViewItemHeight);
+    self.contentSize = CGSizeMake(self.itemWidth * self.buttons.count + self.itemWidth * 2, SDUIViewControllerChannelViewHeight);
 }
 - (void)setContentOffset:(CGPoint)contentOffset{
     [UIView animateWithDuration:0.25f animations:^{

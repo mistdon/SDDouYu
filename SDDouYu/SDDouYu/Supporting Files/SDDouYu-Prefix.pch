@@ -14,7 +14,6 @@
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-
 #import "AFNetworking.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "Masonry.h"
@@ -26,5 +25,6 @@
 #import "ReactiveCocoa.h"
 #import "HYBImageCliped.h"
 
+#import "SDRootViewController.h"
 
 #endif /* SDDouYu_Prefix_pch */

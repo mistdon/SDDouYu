@@ -34,35 +34,35 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions{
     
 //    
-//    [HTTPRequest requestWithUrl:HTTPGetBrandCastInfo success:^(id successObject) {
-//        NSArray *infos = (NSArray *)successObject;
-//        if (infos.count == 0) {
-//            return ;
-//        }else if (infos.count == 1){
-//            NSDictionary *object = infos[0];
-//            [self showBrandcastInfomationImageView:object[@"url"] timeinterval:[object[@"showtime"] doubleValue]];
-//        }
-//        //todo  当有多条广告图时的处理方式
-//    } fail:^(id failObject, NSError *error) {
-//        ;
-//    }];
+    [HTTPRequest requestWithUrl:HTTPGetBrandCastInfo success:^(id successObject) {
+        NSArray *infos = (NSArray *)successObject;
+        if (infos.count == 0) {
+            return ;
+        }else if (infos.count == 1){
+            NSDictionary *object = infos[0];
+            [self showBrandcastInfomationImageView:object[@"url"] timeinterval:[object[@"showtime"] doubleValue]];
+        }
+        //todo  当有多条广告图时的处理方式
+    } fail:^(id failObject, NSError *error) {
+        ;
+    }];
     return YES;
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     //延迟一秒执行,保证获取广告图即时显示出来
-//    sleep(2);
+    sleep(2);
     
 
-    NSInteger ok = 0;
+    NSInteger ok = 1;
     NSLog(@"%s",__func__);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     if(ok){
        self.window.rootViewController = [[SDTabBarController alloc] init];
     }else{
-        self.window.rootViewController = [SDHomeFunViewController new];
+        self.window.rootViewController = [ViewController new];
     }
     
     [self.window makeKeyAndVisible];

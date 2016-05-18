@@ -61,13 +61,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *ranktype;
 @property (nonatomic, copy) NSString *room_id; //房间id
 @property (nonatomic, copy) NSString *room_name; //房间名称
-@property (nonatomic, strong) NSURL *room_src;
+@property (nonatomic, copy) NSString *room_src;
 @property (nonatomic, copy) NSString *show_status;  //直播状态: 1:正在直播, 0: 离线
 @property (nonatomic, copy) NSString *show_time;
 @property (nonatomic, copy) NSString *specific_catalog;
 @property (nonatomic, copy) NSString *specific_status;
 @property (nonatomic, copy) NSString *subject;
-@property (nonatomic, strong) NSURL *vertical_src;
+@property (nonatomic, copy) NSString *vertical_src;
 @property (nonatomic, copy) NSString *vod_quality;
 
 - (void)sayYouName;

@@ -17,9 +17,10 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        SDMultipleCornerView *corner = [[SDMultipleCornerView alloc] initWithFrame:self.bounds];
-        corner.itemSize = CGSizeMake(frame.size.height - 10, frame.size.height - 10);
-        _view = corner;
+        SDMultipleCornerView *corner                         = [[SDMultipleCornerView alloc] initWithFrame:self.bounds];
+        corner.collectionView.showsHorizontalScrollIndicator = NO;
+        corner.itemSize                                      = CGSizeMake(frame.size.height - 10, frame.size.height - 10);
+        _view                                                = corner;
         [self.contentView addSubview:corner];
     }
     return self;

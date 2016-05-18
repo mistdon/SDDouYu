@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+FOUNDATION_EXPORT CGFloat const SDUIViewControllerChannelViewHeight;
+FOUNDATION_EXPORT CGFloat const SDUIViewControllerNavigationBarHeight;
+FOUNDATION_EXPORT CGFloat const SDUIViewControllerTabBarHeight;
+
 @interface SDRootViewController : UIViewController
 
 - (void)ConfigureNavigationBarButtonItems;

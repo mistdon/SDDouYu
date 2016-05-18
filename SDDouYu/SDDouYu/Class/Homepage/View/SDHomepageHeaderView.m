@@ -29,6 +29,7 @@ static CGFloat const kHeaderViewScale = 0.6;
         _bannerView.pageIndicatorTintColor        = [UIColor lightGrayColor];
         _bannerView.currentPageIndicatorTintColor = [UIColor orangeColor];
         _downstairsView = [[SDMultipleCornerView alloc] initWithFrame:CGRectMake(0, frame.size.height * kHeaderViewScale, frame.size.width, frame.size.height * (1 - kHeaderViewScale))];
+        _downstairsView.collectionView.showsHorizontalScrollIndicator = NO;
         _downstairsView.itemSize = CGSizeMake(frame.size.height*(1- kHeaderViewScale), frame.size.height*(1- kHeaderViewScale));
         [self addSubview:_bannerView];
         [self addSubview:_downstairsView];
