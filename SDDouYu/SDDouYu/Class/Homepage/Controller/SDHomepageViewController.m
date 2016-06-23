@@ -7,7 +7,7 @@
 //
 
 #import "SDHomepageViewController.h"
-
+#import "UIScrollView+SDMJRefresh.h"
 #import "SDHomepageTableViewCell.h"
 #import "SDTableViewCellTypeTwo.h"
 
@@ -133,17 +133,38 @@ static CGFloat const kTableViewHeaderViewHeight = 250;
         ;
     }];
     
+    [self setuprefreshControl];
+    
 }
 - (void)ConfigureNavigationBarButtonItems{
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    UIButton *button                      = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [button setImage:[UIImage imageNamed:@"temp"] forState:UIControlStateNormal];
-    UIBarButtonItem *home = [[UIBarButtonItem alloc] initWithCustomView:button];
-    
-    UIBarButtonItem *scanItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"mine"] style:UIBarButtonItemStyleDone target:self action:@selector(scanAction:)];
-    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchAction:)];
-    UIBarButtonItem *liveHistoryItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"info"] style:UIBarButtonItemStyleDone target:self action:@selector(checkWatchHistory:)];
+    UIBarButtonItem *home                 = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIBarButtonItem *scanItem             = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"mine"] style:UIBarButtonItemStyleDone target:self action:@selector(scanAction:)];
+    UIBarButtonItem *searchItem           = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchAction:)];
+    UIBarButtonItem *liveHistoryItem      = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"info"] style:UIBarButtonItemStyleDone target:self action:@selector(checkWatchHistory:)];
     self.navigationItem.leftBarButtonItem = home;
     self.navigationItem.rightBarButtonItems = @[scanItem, searchItem, liveHistoryItem];
+}
+/**
+ *  设置刷新控件
+ */
+- (void)setuprefreshControl{
+    __weak typeof(self)weakself = self;
+    [self.tableView setUpMJRefreshHeaderStyle:SDHeaderRefreshStyleNormal block:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_main_async_safe(^{
+                [weakself.tableView endHeaderRefreshing];
+            });
+        });
+    }];
+    [self.tableView setUpMJRefreshFooterStyle:SDFooterRefreshStyleNormal block:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_main_async_safe(^{
+                [weakself.tableView endFooterRefreshing];
+            });
+        });;
+    }];
 }
 #pragma mark - UICollectionViewDatasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

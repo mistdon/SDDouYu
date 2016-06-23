@@ -19,12 +19,13 @@
 #import "Masonry.h"
 #import "HTTPRequest.h"
 #import "MJExtension.h"
-
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import "BlocksKit.h"
-#import "UIControl+BlocksKit.h"
+#import "BlocksKit+UIKit.h"
 #import "ReactiveCocoa.h"
 #import "HYBImageCliped.h"
 
 #import "SDRootViewController.h"
-
+#import "SDWebImageCompat.h"
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;; //定义日志级别
 #endif /* SDDouYu_Prefix_pch */

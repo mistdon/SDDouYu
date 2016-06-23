@@ -7,7 +7,7 @@
 //
 
 #import "SDRootViewController.h"
-
+#import "MJRefresh.h"
 
 CGFloat const SDUIViewControllerChannelViewHeight   = 44;
 CGFloat const SDUIViewControllerNavigationBarHeight = 64;
@@ -24,8 +24,18 @@ CGFloat const SDUIViewControllerTabBarHeight        = 49;
     [super viewDidLoad];
     self.view.backgroundColor                 = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-
+    _haveSubViewsCanBehaveRefresh = NO;
     // Do any additional setup after loading the view.
+    
+    for (UIView *view in self.view.subviews) {
+        if ([view isMemberOfClass:[UIScrollView class]] ||
+            [view isMemberOfClass:[UITableView class]] ||
+            [view isMemberOfClass:[UICollectionView class]]||
+            [view isMemberOfClass:[UIWebView class]]) {
+            _haveSubViewsCanBehaveRefresh = YES;
+            break;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

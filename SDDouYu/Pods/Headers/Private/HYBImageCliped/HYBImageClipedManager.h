@@ -1,1 +1,0 @@
-../../../HYBImageCliped/Sources/HYBImageClipedManager.h

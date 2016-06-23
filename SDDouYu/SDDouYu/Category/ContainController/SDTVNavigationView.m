@@ -45,7 +45,7 @@
         [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         __weak typeof(self)weakself = self;
         [button bk_addEventHandler:^(id sender) {
-            NSLog(@"sender = %@",items[index]);
+//            NSLog(@"sender = %@",items[index]);
             [weakself itemClick:button];
         } forControlEvents:UIControlEventTouchUpInside];
         [self.buttons addObject:button];

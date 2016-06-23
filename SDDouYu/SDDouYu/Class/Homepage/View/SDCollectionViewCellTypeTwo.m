@@ -28,8 +28,7 @@
     
 }
 - (void)bindDataWithModel:(SDBaseLiveModel *)basemodel{
-    NSLog(@"s1111111");
-    [self.backgroundImageView sd_setImageWithURL:basemodel.room_src placeholderImage:PLACEHOLDER_IMAGE];
+    [self.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:basemodel.room_src] placeholderImage:PLACEHOLDER_IMAGE];
     self.accountLable.text = basemodel.nickname;
 }
 - (void)bindDataWithGameCategoryModel:(SDGameCategoryModel *)basemodel{

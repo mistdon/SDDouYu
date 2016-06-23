@@ -107,7 +107,7 @@ static NSString *const kcellIdentifier = @"kcellIdentifier";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kcellIdentifier forIndexPath:indexPath];
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     UIView *view = [self.viewControllers[indexPath.item] view];
-    NSLog(@"bouns = %@",NSStringFromCGRect(self.collectionView.bounds));
+//    NSLog(@"bouns = %@",NSStringFromCGRect(self.collectionView.bounds));
     [cell.contentView addSubview:view];
     view.frame = cell.bounds;
     return cell;

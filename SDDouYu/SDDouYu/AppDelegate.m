@@ -13,7 +13,8 @@
 #import "SDHomepageViewController.h"
 #import "SDHomeFunViewController.h"
 #import "SDHomeStrageViewController.h"
-
+#import "SDTool.h"
+//#import "DDLog.h"
 static NSString *const KGame_overwatch_icon_url = @"http://staticlive.douyutv.com//upload//game_cate//b659618441aa7051b9133ea77e50e30a.jpg";//守望先锋
 static NSString *const KGame_WOW_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/a82a55473bd57ed1448eb95ba8571c50.jpg";//英雄联盟
 static NSString *const KGame_How_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/193a80abb5f5c386c3b472ef2d42f680.jpg";//守望先锋
@@ -59,15 +60,19 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     NSLog(@"%s",__func__);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    
     if(ok){
        self.window.rootViewController = [[SDTabBarController alloc] init];
     }else{
         self.window.rootViewController = [ViewController new];
     }
+    [self.window makeKeyAndVisible]; 
+    [self trunOnCounterTest];        //打开滑动帧率检测
+    [self settingCocoaLumerJackLog]; //日志系统
     
-    [self.window makeKeyAndVisible];
+    NSLog(@"version = %lf",[SDTool sd_getCurrentDeviceSystemVersion]);
+    NSLog(@"name = %@",[SDTool sd_getCurrentDeviceName]);
     
-//    [self trunOnCounterTest];  //打开滑动帧率检测
     
     return YES;
 }
@@ -85,8 +90,31 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     });
 }
 - (void)trunOnCounterTest{
-//#if !TARGET_IPHONE_SIMULATOR
-    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
-//#endif
+    //https://github.com/kconner/KMCGeigerCounter/issues/11 (支持iOS7，8，不支持9)
+    if ([SDTool sd_getCurrentDeviceSystemVersion] < 9.0) {
+        #if !TARGET_IPHONE_SIMULATOR
+                [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
+        #endif
+    }
+}
+/**
+ *  设置日志输出系统
+ */
+
+- (void)settingCocoaLumerJackLog{
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    //File logger
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.maximumFileSize = 7;
+    [DDLog addLogger:fileLogger];
+    
+    DDLogError(@"erroe");
+    DDLogInfo(@"info");
+    DDLogWarn(@"warn");
+    DDLogDebug(@"debug");
+    
 }
 @end

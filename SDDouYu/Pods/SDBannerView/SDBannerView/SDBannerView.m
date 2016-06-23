@@ -74,7 +74,6 @@
         _scrollView.delegate                       = self;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator   = NO;
-        _scrollView.autoresizesSubviews = NO;
         _currentIndex = 0;
     }
 }
