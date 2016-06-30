@@ -27,4 +27,7 @@
 
 #import "SDRootViewController.h"
 
+#import "CocoaLumberjack.h"
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+
 #endif /* SDDouYu_Prefix_pch */

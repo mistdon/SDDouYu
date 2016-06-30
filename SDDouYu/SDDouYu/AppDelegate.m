@@ -9,10 +9,15 @@
 #import "AppDelegate.h"
 #import "SDTabBarController.h"
 #import "KMCGeigerCounter.h"
+
+
+//以下为测试文件，待删除
 #import "ViewController.h"
 #import "SDHomepageViewController.h"
 #import "SDHomeFunViewController.h"
 #import "SDHomeStrageViewController.h"
+
+
 
 static NSString *const KGame_overwatch_icon_url = @"http://staticlive.douyutv.com//upload//game_cate//b659618441aa7051b9133ea77e50e30a.jpg";//守望先锋
 static NSString *const KGame_WOW_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/a82a55473bd57ed1448eb95ba8571c50.jpg";//英雄联盟
@@ -50,9 +55,9 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    NSLog(@"home = %@",NSHomeDirectory());
     //延迟一秒执行,保证获取广告图即时显示出来
-    sleep(2);
+    sleep(1);
     
 
     NSInteger ok = 1;
@@ -68,6 +73,8 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     [self.window makeKeyAndVisible];
     
 //    [self trunOnCounterTest];  //打开滑动帧率检测
+    
+    [self ConfigureLogInfomation];
     
     return YES;
 }
@@ -88,5 +95,26 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
 //#if !TARGET_IPHONE_SIMULATOR
     [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
 //#endif
+}
+/**
+ *  定义打印日志
+ */
+
+- (void)ConfigureLogInfomation{
+    [DDLog addLogger:[DDASLLogger sharedInstance]];  //apple system logs
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];  //Xcode console
+    
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 *24; //24 hour rolling
+    [DDLog addLogger:fileLogger];
+    
+    DDLogVerbose(@"Verbose");
+    DDLogDebug(@"Debug");
+    DDLogInfo(@"Info");
+    DDLogWarn(@"warn");
+    DDLogError(@"error");
+    
 }
 @end
