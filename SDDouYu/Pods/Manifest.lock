@@ -41,7 +41,7 @@ PODS:
   - HYBImageCliped (2.0.0)
   - KMCGeigerCounter (0.2.2)
   - Masonry (1.0.1)
-  - MJExtension (3.0.10)
+  - MJExtension (3.0.11)
   - MJRefresh (3.0.8)
   - pop (1.0.9)
   - ReactiveCocoa (4.0.4-alpha-4):
@@ -90,7 +90,7 @@ SPEC CHECKSUMS:
   HYBImageCliped: e660afad3daa5702c3afcaa2b6e9dc34497c333e
   KMCGeigerCounter: f8cc3c4aa19fc6f8cec168fb03b364b84c118a7a
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
-  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJExtension: f9ae6ddc0f1c482c3c9af750280ccebd14381958
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
@@ -100,6 +100,4 @@ SPEC CHECKSUMS:
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
-PODFILE CHECKSUM: 84def4e75ca25003849608248e3e2bf3f3a8032b
-
-COCOAPODS: 1.0.0
+COCOAPODS: 0.39.0

@@ -16,14 +16,14 @@
 #import "SDHomepageViewController.h"
 #import "SDHomeFunViewController.h"
 #import "SDHomeStrageViewController.h"
-<<<<<<< HEAD
+#import "SSSSSSSS.h"
 
 
 
-=======
+
 #import "SDTool.h"
 //#import "DDLog.h"
->>>>>>> 3c20ef14139a730270385813be74362eb0b754e1
+//>>>>>>> 3c20ef14139a730270385813be74362eb0b754e1
 static NSString *const KGame_overwatch_icon_url = @"http://staticlive.douyutv.com//upload//game_cate//b659618441aa7051b9133ea77e50e30a.jpg";//守望先锋
 static NSString *const KGame_WOW_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/a82a55473bd57ed1448eb95ba8571c50.jpg";//英雄联盟
 static NSString *const KGame_How_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/193a80abb5f5c386c3b472ef2d42f680.jpg";//守望先锋
@@ -64,7 +64,7 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     //延迟一秒执行,保证获取广告图即时显示出来
     sleep(1);
     
-
+    NSLog(@"we are family");
     NSInteger ok = 1;
     NSLog(@"%s",__func__);
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
