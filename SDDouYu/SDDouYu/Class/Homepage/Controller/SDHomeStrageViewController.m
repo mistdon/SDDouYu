@@ -9,6 +9,7 @@
 #import "SDHomeStrageViewController.h"
 #import "SDCollectionViewCellTypeTwo.h"
 #import "SDBaseLiveModel.h"
+#import "UIScrollView+SDMJRefresh.h"
 #import "SDGameCategoryModel.h"
 static NSString *const kHpmepagecellIdentifier = @"kHpmepagecellIdentifier";
 
@@ -40,8 +41,11 @@ static NSString *const kHpmepagecellIdentifier = @"kHpmepagecellIdentifier";
     self.collectionView = collection;
     [self.view addSubview:collection];
     [collection registerNib:[UINib nibWithNibName:@"SDCollectionViewCellTypeTwo" bundle:nil] forCellWithReuseIdentifier:kHpmepagecellIdentifier];
+    
+    [self sd_setupRefreshControl];
 
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -49,8 +53,28 @@ static NSString *const kHpmepagecellIdentifier = @"kHpmepagecellIdentifier";
         NSArray *array1 = [SDBaseLiveModel mj_objectArrayWithKeyValuesArray:(NSArray *)successObject];
         [self.datasArray addObjectsFromArray:array1];
         [self.collectionView reloadData];
+        [self.collectionView endHeaderRefreshing];
     } fail:^(id failObject, NSError *error) {
         ;
+    }];
+    
+    
+}
+- (void)sd_setupRefreshControl{
+    __weak typeof(self)weakself = self;
+    [self.collectionView setUpMJRefreshHeaderStyle:SDHeaderRefreshStyleNormal block:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_main_async_safe(^{
+                [weakself.collectionView endHeaderRefreshing];
+            });
+        });
+    }];
+    [self.collectionView setUpMJRefreshFooterStyle:SDFooterRefreshStyleNormal block:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_main_async_safe(^{
+                [weakself.collectionView endFooterRefreshing];
+            });
+        });;
     }];
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

@@ -41,7 +41,7 @@
         [mu addObject:vc];
     }
     
-    
+    NSLog(@"have = %lu",self.haveSubViewsCanBehaveRefresh);
     
     SDTVContainerViewController *container = [SDTVContainerViewController TVContainterViewControllers:mu parentController:self];
 }

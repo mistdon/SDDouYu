@@ -12,7 +12,7 @@
 #import "SDHomeGameDetailViewController.h"
 
 #import "SDHomefunHeaderView.h"
-
+#import "UIScrollView+SDMJRefresh.h"
 #import "SDChannelSubModel.h"
 #import "SDGameCategoryModel.h"
 
@@ -84,6 +84,24 @@ static NSString *const kFunCellIdentifier = @"kFunCellIdentifier";
         };;
     } fail:^(id failObject, NSError *error) {
         ;
+    }];
+    [self sd_setUpRefreshControl];
+}
+- (void)sd_setUpRefreshControl{
+    __weak typeof(self)weakself = self;
+    [self.tableview setUpMJRefreshHeaderStyle:SDHeaderRefreshStyleNormal block:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_main_async_safe(^{
+                [weakself.tableview endHeaderRefreshing];
+            });
+        });
+    }];
+    [self.tableview setUpMJRefreshFooterStyle:SDFooterRefreshStyleNormal block:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_main_async_safe(^{
+                [weakself.tableview endFooterRefreshing];
+            });
+        });;
     }];
 }
 #pragma mark - UICollectionViewDatasource
