@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Nc-ih-2Il">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="7Pc-Hs-FBv">
+            <objects>
+                <viewController id="5Nc-ih-2Il" customClass="SDLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="swk-Ii-JRV"/>
+                        <viewControllerLayoutGuide type="bottom" id="KlC-p8-M9U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tOC-SP-KGu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入昵称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diD-on-ExQ">
+                                <rect key="frame" x="20" y="20" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="77c-iw-MLX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZZ-9m-b8W">
+                                <rect key="frame" x="20" y="75" width="560" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LR-st-1gj">
+                                <rect key="frame" x="40" y="130" width="520" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.61321069979999998" blue="0.1309237003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="登录"/>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2LR-st-1gj" firstAttribute="top" secondItem="IZZ-9m-b8W" secondAttribute="bottom" constant="15" id="0Ni-VW-xge"/>
+                            <constraint firstItem="diD-on-ExQ" firstAttribute="leading" secondItem="tOC-SP-KGu" secondAttribute="leading" constant="20" id="3ih-AZ-arI"/>
+                            <constraint firstAttribute="trailing" secondItem="diD-on-ExQ" secondAttribute="trailing" constant="20" id="Gwl-gW-qof"/>
+                            <constraint firstItem="IZZ-9m-b8W" firstAttribute="top" secondItem="diD-on-ExQ" secondAttribute="bottom" constant="15" id="PAQ-Mz-grH"/>
+                            <constraint firstItem="IZZ-9m-b8W" firstAttribute="leading" secondItem="diD-on-ExQ" secondAttribute="leading" id="Pb0-y3-lkT"/>
+                            <constraint firstItem="IZZ-9m-b8W" firstAttribute="height" secondItem="diD-on-ExQ" secondAttribute="height" id="Pdu-B7-u20"/>
+                            <constraint firstItem="2LR-st-1gj" firstAttribute="trailing" secondItem="diD-on-ExQ" secondAttribute="trailing" constant="-20" id="TOq-ZT-xMz"/>
+                            <constraint firstItem="2LR-st-1gj" firstAttribute="centerX" secondItem="diD-on-ExQ" secondAttribute="centerX" id="kcx-bV-ei9"/>
+                            <constraint firstItem="IZZ-9m-b8W" firstAttribute="trailing" secondItem="diD-on-ExQ" secondAttribute="trailing" id="q2Q-eX-rQS"/>
+                            <constraint firstItem="2LR-st-1gj" firstAttribute="leading" secondItem="diD-on-ExQ" secondAttribute="leading" constant="20" id="sxN-xQ-Ns3"/>
+                            <constraint firstItem="diD-on-ExQ" firstAttribute="top" secondItem="swk-Ii-JRV" secondAttribute="bottom" id="x57-s3-MHE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="2LR-st-1gj" id="dGw-wO-X4F"/>
+                        <outlet property="nicknameTextField" destination="diD-on-ExQ" id="FWU-xz-Xe3"/>
+                        <outlet property="passwordTextField" destination="IZZ-9m-b8W" id="SZq-aw-WHP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQa-2O-bKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="423"/>
+        </scene>
+    </scenes>
+</document>

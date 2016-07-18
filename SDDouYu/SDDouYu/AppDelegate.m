@@ -63,10 +63,7 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     NSLog(@"home = %@",NSHomeDirectory());
     //延迟一秒执行,保证获取广告图即时显示出来
     sleep(1);
-    
-    NSLog(@"we are family");
-    NSInteger ok = 1;
-    NSLog(@"%s",__func__);
+    NSInteger ok = 1;;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -78,11 +75,6 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     [self.window makeKeyAndVisible]; 
     [self trunOnCounterTest];        //打开滑动帧率检测
     [self settingCocoaLumerJackLog]; //日志系统
-    
-    NSLog(@"version = %lf",[SDTool sd_getCurrentDeviceSystemVersion]);
-    NSLog(@"name = %@",[SDTool sd_getCurrentDeviceName]);
-    
-    
     [self ConfigureLogInfomation];
     
     return YES;
@@ -121,12 +113,6 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
     fileLogger.maximumFileSize = 7;
     [DDLog addLogger:fileLogger];
-    
-    DDLogError(@"erroe");
-    DDLogInfo(@"info");
-    DDLogWarn(@"warn");
-    DDLogDebug(@"debug");
-    
 }
 /**
  *  定义打印日志
@@ -141,12 +127,5 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
     fileLogger.rollingFrequency = 60 * 60 *24; //24 hour rolling
     [DDLog addLogger:fileLogger];
-    
-    DDLogVerbose(@"Verbose");
-    DDLogDebug(@"Debug");
-    DDLogInfo(@"Info");
-    DDLogWarn(@"warn");
-    DDLogError(@"error");
-    
 }
 @end
