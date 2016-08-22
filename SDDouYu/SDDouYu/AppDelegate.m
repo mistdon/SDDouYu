@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "SDTabBarController.h"
-#import "KMCGeigerCounter.h"
 
 
 //以下为测试文件，待删除
@@ -16,14 +15,12 @@
 #import "SDHomepageViewController.h"
 #import "SDHomeFunViewController.h"
 #import "SDHomeStrageViewController.h"
-#import "SSSSSSSS.h"
-
+#import "CocoaLumberjack.h"
+//static const DDLogLevel ddLogLevel = DDLogLevelVerbose;; //定义日志级别
 
 
 
 #import "SDTool.h"
-//#import "DDLog.h"
-//>>>>>>> 3c20ef14139a730270385813be74362eb0b754e1
 static NSString *const KGame_overwatch_icon_url = @"http://staticlive.douyutv.com//upload//game_cate//b659618441aa7051b9133ea77e50e30a.jpg";//守望先锋
 static NSString *const KGame_WOW_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/a82a55473bd57ed1448eb95ba8571c50.jpg";//英雄联盟
 static NSString *const KGame_How_icon_url = @"http:\/\/staticlive.douyutv.com\/upload\/game_cate\/193a80abb5f5c386c3b472ef2d42f680.jpg";//守望先锋
@@ -63,7 +60,7 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     NSLog(@"home = %@",NSHomeDirectory());
     //延迟一秒执行,保证获取广告图即时显示出来
     sleep(1);
-    NSInteger ok = 1;;
+    NSInteger ok = 0;;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -73,7 +70,6 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
         self.window.rootViewController = [ViewController new];
     }
     [self.window makeKeyAndVisible]; 
-    [self trunOnCounterTest];        //打开滑动帧率检测
     [self settingCocoaLumerJackLog]; //日志系统
     [self ConfigureLogInfomation];
     
@@ -92,14 +88,7 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
         [imageview removeFromSuperview];
     });
 }
-- (void)trunOnCounterTest{
-    //https://github.com/kconner/KMCGeigerCounter/issues/11 (支持iOS7，8，不支持9)
-    if ([SDTool sd_getCurrentDeviceSystemVersion] < 9.0) {
-        #if !TARGET_IPHONE_SIMULATOR
-                [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
-        #endif
-    }
-}
+
 /**
  *  设置日志输出系统
  */

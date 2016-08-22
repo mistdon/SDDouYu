@@ -11,31 +11,38 @@
 #import "SDCareViewController.h"
 #import "SDRootNavigationController.h"
 #import "SDHomeViewController.h"
+#import "YYFPSLabel.h"
+#import "Masonry.h"
 
 @interface SDTabBarController ()
-
+@property (nonatomic,strong) YYFPSLabel *fpslabel;
 @end
 
 @implementation SDTabBarController
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.selectedIndex = 3;
+    
+    self.fpslabel                 = [[YYFPSLabel alloc] init];
+    self.fpslabel.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:self.fpslabel];
+    [self.fpslabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(5);
+        make.size.mas_equalTo(CGSizeMake(50, 20));
+        make.bottom.equalTo(self.view.mas_bottom).offset(-60);
+    }];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-//    NSLog(@"%s",__FUNCTION__);
-
-    
+  
     [self addChildViewControlle:[[SDHomeViewController alloc] init] showTitle:NO same:YES title:@"home" barItemTitle:@"首页" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
     [self addChildViewControlle:[[SDCareViewController alloc] init] showTitle:YES same: YES title:@"Care" barItemTitle:@"关注" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
     [self addChildViewControlle:[[UIViewController alloc] init] showTitle:NO same:YES title:@"222" barItemTitle:@"three" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
     UIViewController *meVC  =[[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
     meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
     [self addChildViewController:meVC];
-
 }
+
 /**
  *  添加带有导航控制器的childViewController
  *

@@ -9,14 +9,13 @@ target 'SDDouYu' do
     pod 'DateTools'
     pod 'MJExtension'
     pod 'ReactiveCocoa','~>4.0.4-alpha-1'
-    pod 'KMCGeigerCounter', '~> 0.2.2' #测试滑动流畅度
     pod 'CocoaLumberjack', '~> 2.3.0' #日志分析工具
     pod 'BlocksKit', '~> 2.2.5'
     pod 'SDWebImage'
     pod 'SDBannerView'
     pod 'SVProgressHUD'
     pod 'pop', '~> 1.0'
-    pod 'YYKit'
+    pod 'YYKit', '~> 1.0.7'
     #OC
     pod 'AFNetworking', '~>3.0.0'
     #swift
