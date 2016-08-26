@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/UIImagePickerController+RACSignalSupport.h
+../../../ReactiveCocoa/ReactiveCocoa/UIImagePickerController+RACSignalSupport.h

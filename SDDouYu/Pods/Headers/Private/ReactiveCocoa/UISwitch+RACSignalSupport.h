@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/UISwitch+RACSignalSupport.h
+../../../ReactiveCocoa/ReactiveCocoa/UISwitch+RACSignalSupport.h

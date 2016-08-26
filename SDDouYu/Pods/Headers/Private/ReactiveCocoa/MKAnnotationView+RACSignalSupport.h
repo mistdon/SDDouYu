@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/MKAnnotationView+RACSignalSupport.h
+../../../ReactiveCocoa/ReactiveCocoa/MKAnnotationView+RACSignalSupport.h

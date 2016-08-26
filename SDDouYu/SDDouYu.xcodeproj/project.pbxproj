@@ -32,6 +32,8 @@
 		3B5BCBA41D6B0BB800063204 /* SDIndicatorEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5BCBA31D6B0BB800063204 /* SDIndicatorEmptyView.m */; };
 		3B5BCBA61D6B0BC100063204 /* SDIndicatorEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5BCBA51D6B0BC100063204 /* SDIndicatorEmptyView.xib */; };
 		3B722DFB1CEB27C700D23975 /* UIImageView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B722DFA1CEB27C700D23975 /* UIImageView+Corner.m */; };
+		3B7DAC5B1D702BB400B3F9EA /* SDStoryboardLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAC5A1D702BB400B3F9EA /* SDStoryboardLoader.m */; };
+		3B7DAC5E1D70309200B3F9EA /* SDNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAC5D1D70309200B3F9EA /* SDNetworkService.m */; };
 		3BA37EAD1CE9BCF4004AF002 /* SDTVContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EAC1CE9BCF4004AF002 /* SDTVContainerViewController.m */; };
 		3BA37EB01CE9BF06004AF002 /* SDTVNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EAF1CE9BF06004AF002 /* SDTVNavigationView.m */; };
 		3BA37EB41CE9C2E6004AF002 /* SDTVChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EB31CE9C2E6004AF002 /* SDTVChannel.m */; };
@@ -117,6 +119,11 @@
 		3B5BCBA51D6B0BC100063204 /* SDIndicatorEmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDIndicatorEmptyView.xib; sourceTree = "<group>"; };
 		3B722DF91CEB27C700D23975 /* UIImageView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Corner.h"; sourceTree = "<group>"; };
 		3B722DFA1CEB27C700D23975 /* UIImageView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Corner.m"; sourceTree = "<group>"; };
+		3B7DAC591D702BB400B3F9EA /* SDStoryboardLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStoryboardLoader.h; sourceTree = "<group>"; };
+		3B7DAC5A1D702BB400B3F9EA /* SDStoryboardLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStoryboardLoader.m; sourceTree = "<group>"; };
+		3B7DAC5C1D70309200B3F9EA /* SDNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNetworkService.h; sourceTree = "<group>"; };
+		3B7DAC5D1D70309200B3F9EA /* SDNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNetworkService.m; sourceTree = "<group>"; };
+		3B7DAC5F1D7036D200B3F9EA /* SDConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDConstant.h; sourceTree = "<group>"; };
 		3BA37EAB1CE9BCF4004AF002 /* SDTVContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTVContainerViewController.h; sourceTree = "<group>"; };
 		3BA37EAC1CE9BCF4004AF002 /* SDTVContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTVContainerViewController.m; sourceTree = "<group>"; };
 		3BA37EAE1CE9BF06004AF002 /* SDTVNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTVNavigationView.h; sourceTree = "<group>"; };
@@ -365,6 +372,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		3B7DAC581D7028E600B3F9EA /* components */ = {
+			isa = PBXGroup;
+			children = (
+				3B7DAC591D702BB400B3F9EA /* SDStoryboardLoader.h */,
+				3B7DAC5A1D702BB400B3F9EA /* SDStoryboardLoader.m */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
 		3BA37EAA1CE9BCC8004AF002 /* ContainController */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +423,7 @@
 		3BD98C101CE4959A00BA5979 /* SDDouYu */ = {
 			isa = PBXGroup;
 			children = (
+				3B7DAC581D7028E600B3F9EA /* components */,
 				3B2709F01D3DD80700799790 /* Utility */,
 				3B3B6DB31D3CCA10002F0D32 /* Pages */,
 				3BEBFA321CE6D672001CF2E2 /* Category */,
@@ -461,6 +478,9 @@
 			children = (
 				3BD98C631CE49B4F00BA5979 /* HTTPRequest.h */,
 				3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */,
+				3B7DAC5C1D70309200B3F9EA /* SDNetworkService.h */,
+				3B7DAC5D1D70309200B3F9EA /* SDNetworkService.m */,
+				3B7DAC5F1D7036D200B3F9EA /* SDConstant.h */,
 			);
 			path = HTTPRequest;
 			sourceTree = "<group>";
@@ -646,6 +666,7 @@
 		3BD98C061CE4959A00BA5979 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SD;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = com.sybercare.enterprise;
 				TargetAttributes = {
@@ -806,8 +827,10 @@
 				3BD98C491CE49AE900BA5979 /* SDHomepageDataSource.m in Sources */,
 				3BD98C131CE4959A00BA5979 /* main.m in Sources */,
 				3B5BCB991D6B00E800063204 /* SDIndicatorErrorView.m in Sources */,
+				3B7DAC5B1D702BB400B3F9EA /* SDStoryboardLoader.m in Sources */,
 				3BDF97141CE73AFF004DCA64 /* SDChannelModel.m in Sources */,
 				A5228E501D1BE28200FA5993 /* SDTool.m in Sources */,
+				3B7DAC5E1D70309200B3F9EA /* SDNetworkService.m in Sources */,
 				3B4560241CEC6CFF0009E51B /* SDChannelSubModel.m in Sources */,
 				3BD98C5D1CE49B1700BA5979 /* SDHomepageTableViewCell.m in Sources */,
 				3B722DFB1CEB27C700D23975 /* UIImageView+Corner.m in Sources */,
@@ -934,7 +957,7 @@
 				INFOPLIST_FILE = "SDDouYu/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sybercare.enterprise.SDDouYu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shendong.douyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7ad7bce1-c0b5-4754-96ca-fe04da9b874b";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -953,7 +976,7 @@
 				INFOPLIST_FILE = "SDDouYu/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sybercare.enterprise.SDDouYu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shendong.douyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7ad7bce1-c0b5-4754-96ca-fe04da9b874b";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";

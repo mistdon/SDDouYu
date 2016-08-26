@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Nc-ih-2Il">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Login View Controller-->
         <scene sceneID="7Pc-Hs-FBv">
             <objects>
-                <viewController id="5Nc-ih-2Il" customClass="SDLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SDLoginViewController" id="5Nc-ih-2Il" customClass="SDLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="swk-Ii-JRV"/>
                         <viewControllerLayoutGuide type="bottom" id="KlC-p8-M9U"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入昵称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diD-on-ExQ">
-                                <rect key="frame" x="20" y="20" width="560" height="40"/>
+                                <rect key="frame" x="20" y="84" width="560" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="77c-iw-MLX"/>
                                 </constraints>
@@ -27,34 +27,53 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZZ-9m-b8W">
-                                <rect key="frame" x="20" y="75" width="560" height="40"/>
+                                <rect key="frame" x="20" y="139" width="560" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LR-st-1gj">
-                                <rect key="frame" x="40" y="130" width="520" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LR-st-1gj">
+                                <rect key="frame" x="40" y="194" width="520" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.61321069979999998" blue="0.1309237003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="登录"/>
                                 <state key="disabled">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <navigationBar contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Qgv-Mp-kDG">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aeC-Yw-fnh"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="登录" id="p4E-12-2Qe">
+                                        <barButtonItem key="rightBarButtonItem" image="btn_dismiss_20x20_" id="23g-ch-UER">
+                                            <connections>
+                                                <action selector="dismissAction:" destination="5Nc-ih-2Il" id="pAn-H3-caQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2LR-st-1gj" firstAttribute="top" secondItem="IZZ-9m-b8W" secondAttribute="bottom" constant="15" id="0Ni-VW-xge"/>
                             <constraint firstItem="diD-on-ExQ" firstAttribute="leading" secondItem="tOC-SP-KGu" secondAttribute="leading" constant="20" id="3ih-AZ-arI"/>
+                            <constraint firstItem="Qgv-Mp-kDG" firstAttribute="top" secondItem="tOC-SP-KGu" secondAttribute="top" constant="20" id="GBp-aT-cGG"/>
                             <constraint firstAttribute="trailing" secondItem="diD-on-ExQ" secondAttribute="trailing" constant="20" id="Gwl-gW-qof"/>
                             <constraint firstItem="IZZ-9m-b8W" firstAttribute="top" secondItem="diD-on-ExQ" secondAttribute="bottom" constant="15" id="PAQ-Mz-grH"/>
                             <constraint firstItem="IZZ-9m-b8W" firstAttribute="leading" secondItem="diD-on-ExQ" secondAttribute="leading" id="Pb0-y3-lkT"/>
                             <constraint firstItem="IZZ-9m-b8W" firstAttribute="height" secondItem="diD-on-ExQ" secondAttribute="height" id="Pdu-B7-u20"/>
                             <constraint firstItem="2LR-st-1gj" firstAttribute="trailing" secondItem="diD-on-ExQ" secondAttribute="trailing" constant="-20" id="TOq-ZT-xMz"/>
+                            <constraint firstAttribute="trailing" secondItem="Qgv-Mp-kDG" secondAttribute="trailing" id="UZF-T1-CzY"/>
                             <constraint firstItem="2LR-st-1gj" firstAttribute="centerX" secondItem="diD-on-ExQ" secondAttribute="centerX" id="kcx-bV-ei9"/>
                             <constraint firstItem="IZZ-9m-b8W" firstAttribute="trailing" secondItem="diD-on-ExQ" secondAttribute="trailing" id="q2Q-eX-rQS"/>
                             <constraint firstItem="2LR-st-1gj" firstAttribute="leading" secondItem="diD-on-ExQ" secondAttribute="leading" constant="20" id="sxN-xQ-Ns3"/>
-                            <constraint firstItem="diD-on-ExQ" firstAttribute="top" secondItem="swk-Ii-JRV" secondAttribute="bottom" id="x57-s3-MHE"/>
+                            <constraint firstItem="Qgv-Mp-kDG" firstAttribute="leading" secondItem="tOC-SP-KGu" secondAttribute="leading" id="tUb-qD-UNv"/>
+                            <constraint firstItem="diD-on-ExQ" firstAttribute="top" secondItem="swk-Ii-JRV" secondAttribute="bottom" constant="64" id="x57-s3-MHE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Wwk-JZ-XpM"/>
                     <connections>
                         <outlet property="loginButton" destination="2LR-st-1gj" id="dGw-wO-X4F"/>
                         <outlet property="nicknameTextField" destination="diD-on-ExQ" id="FWU-xz-Xe3"/>
@@ -63,7 +82,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQa-2O-bKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="423"/>
+            <point key="canvasLocation" x="507" y="423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_dismiss_20x20_" width="20" height="20"/>
+    </resources>
 </document>

@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/UIAlertView+RACSignalSupport.h
+../../../ReactiveCocoa/ReactiveCocoa/UIAlertView+RACSignalSupport.h

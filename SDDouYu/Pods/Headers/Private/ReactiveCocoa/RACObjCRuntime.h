@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/RACObjCRuntime.h
+../../../ReactiveCocoa/ReactiveCocoa/RACObjCRuntime.h

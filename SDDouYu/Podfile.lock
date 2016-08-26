@@ -43,23 +43,19 @@ PODS:
   - MJExtension (3.0.11)
   - MJRefresh (3.0.8)
   - pop (1.0.9)
-  - ReactiveCocoa (4.0.4-alpha-4):
-    - ReactiveCocoa/UI (= 4.0.4-alpha-4)
-    - Result (~> 1.0)
-  - ReactiveCocoa/Core (4.0.4-alpha-4):
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
     - ReactiveCocoa/no-arc
-    - Result (~> 1.0)
-  - ReactiveCocoa/no-arc (4.0.4-alpha-4):
-    - Result (~> 1.0)
-  - ReactiveCocoa/UI (4.0.4-alpha-4):
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-    - Result (~> 1.0)
-  - Result (1.0.2)
   - SDBannerView (1.0)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
   - SVProgressHUD (2.0.3)
+  - Toast (3.0)
   - YYKit (1.0.7):
     - YYKit/no-arc (= 1.0.7)
   - YYKit/no-arc (1.0.7)
@@ -74,10 +70,11 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh (~> 3.0.0)
   - pop (~> 1.0)
-  - ReactiveCocoa (~> 4.0.4-alpha-1)
+  - ReactiveCocoa (~> 2.5)
   - SDBannerView
   - SDWebImage
   - SVProgressHUD
+  - Toast (~> 3.0)
   - YYKit (~> 1.0.7)
 
 SPEC CHECKSUMS:
@@ -90,11 +87,11 @@ SPEC CHECKSUMS:
   MJExtension: f9ae6ddc0f1c482c3c9af750280ccebd14381958
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
-  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDBannerView: 90fcf58ea98723ec6b82d3ddf674bdc92df50b7a
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  Toast: 32c59229abfcf41850162b83bb9259dc84372473
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
 COCOAPODS: 0.39.0

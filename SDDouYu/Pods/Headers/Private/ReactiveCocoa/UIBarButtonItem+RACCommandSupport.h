@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/UIBarButtonItem+RACCommandSupport.h
+../../../ReactiveCocoa/ReactiveCocoa/UIBarButtonItem+RACCommandSupport.h

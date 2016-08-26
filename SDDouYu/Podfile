@@ -8,7 +8,7 @@ target 'SDDouYu' do
     pod 'Masonry'         #约束
     pod 'DateTools'
     pod 'MJExtension'
-    pod 'ReactiveCocoa','~>4.0.4-alpha-1'
+    pod 'ReactiveCocoa','~>2.5'
     pod 'CocoaLumberjack', '~> 2.3.0' #日志分析工具
     pod 'BlocksKit', '~> 2.2.5'
     pod 'SDWebImage'
@@ -16,6 +16,7 @@ target 'SDDouYu' do
     pod 'SVProgressHUD'
     pod 'pop', '~> 1.0'
     pod 'YYKit', '~> 1.0.7'
+    pod 'Toast', '~> 3.0'  #约束
     #OC
     pod 'AFNetworking', '~>3.0.0'
     #swift

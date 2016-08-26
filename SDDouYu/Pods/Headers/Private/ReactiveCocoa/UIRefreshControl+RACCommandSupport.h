@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/UIRefreshControl+RACCommandSupport.h
+../../../ReactiveCocoa/ReactiveCocoa/UIRefreshControl+RACCommandSupport.h

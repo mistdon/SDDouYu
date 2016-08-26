@@ -93,10 +93,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SDDouYu/MJRefresh.framework"
   install_framework "Pods-SDDouYu/Masonry.framework"
   install_framework "Pods-SDDouYu/ReactiveCocoa.framework"
-  install_framework "Pods-SDDouYu/Result.framework"
   install_framework "Pods-SDDouYu/SDBannerView.framework"
   install_framework "Pods-SDDouYu/SDWebImage.framework"
   install_framework "Pods-SDDouYu/SVProgressHUD.framework"
+  install_framework "Pods-SDDouYu/Toast.framework"
   install_framework "Pods-SDDouYu/YYKit.framework"
   install_framework "Pods-SDDouYu/pop.framework"
 fi
@@ -110,10 +110,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SDDouYu/MJRefresh.framework"
   install_framework "Pods-SDDouYu/Masonry.framework"
   install_framework "Pods-SDDouYu/ReactiveCocoa.framework"
-  install_framework "Pods-SDDouYu/Result.framework"
   install_framework "Pods-SDDouYu/SDBannerView.framework"
   install_framework "Pods-SDDouYu/SDWebImage.framework"
   install_framework "Pods-SDDouYu/SVProgressHUD.framework"
+  install_framework "Pods-SDDouYu/Toast.framework"
   install_framework "Pods-SDDouYu/YYKit.framework"
   install_framework "Pods-SDDouYu/pop.framework"
 fi

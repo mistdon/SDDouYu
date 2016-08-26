@@ -22,6 +22,6 @@ typedef NS_ENUM(NSInteger, SDIndicatorState){
 @property (nonatomic, strong) UIView *emptyIndicatorView;
 @property (nonatomic, strong) UIView *errorIndicatorView;
 @property (nonatomic, assign) SDIndicatorState indicatorState;
-@property (nonatomic, weak) id<SDIndicatorCategoryDelegate> indicatorDelegate;
+@property (nonatomic, weak)   id<SDIndicatorCategoryDelegate> indicatorDelegate;
 
 @end

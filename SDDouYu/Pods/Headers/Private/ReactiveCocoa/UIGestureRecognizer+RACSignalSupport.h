@@ -1,1 +1,1 @@
-../../../ReactiveCocoa/ReactiveCocoa/Objective-C/UIGestureRecognizer+RACSignalSupport.h
+../../../ReactiveCocoa/ReactiveCocoa/UIGestureRecognizer+RACSignalSupport.h

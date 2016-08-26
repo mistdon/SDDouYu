@@ -8,6 +8,7 @@
 
 #import "SDLoginViewController.h"
 #import "SDLoginViewModel.h"
+#import "SDNetworkService.h"
 
 @interface SDLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nicknameTextField;
@@ -33,5 +34,19 @@
     [[[self.loginViewModel.loginCommand executionSignals] switchToLatest] subscribeNext:^(id x) {
          NSLog(@"x  = %@",x);
     }];
+    [[self.loginViewModel.loginCommand errors] subscribeNext:^(id x) {
+        NSLog(@"error = %@",x);
+    }];
+    
+    [[[SDNetworkService shared] requestFromNetWork:nil params:nil] subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    } error:^(NSError *error) {
+        NSLog(@"error = %@",error);
+    }];
+    
+}
+- (IBAction)dismissAction:(id)sender {
+    NSLog(@"%s",__FUNCTION__);
+    self pop
 }
 @end

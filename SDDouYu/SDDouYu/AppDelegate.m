@@ -16,6 +16,8 @@
 #import "SDHomeFunViewController.h"
 #import "SDHomeStrageViewController.h"
 #import "CocoaLumberjack.h"
+#import "SDLoginViewController.h"
+#import "SDStoryboardLoader.h"
 //static const DDLogLevel ddLogLevel = DDLogLevelVerbose;; //定义日志级别
 
 
@@ -67,7 +69,7 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     if(ok){
        self.window.rootViewController = [[SDTabBarController alloc] init];
     }else{
-        self.window.rootViewController = [ViewController new];
+        self.window.rootViewController = SDViewController(@"Login", @"Me", nil);
     }
     [self.window makeKeyAndVisible]; 
     [self settingCocoaLumerJackLog]; //日志系统
