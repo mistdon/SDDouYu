@@ -37,6 +37,8 @@
 		3BA37EAD1CE9BCF4004AF002 /* SDTVContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EAC1CE9BCF4004AF002 /* SDTVContainerViewController.m */; };
 		3BA37EB01CE9BF06004AF002 /* SDTVNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EAF1CE9BF06004AF002 /* SDTVNavigationView.m */; };
 		3BA37EB41CE9C2E6004AF002 /* SDTVChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EB31CE9C2E6004AF002 /* SDTVChannel.m */; };
+		3BD1E5C81D743CBB003E1F10 /* SDNetworkServiceConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E5C71D743CBB003E1F10 /* SDNetworkServiceConsts.m */; };
+		3BD1E5CB1D74446E003E1F10 /* SDBaseLiveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E5CA1D74446E003E1F10 /* SDBaseLiveViewModel.m */; };
 		3BD98C131CE4959A00BA5979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C121CE4959A00BA5979 /* main.m */; };
 		3BD98C161CE4959A00BA5979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C151CE4959A00BA5979 /* AppDelegate.m */; };
 		3BD98C191CE4959A00BA5979 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD98C181CE4959A00BA5979 /* ViewController.m */; };
@@ -130,6 +132,10 @@
 		3BA37EAF1CE9BF06004AF002 /* SDTVNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTVNavigationView.m; sourceTree = "<group>"; };
 		3BA37EB21CE9C2E6004AF002 /* SDTVChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTVChannel.h; sourceTree = "<group>"; };
 		3BA37EB31CE9C2E6004AF002 /* SDTVChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTVChannel.m; sourceTree = "<group>"; };
+		3BD1E5C61D743CBB003E1F10 /* SDNetworkServiceConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNetworkServiceConsts.h; sourceTree = "<group>"; };
+		3BD1E5C71D743CBB003E1F10 /* SDNetworkServiceConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNetworkServiceConsts.m; sourceTree = "<group>"; };
+		3BD1E5C91D74446E003E1F10 /* SDBaseLiveViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseLiveViewModel.h; sourceTree = "<group>"; };
+		3BD1E5CA1D74446E003E1F10 /* SDBaseLiveViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseLiveViewModel.m; sourceTree = "<group>"; };
 		3BD98C0E1CE4959A00BA5979 /* SDDouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDDouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD98C121CE4959A00BA5979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD98C141CE4959A00BA5979 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -480,6 +486,8 @@
 				3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */,
 				3B7DAC5C1D70309200B3F9EA /* SDNetworkService.h */,
 				3B7DAC5D1D70309200B3F9EA /* SDNetworkService.m */,
+				3BD1E5C61D743CBB003E1F10 /* SDNetworkServiceConsts.h */,
+				3BD1E5C71D743CBB003E1F10 /* SDNetworkServiceConsts.m */,
 				3B7DAC5F1D7036D200B3F9EA /* SDConstant.h */,
 			);
 			path = HTTPRequest;
@@ -540,6 +548,8 @@
 				3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */,
 				3BEBFA331CE6EC69001CF2E2 /* SDBaseLiveModel.h */,
 				3BEBFA341CE6EC69001CF2E2 /* SDBaseLiveModel.m */,
+				3BD1E5C91D74446E003E1F10 /* SDBaseLiveViewModel.h */,
+				3BD1E5CA1D74446E003E1F10 /* SDBaseLiveViewModel.m */,
 				3BDF97121CE73AFF004DCA64 /* SDChannelModel.h */,
 				3BDF97131CE73AFF004DCA64 /* SDChannelModel.m */,
 				3B4560221CEC6CFF0009E51B /* SDChannelSubModel.h */,
@@ -810,6 +820,7 @@
 				3BD98C651CE49B4F00BA5979 /* HTTPRequest.m in Sources */,
 				3BA37EAD1CE9BCF4004AF002 /* SDTVContainerViewController.m in Sources */,
 				3B0484051CEACFB40001CFF6 /* SDGameCategoryModel.m in Sources */,
+				3BD1E5C81D743CBB003E1F10 /* SDNetworkServiceConsts.m in Sources */,
 				3BD98C4E1CE49AFD00BA5979 /* SDHomeGameDetailViewController.m in Sources */,
 				3BEBFA2B1CE6D29C001CF2E2 /* SDTableViewCellTypeTwo.m in Sources */,
 				3B05DBFE1CE84365008D90E2 /* SDCustomButton.m in Sources */,
@@ -833,6 +844,7 @@
 				3B7DAC5E1D70309200B3F9EA /* SDNetworkService.m in Sources */,
 				3B4560241CEC6CFF0009E51B /* SDChannelSubModel.m in Sources */,
 				3BD98C5D1CE49B1700BA5979 /* SDHomepageTableViewCell.m in Sources */,
+				3BD1E5CB1D74446E003E1F10 /* SDBaseLiveViewModel.m in Sources */,
 				3B722DFB1CEB27C700D23975 /* UIImageView+Corner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

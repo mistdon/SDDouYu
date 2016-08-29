@@ -47,6 +47,5 @@
 }
 - (IBAction)dismissAction:(id)sender {
     NSLog(@"%s",__FUNCTION__);
-    self pop
 }
 @end

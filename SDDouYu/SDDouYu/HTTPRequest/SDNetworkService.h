@@ -15,4 +15,6 @@
 
 - (RACSignal *)requestFromNetWork:(NSString *)urlKey params:(NSDictionary *)params;
 
+- (RACSignal *)requestBaseLiveModel:(NSString *)urlKey params:(NSDictionary *)params;
+
 @end

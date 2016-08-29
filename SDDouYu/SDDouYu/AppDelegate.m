@@ -69,7 +69,7 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     if(ok){
        self.window.rootViewController = [[SDTabBarController alloc] init];
     }else{
-        self.window.rootViewController = SDViewController(@"Login", @"Me", nil);
+        self.window.rootViewController = [ViewController new];
     }
     [self.window makeKeyAndVisible]; 
     [self settingCocoaLumerJackLog]; //日志系统

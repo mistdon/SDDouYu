@@ -11,6 +11,7 @@
 #import "AFNetworking.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SDConstant.h"
+
 NSString *const sssssHTTPGetAllFunInfomaitons = @"v1/getHotRoom/2?aid=ios&client_sys=ios&time=1463474820&auth=30f1016666d26c86da81ba7697b9ac30";
 
 @implementation SDNetworkService
@@ -43,5 +44,6 @@ NSString *const sssssHTTPGetAllFunInfomaitons = @"v1/getHotRoom/2?aid=ios&client
     }];
     return subject;
 }
+
 
 @end
