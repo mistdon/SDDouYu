@@ -1,6 +1,0 @@
-framework module SDBannerView {
-  umbrella header "SDBannerView-umbrella.h"
-
-  export *
-  module * { export * }
-}

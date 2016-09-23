@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36404895FB666F2E05AEB918 /* Pods_SDDouYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D32265AFEB3331E6C41134D /* Pods_SDDouYu.framework */; };
 		3B0483FC1CEAAC310001CFF6 /* SDHomegameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */; };
 		3B0483FF1CEAB9220001CFF6 /* SDHomeFunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */; };
 		3B0484021CEAB93E0001CFF6 /* SDHomeStrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */; };
@@ -24,6 +23,9 @@
 		3B3B6DBE1D3CCBD4002F0D32 /* SDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B6DBD1D3CCBD4002F0D32 /* SDLoginViewModel.m */; };
 		3B4560241CEC6CFF0009E51B /* SDChannelSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4560231CEC6CFF0009E51B /* SDChannelSubModel.m */; };
 		3B4560281CEC6E9D0009E51B /* SDHomefunHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4560271CEC6E9D0009E51B /* SDHomefunHeaderView.m */; };
+		3B4C244E1D950D3B00FDC0C3 /* SDFullPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C244D1D950D3B00FDC0C3 /* SDFullPlayerViewController.m */; };
+		3B4C24511D950DA000FDC0C3 /* SDPlayerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C24501D950DA000FDC0C3 /* SDPlayerViewModel.m */; };
+		3B4C24561D950E3900FDC0C3 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4C24551D950E3900FDC0C3 /* IJKMediaFramework.framework */; };
 		3B5BCB941D6AF77600063204 /* SDIndicatorLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5BCB931D6AF77600063204 /* SDIndicatorLoadingView.m */; };
 		3B5BCB961D6AF78B00063204 /* SDIndicatorLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5BCB951D6AF78B00063204 /* SDIndicatorLoadingView.xib */; };
 		3B5BCB991D6B00E800063204 /* SDIndicatorErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5BCB981D6B00E800063204 /* SDIndicatorErrorView.m */; };
@@ -73,9 +75,11 @@
 		A5228E501D1BE28200FA5993 /* SDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A5228E4F1D1BE28200FA5993 /* SDTool.m */; };
 		A525E4C21D1BB80200411F54 /* UIColor+categoryColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A525E4C11D1BB80200411F54 /* UIColor+categoryColor.m */; };
 		A525E4C81D1BCE5900411F54 /* UIScrollView+SDMJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A525E4C71D1BCE5900411F54 /* UIScrollView+SDMJRefresh.m */; };
+		BF966D04F294F7CA6E6E0B84 /* libPods-SDDouYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE623EDDB4099B6C2636B7D /* libPods-SDDouYu.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37C31511B1BD611FC277D51B /* Pods-SDDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		3B0483FA1CEAAC310001CFF6 /* SDHomegameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomegameViewController.h; path = Homepage/Controller/SDHomegameViewController.h; sourceTree = "<group>"; };
 		3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDHomegameViewController.m; path = Homepage/Controller/SDHomegameViewController.m; sourceTree = "<group>"; };
 		3B0483FD1CEAB9220001CFF6 /* SDHomeFunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomeFunViewController.h; path = Homepage/Controller/SDHomeFunViewController.h; sourceTree = "<group>"; };
@@ -107,6 +111,11 @@
 		3B4560231CEC6CFF0009E51B /* SDChannelSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChannelSubModel.m; sourceTree = "<group>"; };
 		3B4560261CEC6E9D0009E51B /* SDHomefunHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomefunHeaderView.h; sourceTree = "<group>"; };
 		3B4560271CEC6E9D0009E51B /* SDHomefunHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomefunHeaderView.m; sourceTree = "<group>"; };
+		3B4C244C1D950D3B00FDC0C3 /* SDFullPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFullPlayerViewController.h; sourceTree = "<group>"; };
+		3B4C244D1D950D3B00FDC0C3 /* SDFullPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFullPlayerViewController.m; sourceTree = "<group>"; };
+		3B4C244F1D950DA000FDC0C3 /* SDPlayerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPlayerViewModel.h; sourceTree = "<group>"; };
+		3B4C24501D950DA000FDC0C3 /* SDPlayerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPlayerViewModel.m; sourceTree = "<group>"; };
+		3B4C24551D950E3900FDC0C3 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		3B5BCB911D6AE94F00063204 /* SDIndicatorCategoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDIndicatorCategoryDelegate.h; sourceTree = "<group>"; };
 		3B5BCB921D6AF77600063204 /* SDIndicatorLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDIndicatorLoadingView.h; sourceTree = "<group>"; };
 		3B5BCB931D6AF77600063204 /* SDIndicatorLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDIndicatorLoadingView.m; sourceTree = "<group>"; };
@@ -191,9 +200,6 @@
 		3BEBFA371CE6ED39001CF2E2 /* SDBaseLiveModel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDBaseLiveModel+Extension.m"; sourceTree = "<group>"; };
 		3BEBFA391CE6F221001CF2E2 /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
-		4D32265AFEB3331E6C41134D /* Pods_SDDouYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDDouYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89737398F51B1FA9A3364011 /* Pods-SDDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.debug.xcconfig"; sourceTree = "<group>"; };
-		904A253C8DC7156942348033 /* Pods-SDDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.release.xcconfig"; sourceTree = "<group>"; };
 		A51B89C11D1B8B7A00A528AC /* SDRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRefreshTableViewController.h; sourceTree = "<group>"; };
 		A51B89C21D1B8B7A00A528AC /* SDRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRefreshTableViewController.m; sourceTree = "<group>"; };
 		A5228E4E1D1BE28200FA5993 /* SDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTool.h; path = SDDouYu/Class/SDTool.h; sourceTree = SOURCE_ROOT; };
@@ -203,6 +209,8 @@
 		A525E4C61D1BCE5900411F54 /* UIScrollView+SDMJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SDMJRefresh.h"; sourceTree = "<group>"; };
 		A525E4C71D1BCE5900411F54 /* UIScrollView+SDMJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SDMJRefresh.m"; sourceTree = "<group>"; };
 		A5CF5BD71D0FA19E00F6121F /* SDPullRefreshProtocl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDPullRefreshProtocl.h; path = RootClass/SDPullRefreshProtocl.h; sourceTree = "<group>"; };
+		CEF071E70735C0D580D7762F /* Pods-SDDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE623EDDB4099B6C2636B7D /* libPods-SDDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,13 +218,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36404895FB666F2E05AEB918 /* Pods_SDDouYu.framework in Frameworks */,
+				3B4C24561D950E3900FDC0C3 /* IJKMediaFramework.framework in Frameworks */,
+				BF966D04F294F7CA6E6E0B84 /* libPods-SDDouYu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A5D62624AD514D7993819A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDE623EDDB4099B6C2636B7D /* libPods-SDDouYu.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B0484061CEAD2990001CFF6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +367,41 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		3B4C244A1D950D2400FDC0C3 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				3B4C244B1D950D2A00FDC0C3 /* Player */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		3B4C244B1D950D2A00FDC0C3 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				3B4C244C1D950D3B00FDC0C3 /* SDFullPlayerViewController.h */,
+				3B4C244D1D950D3B00FDC0C3 /* SDFullPlayerViewController.m */,
+				3B4C244F1D950DA000FDC0C3 /* SDPlayerViewModel.h */,
+				3B4C24501D950DA000FDC0C3 /* SDPlayerViewModel.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		3B4C24531D950E3900FDC0C3 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				3B4C24541D950E3900FDC0C3 /* IJKMediaFramework */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		3B4C24541D950E3900FDC0C3 /* IJKMediaFramework */ = {
+			isa = PBXGroup;
+			children = (
+				3B4C24551D950E3900FDC0C3 /* IJKMediaFramework.framework */,
+			);
+			path = IJKMediaFramework;
+			sourceTree = "<group>";
+		};
 		3B5BCB8D1D6AE8DB00063204 /* IndicatorCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +433,7 @@
 		3B7DAC581D7028E600B3F9EA /* components */ = {
 			isa = PBXGroup;
 			children = (
+				3B4C244A1D950D2400FDC0C3 /* Pages */,
 				3B7DAC591D702BB400B3F9EA /* SDStoryboardLoader.h */,
 				3B7DAC5A1D702BB400B3F9EA /* SDStoryboardLoader.m */,
 			);
@@ -413,8 +466,8 @@
 			children = (
 				3BD98C0F1CE4959A00BA5979 /* Products */,
 				3BD98C101CE4959A00BA5979 /* SDDouYu */,
-				632ECF8A1CE468A509A3472C /* Pods */,
-				48D53EB5149E0EFA974725C1 /* Frameworks */,
+				6C07DE77626F41DE1F3DEE40 /* Pods */,
+				2A5D62624AD514D7993819A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -429,6 +482,7 @@
 		3BD98C101CE4959A00BA5979 /* SDDouYu */ = {
 			isa = PBXGroup;
 			children = (
+				3B4C24531D950E3900FDC0C3 /* Libs */,
 				3B7DAC581D7028E600B3F9EA /* components */,
 				3B2709F01D3DD80700799790 /* Utility */,
 				3B3B6DB31D3CCA10002F0D32 /* Pages */,
@@ -609,19 +663,11 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		48D53EB5149E0EFA974725C1 /* Frameworks */ = {
+		6C07DE77626F41DE1F3DEE40 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4D32265AFEB3331E6C41134D /* Pods_SDDouYu.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		632ECF8A1CE468A509A3472C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				89737398F51B1FA9A3364011 /* Pods-SDDouYu.debug.xcconfig */,
-				904A253C8DC7156942348033 /* Pods-SDDouYu.release.xcconfig */,
+				CEF071E70735C0D580D7762F /* Pods-SDDouYu.debug.xcconfig */,
+				37C31511B1BD611FC277D51B /* Pods-SDDouYu.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -653,13 +699,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BD98C251CE4959A00BA5979 /* Build configuration list for PBXNativeTarget "SDDouYu" */;
 			buildPhases = (
-				489190B26DAA0CE683BB9C63 /* 📦 Check Pods Manifest.lock */,
+				AF4ADCACC9D3A916B853A3F9 /* [CP] Check Pods Manifest.lock */,
 				3BD98C0A1CE4959A00BA5979 /* Sources */,
 				3BD98C0B1CE4959A00BA5979 /* Frameworks */,
 				3BD98C0C1CE4959A00BA5979 /* Resources */,
-				C34C66C488DA02FEE07D36F8 /* 📦 Embed Pods Frameworks */,
-				FD71025337DEFA0DC7691888 /* 📦 Copy Pods Resources */,
-				65999F3E0A8F46F7ADDC4EF0 /* Embed Pods Frameworks */,
+				20BBFDCE7FC5D54518B3F820 /* [CP] Embed Pods Frameworks */,
+				6248B03AE7A4CD817B8A1C72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -682,6 +727,8 @@
 				TargetAttributes = {
 					3BD98C0D1CE4959A00BA5979 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = S8238R3HUC;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -726,29 +773,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		489190B26DAA0CE683BB9C63 /* 📦 Check Pods Manifest.lock */ = {
+		20BBFDCE7FC5D54518B3F820 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		65999F3E0A8F46F7ADDC4EF0 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,34 +788,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C34C66C488DA02FEE07D36F8 /* 📦 Embed Pods Frameworks */ = {
+		6248B03AE7A4CD817B8A1C72 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD71025337DEFA0DC7691888 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF4ADCACC9D3A916B853A3F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -806,6 +838,8 @@
 				3BD98C3D1CE49AC100BA5979 /* SDTabBarController.m in Sources */,
 				3B0483FF1CEAB9220001CFF6 /* SDHomeFunViewController.m in Sources */,
 				3BD98C5F1CE49B1700BA5979 /* SDScrollTogetherView.m in Sources */,
+				3B4C24511D950DA000FDC0C3 /* SDPlayerViewModel.m in Sources */,
+				3B4C244E1D950D3B00FDC0C3 /* SDFullPlayerViewController.m in Sources */,
 				3B3B6DB71D3CCAAA002F0D32 /* SDLoginViewController.m in Sources */,
 				3B4560281CEC6E9D0009E51B /* SDHomefunHeaderView.m in Sources */,
 				3BA37EB41CE9C2E6004AF002 /* SDTVChannel.m in Sources */,
@@ -959,39 +993,49 @@
 		};
 		3BD98C261CE4959A00BA5979 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89737398F51B1FA9A3364011 /* Pods-SDDouYu.debug.xcconfig */;
+			baseConfigurationReference = CEF071E70735C0D580D7762F /* Pods-SDDouYu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianye Zhai (GEZJKDGQ9H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = S8238R3HUC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDDouYu/Libs/IJKMediaFramework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDDouYu/Supporting Files/SDDouYu-Prefix.pch";
 				INFOPLIST_FILE = "SDDouYu/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shendong.douyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ad7bce1-c0b5-4754-96ca-fe04da9b874b";
-				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "./**";
 			};
 			name = Debug;
 		};
 		3BD98C271CE4959A00BA5979 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 904A253C8DC7156942348033 /* Pods-SDDouYu.release.xcconfig */;
+			baseConfigurationReference = 37C31511B1BD611FC277D51B /* Pods-SDDouYu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianye Zhai (GEZJKDGQ9H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = S8238R3HUC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDDouYu/Libs/IJKMediaFramework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDDouYu/Supporting Files/SDDouYu-Prefix.pch";
 				INFOPLIST_FILE = "SDDouYu/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shendong.douyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ad7bce1-c0b5-4754-96ca-fe04da9b874b";
-				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "./**";
 			};
 			name = Release;
 		};
