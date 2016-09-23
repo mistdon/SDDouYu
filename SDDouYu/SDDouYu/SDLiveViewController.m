@@ -1,30 +1,26 @@
 //
-//  SDCareViewController.m
-//  DouYu
+//  SDLiveViewController.m
+//  SDDouYu
 //
-//  Created by shendong on 16/5/11.
+//  Created by shendong on 16/9/23.
 //  Copyright © 2016年 com.sybercare.enterprise. All rights reserved.
 //
 
-#import "SDCareViewController.h"
-#import "SDCustomButton.h"
+#import "SDLiveViewController.h"
 
-@interface SDCareViewController ()
-@property (nonatomic, copy) NSMutableArray *sources;
+@interface SDLiveViewController ()
+
 @end
 
-@implementation SDCareViewController
+@implementation SDLiveViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
-
-    
-    
     // Dispose of any resources that can be recreated.
 }
 
