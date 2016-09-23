@@ -23,6 +23,6 @@ tips: 如果一个控件左边是image，右边是lable，这样直接用button�
 ####How to install:   
 1. pod install  
 2. 将[针对iOS的IJKMediaFramework.framework](http://pan.baidu.com/s/1eSLRmme)添加到工程中去, 下载后按照以下目录安装(仅是为了在git push 时ignore IJKMediaFramework/，因为这个framework的文件超过了github要求的文件上限)   
-   ![IJKMediaFramework_1](https://github.com/momo13014/SDDouYu/blob/master/screenshot/IJKMediaFramework_1)   
-   ![IJKMediaFramework_2](https://github.com/momo13014/SDDouYu/blob/master/screenshot/IJKMediaFramework_2)   
+   ![IJKMediaFramework_1](https://github.com/momo13014/SDDouYu/blob/master/screenshot/IJKMediaFramework_1.png)   
+   ![IJKMediaFramework_2](https://github.com/momo13014/SDDouYu/blob/master/screenshot/IJKMediaFramework_2.png)   
 
