@@ -15,3 +15,5 @@ tips: 如果一个控件左边是image，右边是lable，这样直接用button�
 2. 首页上面有一个轮播的小功能, 正好用到我之前开源的一个小组件SDBannberView(支持CocoaPods)。那么问题来了,有Bug😢😢😢
 3. ReactiveCocoa看了好长时间了,就在这个项目中试一下吧
    ![image](https://github.com/momo13014/SDDouYu/blob/master/screenshot/douyu_20160512.gif)
+
+Let's do IT!
