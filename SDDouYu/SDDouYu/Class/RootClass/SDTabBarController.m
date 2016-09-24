@@ -35,12 +35,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    [self addChildViewControlle:[[SDHomeViewController alloc] init] showTitle:NO same:YES title:@"home" barItemTitle:@"首页" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
-    [self addChildViewControlle:[[SDCareViewController alloc] init] showTitle:YES same: YES title:@"Care" barItemTitle:@"关注" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
-    [self addChildViewControlle:[[UIViewController alloc] init] showTitle:NO same:YES title:@"222" barItemTitle:@"three" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
-    UIViewController *meVC  =[[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
-    meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
-    [self addChildViewController:meVC];
+//    [self addChildViewControlle:[[SDHomeViewController alloc] init] showTitle:NO same:YES title:@"home" barItemTitle:@"首页" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
+//    [self addChildViewControlle:[[SDCareViewController alloc] init] showTitle:YES same: YES title:@"Care" barItemTitle:@"关注" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
+//    [self addChildViewControlle:[[UIViewController alloc] init] showTitle:NO same:YES title:@"222" barItemTitle:@"three" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
+//    UIViewController *meVC  =[[UIStoryboard storyboardWithName:@"Me" bundle:nil] instantiateInitialViewController];
+//    meVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"icon_mine"] selectedImage:[UIImage imageNamed:@"icon_mine_selected"]];
+//    [self addChildViewController:meVC];
 }
 
 /**

@@ -1,7 +1,4 @@
-platform:ios ,'8.0'
-source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
-#link_with  'SDDouYu'
+platform:ios ,'10.0'
 
 target 'SDDouYu' do
     pod 'MJRefresh', '~> 3.0.0'

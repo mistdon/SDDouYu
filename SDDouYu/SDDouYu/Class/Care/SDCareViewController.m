@@ -17,27 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    SDCustomButton *button = [[SDCustomButton alloc] initWithFrame:CGRectMake(0, 100, 200, 100)];
-    button.backgroundColor = [UIColor greenColor];
-    [button setTitle:@"更多" forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"douyu"] forState:UIControlStateNormal];
-    [self.view addSubview:button];
-    
-    self.sources = [NSMutableArray array];
-    
-    
-    NSString *showname = nil; //假设这是显示在lable上的数据
-    NSMutableArray *data = [NSMutableArray arrayWithObjects:@"shen",@"dong",@"wang",nil];
-    @try {
-         showname= [data objectAtIndex:3];
-    } @catch (NSException *exception) {
-        showname = @"shendong";
-        DDLogError(@"exception = %@", exception);
-    } @finally {
-        DDLogDebug(@"This is some debug thing");
-        DDLogInfo(@"showname = %@",showname);
-    }
-    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -61,17 +61,21 @@ static NSString *const KGame_FTG_icon_url = @"http:\/\/staticlive.douyutv.com\/u
     // Override point for customization after application launch.
     NSLog(@"home = %@",NSHomeDirectory());
     //延迟一秒执行,保证获取广告图即时显示出来
-    sleep(1);
-    NSInteger ok = 0;;
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
+    BOOL test = NO;
+    if (test) {
+        sleep(1);
+        NSInteger ok = 0;;
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        self.window.backgroundColor = [UIColor whiteColor];
     
-    if(ok){
-       self.window.rootViewController = [[SDTabBarController alloc] init];
-    }else{
-        self.window.rootViewController = [ViewController new];
+        if(ok){
+           self.window.rootViewController = [[SDTabBarController alloc] init];
+        }else{
+            self.window.rootViewController = [ViewController new];
+        }
+        [self.window makeKeyAndVisible];
     }
-    [self.window makeKeyAndVisible]; 
+
     [self settingCocoaLumerJackLog]; //日志系统
     [self ConfigureLogInfomation];
     
