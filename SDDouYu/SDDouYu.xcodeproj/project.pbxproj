@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B015CB11D96E73A00AA4853 /* testSourceFile in Resources */ = {isa = PBXBuildFile; fileRef = 3B015CB01D96E73A00AA4853 /* testSourceFile */; };
 		3B0483FC1CEAAC310001CFF6 /* SDHomegameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */; };
 		3B0483FF1CEAB9220001CFF6 /* SDHomeFunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */; };
 		3B0484021CEAB93E0001CFF6 /* SDHomeStrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */; };
@@ -83,14 +84,15 @@
 
 /* Begin PBXFileReference section */
 		37C31511B1BD611FC277D51B /* Pods-SDDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.release.xcconfig"; sourceTree = "<group>"; };
-		3B0483FA1CEAAC310001CFF6 /* SDHomegameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomegameViewController.h; path = Homepage/Controller/SDHomegameViewController.h; sourceTree = "<group>"; };
-		3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDHomegameViewController.m; path = Homepage/Controller/SDHomegameViewController.m; sourceTree = "<group>"; };
-		3B0483FD1CEAB9220001CFF6 /* SDHomeFunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomeFunViewController.h; path = Homepage/Controller/SDHomeFunViewController.h; sourceTree = "<group>"; };
-		3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDHomeFunViewController.m; path = Homepage/Controller/SDHomeFunViewController.m; sourceTree = "<group>"; };
-		3B0484001CEAB93E0001CFF6 /* SDHomeStrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDHomeStrageViewController.h; path = Homepage/Controller/SDHomeStrageViewController.h; sourceTree = "<group>"; };
-		3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDHomeStrageViewController.m; path = Homepage/Controller/SDHomeStrageViewController.m; sourceTree = "<group>"; };
-		3B0484031CEACFB40001CFF6 /* SDGameCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDGameCategoryModel.h; path = Homepage/Model/SDGameCategoryModel.h; sourceTree = "<group>"; };
-		3B0484041CEACFB40001CFF6 /* SDGameCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDGameCategoryModel.m; path = Homepage/Model/SDGameCategoryModel.m; sourceTree = "<group>"; };
+		3B015CB01D96E73A00AA4853 /* testSourceFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testSourceFile; sourceTree = "<group>"; };
+		3B0483FA1CEAAC310001CFF6 /* SDHomegameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomegameViewController.h; sourceTree = "<group>"; };
+		3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomegameViewController.m; sourceTree = "<group>"; };
+		3B0483FD1CEAB9220001CFF6 /* SDHomeFunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomeFunViewController.h; sourceTree = "<group>"; };
+		3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomeFunViewController.m; sourceTree = "<group>"; };
+		3B0484001CEAB93E0001CFF6 /* SDHomeStrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomeStrageViewController.h; sourceTree = "<group>"; };
+		3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomeStrageViewController.m; sourceTree = "<group>"; };
+		3B0484031CEACFB40001CFF6 /* SDGameCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGameCategoryModel.h; sourceTree = "<group>"; };
+		3B0484041CEACFB40001CFF6 /* SDGameCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGameCategoryModel.m; sourceTree = "<group>"; };
 		3B04840E1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomegameCollectionViewCell.h; sourceTree = "<group>"; };
 		3B04840F1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHomegameCollectionViewCell.m; sourceTree = "<group>"; };
 		3B0484141CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHomegameCollectionHeaderView.h; sourceTree = "<group>"; };
@@ -209,13 +211,13 @@
 		3BEBFA3A1CE6F221001CF2E2 /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
 		A51B89C11D1B8B7A00A528AC /* SDRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRefreshTableViewController.h; sourceTree = "<group>"; };
 		A51B89C21D1B8B7A00A528AC /* SDRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRefreshTableViewController.m; sourceTree = "<group>"; };
-		A5228E4E1D1BE28200FA5993 /* SDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDTool.h; path = SDDouYu/Class/SDTool.h; sourceTree = SOURCE_ROOT; };
-		A5228E4F1D1BE28200FA5993 /* SDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDTool.m; path = SDDouYu/Class/SDTool.m; sourceTree = SOURCE_ROOT; };
+		A5228E4E1D1BE28200FA5993 /* SDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTool.h; sourceTree = "<group>"; };
+		A5228E4F1D1BE28200FA5993 /* SDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTool.m; sourceTree = "<group>"; };
 		A525E4C01D1BB80200411F54 /* UIColor+categoryColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+categoryColor.h"; sourceTree = "<group>"; };
 		A525E4C11D1BB80200411F54 /* UIColor+categoryColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+categoryColor.m"; sourceTree = "<group>"; };
 		A525E4C61D1BCE5900411F54 /* UIScrollView+SDMJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SDMJRefresh.h"; sourceTree = "<group>"; };
 		A525E4C71D1BCE5900411F54 /* UIScrollView+SDMJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SDMJRefresh.m"; sourceTree = "<group>"; };
-		A5CF5BD71D0FA19E00F6121F /* SDPullRefreshProtocl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDPullRefreshProtocl.h; path = RootClass/SDPullRefreshProtocl.h; sourceTree = "<group>"; };
+		A5CF5BD71D0FA19E00F6121F /* SDPullRefreshProtocl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPullRefreshProtocl.h; sourceTree = "<group>"; };
 		CEF071E70735C0D580D7762F /* Pods-SDDouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDDouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDDouYu/Pods-SDDouYu.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE623EDDB4099B6C2636B7D /* libPods-SDDouYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDDouYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -244,41 +246,41 @@
 		3B0484061CEAD2990001CFF6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3B0484091CEAD2B90001CFF6 /* Strange */,
 				3B0484081CEAD2B30001CFF6 /* Fun */,
 				3B0484071CEAD2AB0001CFF6 /* Game */,
 				3BD98C2D1CE49A5C00BA5979 /* Homepage */,
+				3B0484091CEAD2B90001CFF6 /* Strange */,
 			);
-			name = Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3B0484071CEAD2AB0001CFF6 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				3B04840D1CEAD2D80001CFF6 /* View */,
-				3B04840C1CEAD2D30001CFF6 /* Model */,
 				3B04840A1CEAD2C40001CFF6 /* Controller */,
+				3B04840C1CEAD2D30001CFF6 /* Model */,
+				3B04840D1CEAD2D80001CFF6 /* View */,
 			);
-			name = Game;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		3B0484081CEAD2B30001CFF6 /* Fun */ = {
 			isa = PBXGroup;
 			children = (
-				3B4560251CEC6E800009E51B /* View */,
 				3B722DF51CEB0E7100D23975 /* Controller */,
+				3B4560251CEC6E800009E51B /* View */,
 			);
-			name = Fun;
+			path = Fun;
 			sourceTree = "<group>";
 		};
 		3B0484091CEAD2B90001CFF6 /* Strange */ = {
 			isa = PBXGroup;
 			children = (
-				3B0484211CEAF5F10001CFF6 /* View */,
-				3B0484201CEAF5EC0001CFF6 /* Model */,
 				3B04841F1CEAF56A0001CFF6 /* Controller */,
+				3B0484201CEAF5EC0001CFF6 /* Model */,
+				3B0484211CEAF5F10001CFF6 /* View */,
 			);
-			name = Strange;
+			path = Strange;
 			sourceTree = "<group>";
 		};
 		3B04840A1CEAD2C40001CFF6 /* Controller */ = {
@@ -287,7 +289,7 @@
 				3B0483FA1CEAAC310001CFF6 /* SDHomegameViewController.h */,
 				3B0483FB1CEAAC310001CFF6 /* SDHomegameViewController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3B04840C1CEAD2D30001CFF6 /* Model */ = {
@@ -296,21 +298,21 @@
 				3B0484031CEACFB40001CFF6 /* SDGameCategoryModel.h */,
 				3B0484041CEACFB40001CFF6 /* SDGameCategoryModel.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B04840D1CEAD2D80001CFF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B0484141CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.h */,
+				3B0484151CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.m */,
+				3B0484161CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.xib */,
 				3B04840E1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.h */,
 				3B04840F1CEAD3010001CFF6 /* SDHomegameCollectionViewCell.m */,
 				3B04841C1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.h */,
 				3B04841D1CEAEDA90001CFF6 /* SDHomegameCommonCollectionViewCell.m */,
-				3B0484141CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.h */,
-				3B0484151CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.m */,
-				3B0484161CEAE4FF0001CFF6 /* SDHomegameCollectionHeaderView.xib */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		3B04841F1CEAF56A0001CFF6 /* Controller */ = {
@@ -319,21 +321,21 @@
 				3B0484001CEAB93E0001CFF6 /* SDHomeStrageViewController.h */,
 				3B0484011CEAB93E0001CFF6 /* SDHomeStrageViewController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3B0484201CEAF5EC0001CFF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B0484211CEAF5F10001CFF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		3B2709F01D3DD80700799790 /* Utility */ = {
@@ -342,7 +344,7 @@
 				3B2709F11D3DD83000799790 /* YYFPSLabel.h */,
 				3B2709F21D3DD83000799790 /* YYFPSLabel.m */,
 			);
-			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		3B3B6DB31D3CCA10002F0D32 /* Pages */ = {
@@ -351,19 +353,19 @@
 				3B4C24571D9529D900FDC0C3 /* Live */,
 				3B3B6DB41D3CCA65002F0D32 /* LoginRegister */,
 			);
-			name = Pages;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		3B3B6DB41D3CCA65002F0D32 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
+				3B3B6DBA1D3CCACD002F0D32 /* Me.storyboard */,
 				3B3B6DB51D3CCAAA002F0D32 /* SDLoginViewController.h */,
 				3B3B6DB61D3CCAAA002F0D32 /* SDLoginViewController.m */,
 				3B3B6DBC1D3CCBD4002F0D32 /* SDLoginViewModel.h */,
 				3B3B6DBD1D3CCBD4002F0D32 /* SDLoginViewModel.m */,
-				3B3B6DBA1D3CCACD002F0D32 /* Me.storyboard */,
 			);
-			name = LoginRegister;
+			path = LoginRegister;
 			sourceTree = "<group>";
 		};
 		3B4560251CEC6E800009E51B /* View */ = {
@@ -372,7 +374,7 @@
 				3B4560261CEC6E9D0009E51B /* SDHomefunHeaderView.h */,
 				3B4560271CEC6E9D0009E51B /* SDHomefunHeaderView.m */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		3B4C244A1D950D2400FDC0C3 /* Pages */ = {
@@ -380,7 +382,7 @@
 			children = (
 				3B4C244B1D950D2A00FDC0C3 /* Player */,
 			);
-			name = Pages;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		3B4C244B1D950D2A00FDC0C3 /* Player */ = {
@@ -391,7 +393,7 @@
 				3B4C244F1D950DA000FDC0C3 /* SDPlayerViewModel.h */,
 				3B4C24501D950DA000FDC0C3 /* SDPlayerViewModel.m */,
 			);
-			name = Player;
+			path = Player;
 			sourceTree = "<group>";
 		};
 		3B4C24531D950E3900FDC0C3 /* Libs */ = {
@@ -417,26 +419,26 @@
 				3B4C245A1D952A0800FDC0C3 /* SDLiveViewController.h */,
 				3B4C245B1D952A0800FDC0C3 /* SDLiveViewController.m */,
 			);
-			name = Live;
+			path = Live;
 			sourceTree = "<group>";
 		};
 		3B5BCB8D1D6AE8DB00063204 /* IndicatorCategory */ = {
 			isa = PBXGroup;
 			children = (
-				3B5BCB9D1D6B0ACA00063204 /* UIView+SDIndicatorView.h */,
-				3B5BCB9E1D6B0ACA00063204 /* UIView+SDIndicatorView.m */,
-				3B5BCB921D6AF77600063204 /* SDIndicatorLoadingView.h */,
-				3B5BCB931D6AF77600063204 /* SDIndicatorLoadingView.m */,
-				3B5BCB951D6AF78B00063204 /* SDIndicatorLoadingView.xib */,
-				3B5BCB971D6B00E800063204 /* SDIndicatorErrorView.h */,
-				3B5BCB981D6B00E800063204 /* SDIndicatorErrorView.m */,
-				3B5BCBA01D6B0B8900063204 /* SDIndicatorErrorView.xib */,
+				3B5BCB911D6AE94F00063204 /* SDIndicatorCategoryDelegate.h */,
 				3B5BCBA21D6B0BB800063204 /* SDIndicatorEmptyView.h */,
 				3B5BCBA31D6B0BB800063204 /* SDIndicatorEmptyView.m */,
 				3B5BCBA51D6B0BC100063204 /* SDIndicatorEmptyView.xib */,
-				3B5BCB911D6AE94F00063204 /* SDIndicatorCategoryDelegate.h */,
+				3B5BCB971D6B00E800063204 /* SDIndicatorErrorView.h */,
+				3B5BCB981D6B00E800063204 /* SDIndicatorErrorView.m */,
+				3B5BCBA01D6B0B8900063204 /* SDIndicatorErrorView.xib */,
+				3B5BCB921D6AF77600063204 /* SDIndicatorLoadingView.h */,
+				3B5BCB931D6AF77600063204 /* SDIndicatorLoadingView.m */,
+				3B5BCB951D6AF78B00063204 /* SDIndicatorLoadingView.xib */,
+				3B5BCB9D1D6B0ACA00063204 /* UIView+SDIndicatorView.h */,
+				3B5BCB9E1D6B0ACA00063204 /* UIView+SDIndicatorView.m */,
 			);
-			name = IndicatorCategory;
+			path = IndicatorCategory;
 			sourceTree = "<group>";
 		};
 		3B722DF51CEB0E7100D23975 /* Controller */ = {
@@ -445,7 +447,7 @@
 				3B0483FD1CEAB9220001CFF6 /* SDHomeFunViewController.h */,
 				3B0483FE1CEAB9220001CFF6 /* SDHomeFunViewController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3B7DAC581D7028E600B3F9EA /* components */ = {
@@ -455,7 +457,7 @@
 				3B7DAC591D702BB400B3F9EA /* SDStoryboardLoader.h */,
 				3B7DAC5A1D702BB400B3F9EA /* SDStoryboardLoader.m */,
 			);
-			name = components;
+			path = components;
 			sourceTree = "<group>";
 		};
 		3BA37EAA1CE9BCC8004AF002 /* ContainController */ = {
@@ -482,10 +484,10 @@
 		3BD98C051CE4959A00BA5979 = {
 			isa = PBXGroup;
 			children = (
+				2A5D62624AD514D7993819A6 /* Frameworks */,
+				6C07DE77626F41DE1F3DEE40 /* Pods */,
 				3BD98C0F1CE4959A00BA5979 /* Products */,
 				3BD98C101CE4959A00BA5979 /* SDDouYu */,
-				6C07DE77626F41DE1F3DEE40 /* Pods */,
-				2A5D62624AD514D7993819A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -500,18 +502,19 @@
 		3BD98C101CE4959A00BA5979 /* SDDouYu */ = {
 			isa = PBXGroup;
 			children = (
-				3B4C24531D950E3900FDC0C3 /* Libs */,
-				3B7DAC581D7028E600B3F9EA /* components */,
-				3B2709F01D3DD80700799790 /* Utility */,
-				3B3B6DB31D3CCA10002F0D32 /* Pages */,
 				3BEBFA321CE6D672001CF2E2 /* Category */,
 				3BD98C291CE49A3800BA5979 /* Class */,
 				3BD98C2B1CE49A4300BA5979 /* HTTPRequest */,
 				3BD98C2A1CE49A3D00BA5979 /* Helper */,
+				3B4C24531D950E3900FDC0C3 /* Libs */,
+				3B3B6DB31D3CCA10002F0D32 /* Pages */,
 				3BD98C111CE4959A00BA5979 /* Supporting Files */,
+				3B2709F01D3DD80700799790 /* Utility */,
+				3B7DAC581D7028E600B3F9EA /* components */,
 				3BD98C141CE4959A00BA5979 /* AppDelegate.h */,
 				3BD98C151CE4959A00BA5979 /* AppDelegate.m */,
 				3BD98C171CE4959A00BA5979 /* ViewController.h */,
+				3B015CB01D96E73A00AA4853 /* testSourceFile */,
 				3BD98C181CE4959A00BA5979 /* ViewController.m */,
 			);
 			path = SDDouYu;
@@ -534,9 +537,9 @@
 		3BD98C291CE49A3800BA5979 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				3BD98C2E1CE49A6200BA5979 /* Care */,
 				A51B89C41D1B8CDB00A528AC /* Category */,
 				3B0484061CEAD2990001CFF6 /* Home */,
-				3BD98C2E1CE49A6200BA5979 /* Care */,
 				3BD98C2C1CE49A5500BA5979 /* RootClass */,
 			);
 			path = Class;
@@ -556,11 +559,11 @@
 			children = (
 				3BD98C631CE49B4F00BA5979 /* HTTPRequest.h */,
 				3BD98C641CE49B4F00BA5979 /* HTTPRequest.m */,
+				3B7DAC5F1D7036D200B3F9EA /* SDConstant.h */,
 				3B7DAC5C1D70309200B3F9EA /* SDNetworkService.h */,
 				3B7DAC5D1D70309200B3F9EA /* SDNetworkService.m */,
 				3BD1E5C61D743CBB003E1F10 /* SDNetworkServiceConsts.h */,
 				3BD1E5C71D743CBB003E1F10 /* SDNetworkServiceConsts.m */,
-				3B7DAC5F1D7036D200B3F9EA /* SDConstant.h */,
 			);
 			path = HTTPRequest;
 			sourceTree = "<group>";
@@ -568,14 +571,14 @@
 		3BD98C2C1CE49A5500BA5979 /* RootClass */ = {
 			isa = PBXGroup;
 			children = (
+				A51B89C11D1B8B7A00A528AC /* SDRefreshTableViewController.h */,
+				A51B89C21D1B8B7A00A528AC /* SDRefreshTableViewController.m */,
 				3BD98C331CE49AAA00BA5979 /* SDRootNavigationController.h */,
 				3BD98C341CE49AAA00BA5979 /* SDRootNavigationController.m */,
 				3BD98C351CE49AAA00BA5979 /* SDRootViewController.h */,
 				3BD98C361CE49AAA00BA5979 /* SDRootViewController.m */,
 				3BD98C3B1CE49AC100BA5979 /* SDTabBarController.h */,
 				3BD98C3C1CE49AC100BA5979 /* SDTabBarController.m */,
-				A51B89C11D1B8B7A00A528AC /* SDRefreshTableViewController.h */,
-				A51B89C21D1B8B7A00A528AC /* SDRefreshTableViewController.m */,
 			);
 			path = RootClass;
 			sourceTree = "<group>";
@@ -670,8 +673,8 @@
 		3BEBFA321CE6D672001CF2E2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				3B5BCB8D1D6AE8DB00063204 /* IndicatorCategory */,
 				3BA37EAA1CE9BCC8004AF002 /* ContainController */,
+				3B5BCB8D1D6AE8DB00063204 /* IndicatorCategory */,
 				3B05DBFC1CE84365008D90E2 /* SDCustomButton.h */,
 				3B05DBFD1CE84365008D90E2 /* SDCustomButton.m */,
 				3B05DBFF1CE84881008D90E2 /* SDMultipleCornerView.h */,
@@ -698,7 +701,7 @@
 				A525E4C01D1BB80200411F54 /* UIColor+categoryColor.h */,
 				A525E4C11D1BB80200411F54 /* UIColor+categoryColor.m */,
 			);
-			name = Category;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		A525E4BF1D1BB33F00411F54 /* MJRefreshAbout */ = {
@@ -708,7 +711,7 @@
 				A525E4C61D1BCE5900411F54 /* UIScrollView+SDMJRefresh.h */,
 				A525E4C71D1BCE5900411F54 /* UIScrollView+SDMJRefresh.m */,
 			);
-			name = MJRefreshAbout;
+			path = MJRefreshAbout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -783,6 +786,7 @@
 				3BD98C1E1CE4959A00BA5979 /* Assets.xcassets in Resources */,
 				3B4C245E1D952AD600FDC0C3 /* Care.storyboard in Resources */,
 				3BEBFA311CE6D2D0001CF2E2 /* SDCollectionViewCellTypeTwo.xib in Resources */,
+				3B015CB11D96E73A00AA4853 /* testSourceFile in Resources */,
 				3B3B6DBB1D3CCACD002F0D32 /* Me.storyboard in Resources */,
 				3BD98C1C1CE4959A00BA5979 /* Main.storyboard in Resources */,
 				3BD98C5E1CE49B1700BA5979 /* SDHomepageTableViewCell.xib in Resources */,

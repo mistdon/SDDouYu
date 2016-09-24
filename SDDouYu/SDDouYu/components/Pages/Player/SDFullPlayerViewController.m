@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.liveUrl = [NSURL URLWithString:@"http:\/\/hdl3a.douyucdn.cn\/live/209225rhw54sEpcR.flv?wsAuth=9038982f5d95521ae28d66a905737ed0&token=app-ios-0-209225-17be86b126c997d43c8e5b605bda339a&logo=0&expire=0&did=ED961303222942ABBEF0C6A3D90EFD44"];
+    self.liveUrl = [NSURL URLWithString:@"http://hls3a.douyucdn.cn/live/478334rmeaTPnXfi.flv?wsAuth=e5bb71b2b8e05d0bceabe75414171bd8&token=app-ios-0-478334-ddec6f72ab01e208aaf8521187dc9201&logo=0&expire=0&did=ED961303222942ABBEF0C6A3D90EFD44"];
     
 //    self.liveUrl = [NSURL URLWithString:@"http://pull99.a8.com/live/1474624802437931.flv?ikHost=ws&ikOp=1&CodecInfo=8192"];
 //    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.liveUrl withOptions:[IJKFFOptions optionsByDefault]];
